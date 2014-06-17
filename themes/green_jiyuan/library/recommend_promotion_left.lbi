@@ -1,0 +1,32 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {assign var=all_pro_goods value=get_promote_goods()} -->
+<!-- {* if $promotion_goods *} -->
+<!-- {if $all_pro_goods} -->
+		<div class="rs_left_box">
+			<div class="rs_left_box_head"><a href="../search.php?intro=promotion" target="_blank">限时抢购</a></div>
+			<div class="rs_left_box_list rs_l_b_l_border">
+				<!--{foreach from=get_promote_goods() item=goods name="promotion_foreach"}-->
+				<!-- {if $smarty.foreach.promotion_foreach.index lt 3} 限制显示数量 -->
+				<div class="rs_left_rp_goodsbox">
+					<div class="rs_l_rp_imgbox">
+						<a href="{$goods.url}" target="_blank">
+						<span class="rs_l_rp_sale_img"></span>
+						<img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+						</a>
+					</div>
+					<div class="rs_l_rp_word">
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+						<font class="goodspice market">{$goods.market_price}</font><br />
+                         <!-- {if $goods.promote_price neq ""} -->
+                         <b class="f1">{$goods.promote_price}</b><br />
+                         <!-- {else}-->
+                         <b class="f1">{$goods.shop_price}</b><br />
+                         <!--{/if}-->
+						<a href="goods-1.html" target="_blank"><img src="images/rs_sales_go.jpg" /></a>
+					</div>
+				</div>
+				<!-- {/if} -->
+				<!--{/foreach}-->
+			</div>
+		</div>
+<!-- {/if} -->

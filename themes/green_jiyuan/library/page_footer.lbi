@@ -1,0 +1,96 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<div class="rs_foot_wrap">
+	<div class="rs_links_wrap block">
+		<div class="rs_links">
+			<div class="rs_links_tit">友情链接：</div>
+			<!-- {if $img_links} -->
+			<!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+			<div class="rs_links_img_li">
+				<a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" /></a>
+			</div>
+			<!--结束图片类型的友情链接{/foreach}-->
+			<!-- {/if} -->
+			<!-- {if $txt_links} -->
+			<!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+			<div class="rs_links_word_li">
+				<a href="{$link.url}" target="_blank" title="{$link.name}" class="linkTxt">{$link.name}</a>
+			</div>
+			<!--结束文字类型的友情链接{/foreach}-->
+			<!-- {/if} -->
+		</div>
+	</div>
+	<div class="rs_foot_banner">
+		<img src="images/rs_foot_banner.jpg" />
+	</div>
+	<div class="rs_foot_helps_wrap">
+	<!--{if $helps}-->
+		<div class="rs_foot_helps">
+		<!-- {foreach from=$helps item=help_cat name=help_cat_k} -->
+			
+			<!--{if $smarty.foreach.help_cat_k.index lt 6}-->
+			<div class="rs_helps_box rs_h_{$smarty.foreach.help_cat_k.index}">
+				<dl>
+					<dt><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}" target="_blank">{$help_cat.cat_name}</a></dt>
+					<!-- {foreach from=$help_cat.article item=item} -->
+					<dd><a href="{$item.url}" title="{$item.title|escape:html}" target="_blank">{$item.short_title}</a></dd>
+					<!-- {/foreach} -->
+				</dl>
+			</div>
+			<!--{/if}-->
+		<!-- {/foreach} -->
+		</div>
+	<!--{/if}-->
+	</div>
+	<div class="rs_foot_copy_wrap">
+		<p style="width:195px;height:42px; margin: 0 auto; line-height: 20px;">
+			<img src="images/rs_foot_tel.jpg" style="float:left;" />
+			<span class="rs_ft_stel">订购热线（免长途费）</span><br />
+			<span class="">{$service_phone}</span>
+		</p>
+		<!-- {if $baojian_tel || $shipin_tel || $jiujiu_tel} -->
+		<p class="f13b">客户服务热线</p>
+			<!-- {if $baojian_tel} -->
+			<span class="plr8">吉元保健食品 </span><span class="plr8">{$baojian_tel}</span>
+			<!-- {/if} -->
+			<!-- {if $shipin_tel} -->
+			| <span class="plr8">吉元食品 </span><span class="plr8">{$shipin_tel}</span>
+			<!-- {/if} -->
+			<!-- {if $jiujiu_tel} -->
+			| <span class="plr8">九九一化妆品 </span><span class="plr8">{$jiujiu_tel}</span>
+			<!-- {/if} -->
+		<!-- {/if} -->
+		<p>{$copyright}</p>
+		<!-- ICP 证书{if $icp_number} -->
+		<p>{$lang.icp_number} : <a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a></p>
+		<!-- {/if} -->
+	</div>
+</div>
+<div class="rs_float_window">
+	<div class="rs_float_msg"><a href="/message.php" target="_blank"><img src="images/rs_float_window_msg.jpg" /></a></div>
+	<!--{if count($qq) > 0}-->
+	<div class="rs_float_qq" id="qqflip">
+		<span class="flipmove"><img src="images/rs_float_window_qq.jpg" /></span>
+		<span class="qqlist">
+			<!-- QQ 号码 {foreach from=$qq item=im} -->
+			<!-- {if $im} -->
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$im}&amp;site={$shop_name}&amp;menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:{$im}:50" alt="点击这里给我发消息" title="点击这里给我发消息"></a>
+			<!-- {/if} -->
+			<!-- {/foreach} 结束QQ号码 -->
+		</span>
+	</div>
+	<!-- {/if} -->
+</div>
+<script type="text/javascript">
+$(function($) {
+	$('#qqflip').hover(
+		function() { //On hover...
+			$(this).find(".flipmove").stop().animate({marginTop: "-100px"}, 250);
+		},
+		function() { //On hover out...
+			$(this).find(".flipmove").stop().animate({marginTop: "0"}, 250);
+		}
+	);
+});
+</script>

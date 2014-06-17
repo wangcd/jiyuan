@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $new_goods} -->
+		<div class="rs_right_box">
+			<div class="rs_r_new_tit"><img src="images/rs_r_new_tit.jpg"></img></div>
+			<div class="rs_right_box_list">
+			<!--{foreach from=$new_goods item=goods}-->
+				<div class="rs_r_new_imgbox">
+					<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+					<div class="rs_r_new_word_box">
+						<div class="rs_r_new_word">
+							<a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>
+						</div>
+					</div>
+				</div>
+			<!--{/foreach}-->
+			</div>
+		</div>
+<!-- {/if} -->

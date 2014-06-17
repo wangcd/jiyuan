@@ -1,0 +1,50 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript"> 
+<!--
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+<div class="Landing">
+  <div style="float:right"> 
+    <!--{if $navigator_list.top}--> 
+    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} --> 
+    <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a> 
+    <!-- {if !$smarty.foreach.nav_top_list.last} --> 
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <!-- {/if} --> 
+    <!-- {/foreach} --> 
+    <!-- {/if} --> 
+  </div>
+  <div style="float:left;" class="rs_welcom"> {insert_scripts files='jquery-1.8.3.min.js,jquery.json-2.4.min.js,transport.js,utils.js'} <font id="ECS_MEMBERZONE"> {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font> </div>
+</div>
+<div class="rs_head_wrap">
+	<div class="rs_head">
+		<div class="rs_h_logo"><a href="index.php"><img src="images/logo.gif"></a></div>
+		<div class="rs_h_logoright"><img src="images/rs_h_logoright.jpg"></div>
+		<div class="rs_h_anquan"><img src="images/rs_h_anquan.jpg"></div>
+		<div class="rs_h_bigpic">
+			<img src="images/rs_h_bigpic_top.jpg">
+			<div class="rs_h_bigpic_bot"><img src="images/rs_h_bigpic_bot.jpg"></div>
+		</div>
+	</div>
+</div>
+<div class="rs_headnav_wrap">
+	<div class="rs_headnav">
+		<ul class="rs_navlist">
+			<li {if $navigator_list.config.index eq 1} class="rs_curt" {/if}>{if $navigator_list.config.index eq 1}<span class="l"></span><span class="r"></span>{/if}<a href="../index.php">{$lang.home}</a></li>
+			<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+			<li {if $nav.active eq 1} class="rs_curt"{/if}>{if $nav.active eq 1} <span class="l"></span><span class="r"></span>{/if}<a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></li>
+			<!-- {/foreach} -->
+		</ul>
+	</div>
+</div>
+

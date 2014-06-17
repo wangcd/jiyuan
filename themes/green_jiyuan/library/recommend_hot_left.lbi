@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods} -->
+		<div class="rs_left_box">
+			<div class="rs_left_box_head"><a href="../search.php?intro=hot" target="_blank">热销商品</a></div>
+			<!--{foreach from=$hot_goods item=goods name="hot_foreach"}-->
+			<!-- {if $smarty.foreach.hot_foreach.index lt 6} 限制显示数量 -->
+			<div class="rs_left_box_list {if $smarty.foreach.hot_foreach.index gt 0} rs_br_top {/if}">
+				<div class="rs_left_ht_goodsbox">
+					<div class="rs_l_ht_sort"><img src="images/rs_sort_{$smarty.foreach.hot_foreach.index}.jpg" /></div>
+					<div class="rs_l_ht_imgbox"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+					<div class="rs_l_ht_word">
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+						<font class="goodspice market">{$goods.market_price}</font><br />
+                         <!-- {if $goods.promote_price neq ""} -->
+                         <b class="f1">{$goods.promote_price}</b><br />
+                         <!-- {else}-->
+                         <b class="f1">{$goods.shop_price}</b><br />
+                         <!--{/if}-->
+					</div>
+				</div>
+			</div>
+			<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+<!-- {/if} -->
+
+

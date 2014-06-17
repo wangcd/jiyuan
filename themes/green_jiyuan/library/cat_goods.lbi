@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<div class="rs_right_box_list">
+				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
+				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
+					<div class="rs_r_{$rs_index_r_step}_imgbox">
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+					</div>
+					<div class="rs_right_box_word">
+						<span class="goodspice market">{$goods.market_price}</span>
+						<!-- {if $goods.promote_price neq ""} -->
+						<b class="rs_r_b_f">{$goods.promote_price}</b><br />
+						<!-- {else}-->
+						<b class="rs_r_b_f">{$goods.shop_price}</b><br />
+						<!--{/if}-->
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+					</div>
+				</div>
+				 <!--{/foreach}-->
+			</div>
