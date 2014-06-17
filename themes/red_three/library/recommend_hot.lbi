@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="rs_sale_box">
+	<div class="rs_s_tit"><a href="../search.php?intro=hot">热卖商品</a></div>
+	<ul class="rs_s_list">
+		<!--{foreach from=$hot_goods item=goods name="hot_foreach"}-->
+			<!-- {if $smarty.foreach.hot_foreach.first} -->
+			<li class="rs_first">
+			<!--{else}-->
+			<li>
+			<!--{/if}-->
+				<div class="rs_s_l_img">
+					<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+				</div>
+				<div class="rs_s_l_word">
+					<div class="rs_slw_n"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></div>
+					<del>{$goods.market_price}</del>
+					<div class="rs_slw_p">
+						<!-- {if $goods.promote_price neq ""} -->
+						{$goods.promote_price}
+						<!-- {else}-->
+						{$goods.shop_price}
+						<!--{/if}-->
+					</div>
+					<div class="rs_slw_b"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">立即抢</a></div>
+				</div>
+			</li>
+		<!--{/foreach}-->
+	</ul>
+</div>
+<!-- {/if} -->
+<!-- {/if} -->

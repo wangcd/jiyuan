@@ -1,0 +1,29 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+<div class="rs_pbox">
+	<div class="rs_pbox_tit"><span>限时抢购</span></div>
+	<ul class="rs_pbox_ul">
+		<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+		<!--{if !$smarty.foreach.promotion_foreach.first}-->
+		<li>
+			<div class="rs_gl_img">
+				<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+			</div>
+			<div class="rs_pbox_n">
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+			</div>
+			<div class="rs_pbox_n">
+				<img src="images/rs_clock.jpg" />剩余<span class="rs_jq_timer">{$goods.end_date_str}</span>
+			</div>
+			<div class="rs_pbox_p">
+				<span class="rs_pp">{$goods.promote_price}</span>
+				<del>{$goods.market_price}</del>
+				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">去看看</a>
+			</div>
+		</li>
+		<!--{/if}-->
+		<!--{/foreach}-->
+	</ul>
+</div>
+<div class="blank"></div>
+<!-- {/if} -->

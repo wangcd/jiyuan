@@ -1,0 +1,68 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+          //初始化主菜单
+            function sw_nav2(obj,tag)
+            {
+            var DisSub2 = $("#DisSub2_"+obj);
+            var HandleLI2= $("#HandleLI2_"+obj);
+                if(tag==1)
+                {
+                    DisSub2.show();
+					HandleLI2.addClass("current");
+                }
+                else
+                {
+                    DisSub2.hide();
+					HandleLI2.removeClass("current");
+                }
+            }
+</script>
+ 
+    
+    
+  <div id="category_tree">
+  <div class="tit">
+  	所有商品分类
+  	<div class="rs_cate_jiantou"></div>
+  	<div class="rs_cate_yinying"></div>
+  </div>
+  <dl class="clearfix" >
+     <!--{foreach from=$categories item=cat name=no}-->
+        <div  class="dt" onMouseOver="sw_nav2({$smarty.foreach.no.iteration},1);" onMouseOut="sw_nav2({$smarty.foreach.no.iteration},0);" >
+        
+        <div id="HandleLI2_{$smarty.foreach.no.iteration}" class="rs_cate_li">
+        <a class="rs_cate_tit" href="{$cat.url}">
+			{$cat.name|escape:html}
+		</a>
+		<span class="rs_cate_jt">&gt;</span>
+		<!--{foreach from=$cat.cat_id item=rs_child name=rs_childs}-->
+        <a class="rs_cate_a" href="{$rs_child.url}">
+        	<!--{if !$smarty.foreach.rs_childs.first}-->
+        	、
+        	<!--{/if}-->
+			{$rs_child.name|escape:html}
+		</a>
+		<!--{/foreach}-->
+		</div>
+        
+        
+
+<dd  id=DisSub2_{$smarty.foreach.no.iteration} style="display:none"> 
+<!--{foreach from=$cat.cat_id item=child}-->
+ <a class="over_2" href="{$child.url}">{$child.name|escape:html}</a>  
+
+<div class="clearfix">
+<!--{foreach from=$child.cat_id item=childer}-->
+<a class="over_3" href="{$childer.url}">{$childer.name|escape:html}</a>
+<!--{/foreach}-->
+</div>   
+       
+<!--{/foreach}-->
+</dd> 
+
+</div>
+<!--{/foreach}--> 
+</dl>
+
+</div>
+

@@ -1,0 +1,83 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="rs_idx_gl">
+	<div class="rs_ig_l">
+		<div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
+			<div class="rs_igl_tit_img"></div>
+			<div class="rs_igl_tit_blank"></div>
+		</div>
+		<div class="rs_igl_l">
+			<ul class="rs_igll_cate">
+				<!--{foreach from=$categories item=cates name="cate_foreach"}-->
+				<!-- {if $cates.id eq $goods_cat.id} -->
+					<!--{foreach from=$cates.cat_id item=cate_child2 name="cate2_foreach"}-->
+					<!-- {if $cate_child2.id} -->
+						<li><a href="{$cate_child2.url}">{$cate_child2.name|escape:html}</a></li>
+						<!--{foreach from=$cate_child2.cat_id item=cate_child3 name="cate3_foreach"}-->
+						<!-- {if $cate_child3.id} -->
+							<li><a href="{$cate_child3.url}">{$cate_child3.name|escape:html}</a></li>
+						<!--{/if}-->
+						<!--{/foreach}-->
+					<!--{/if}-->
+					<!--{/foreach}-->
+				<!--{/if}-->
+				<!--{/foreach}-->
+			</ul>
+			<div class="rs_igll_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_left'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+		</div>
+		<div class="rs_igl_r">
+			<div class="rs_iglr_ad">
+			<!--{foreach from=$rs_idx_ads['idx_step_mid'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+			</div>
+			<ul class="rs_iglr_ul">
+				<!--{foreach from=$cat_goods item=goods name="goods_foreach"}-->
+				<li>
+					<div class="rs_iglr_img">
+						<a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}" /></a>
+					</div>
+					<div class="rs_iglr_n">
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a>
+					</div>
+					<div class="rs_iglr_p">
+						<span class="rs_pp">
+							<!-- {if $goods.promote_price neq ""} -->
+							{$goods.promote_price}
+							<!-- {else}-->
+							{$goods.shop_price}
+							<!--{/if}-->
+						</span>
+						<del>{$goods.market_price}</del>
+						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+					</div>
+				</li>
+				<!--{/foreach}-->
+			</ul>
+		</div>
+	</div>
+	<div class="rs_ig_r">
+		<div class="rs_ig_r_tit rs_jq_gl_{$goods_cat.id}">7日畅销榜</div>
+		<div class="rs_ig_r_list"></div>
+		<div class="rs_ig_r_brand">
+			<!--{foreach from=$rs_idx_ads['idx_step_right'] item=ads key=adkey name="ads_foreach"}-->
+				<!-- {if $adkey eq $goods_cat.id} -->
+					{$ads[0]}
+				<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="blank"></div>
+
+<script type="text/javascript">
+
+</script>
