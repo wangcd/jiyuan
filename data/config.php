@@ -3,7 +3,7 @@
 $db_host   = "localhost";
 
 // database name
-$db_name   = "dsdmall.com";
+$db_name   = "jiyuan";
 //$db_name   = "dsdmall_com";
 
 // database username
@@ -15,7 +15,7 @@ $db_pass   = "";
 //$db_pass   = "MWNwYmN1QTNmJmY";
 
 // table prefix
-$prefix    = "dsd_";
+$prefix    = "jiy_";
 
 $timezone    = "PRC";
 

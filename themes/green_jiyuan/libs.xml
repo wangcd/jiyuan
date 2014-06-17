@@ -101,26 +101,14 @@
     </region>
   </file>
   <file name="index.dwt">
-    <region name="网店公告下广告位178x72"/>
-    <region name="左边区域">
+    <region name="左部模块列表">
       <lib>category_tree</lib>
-      <lib>top10</lib>
-      <lib>promotion_info</lib>
-      <lib>invoice_query</lib>
-      <lib>order_query</lib>
-      <lib>email_list</lib>
-      <lib>vote_list</lib>
+      <lib>recommend_hot</lib>
+	  <lib>group_buy</lib>
+	  <lib>recommend_promotion</lib>
     </region>
-    <region name="特价商品广告位126x182"/>
-    <region name="热卖商品广告位126x182"/>
-    <region name="最新文章下广告位200x214"/>
-    <region name="首页通栏广告782x60"/>
-    <region name="精品推荐广告位200x368"/>
-    <region name="新品上市广告位200x368"/>
-    <region name="右边可编辑区">
-      <lib>brands</lib>
-      <lib>group_buy</lib>
-      <lib>auction</lib>
+    <region name="商品楼层展示区">
+      <lib>cat_goods</lib>
     </region>
   </file>
   <file name="message.dwt"/>

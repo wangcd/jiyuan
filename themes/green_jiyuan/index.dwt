@@ -22,50 +22,110 @@
 <script type="text/javascript" src="js/roll.js"></script>
 </head>
 <body>
+<!--头部-->
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-<div class="rs_main_banner">
-	<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
-</div>
-<div class="rs_main_wrap blank">
-	<div class="rs_main_bg">
-		<div class="fl"><img src="images/main_bg_left.jpg" /></div>
-		<div class="fr"><img src="images/main_bg_right.jpg" /></div>
+
+<div class="main">
+	<!--左部-->
+    <div class="left fl">
+   	  <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+      <img src="images/tuan.gif"/>
+        <img src="images/miao.gif" />
+		<!-- TemplateBeginEditable name="左部模块列表" -->
+<!-- #BeginLibraryItem "/library/group_buy.lbi" -->
+
+<!-- {if $group_buy_goods} -->
+<div class="mod1 blank" id="groups">
+	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
+	<h1 class="mod1tit">{$lang.group_buy_goods}<a href="group_buy.php" class="more">更多</a></h1>
+	<div class="mod1con group">
+	<!--{foreach from=$group_buy_goods item=goods}-->
+	<div class="goodsbox">
+	 <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
+	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
+   {$lang.last_price}<b class="f1">{$goods.last_price}</b>
 	</div>
-
-<div class="rs_main block clearfix">
- 	<div id="pageLeft" class="fl rs_wtbg rs_index_left">
- 		
-		<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
-		
-		<div class="rs_left_box">
-			<div class="rs_left_box_head rs_left_box_head_videoad">精彩视频</div>
-			<!-- TemplateBeginEditable name="首页视频广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
+ <!--{/foreach}-->
+	</div>
 </div>
+<script type="text/javascript">divheight("groups");</script>
+<!-- {/if} -->
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
+
+<!-- {if $promotion_goods} -->
+<div class="module">
+	<h1 class="modTitle"><p>{$lang.promotion_goods}</p><a href="../search.php?intro=promotion" class="more">more</a></h1>
+	<div class="promotion_goods">
+	 <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+	 <!-- {if $smarty.foreach.promotion_foreach.index lt 3} 限制显示数量 -->
+   
+   <div class="goodsbox">
+	   <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}"/></a></div>
+	 	 <strong class="f1">{$goods.promote_price}</strong><br />
+	   <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|truncate:4}</a>
+	</div>
+	 <!-- {/if} -->
+   <!--{/foreach}-->
+	</div>
+</div>
+<!-- {/if} -->
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+
+
+<!-- {if $hot_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+	 <div class="mod1 blank"style="border:none" >
+	  <span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
+      
+
+
+<h1 class="mod1tita" style=" background:url(images/index_bg25.gif) no-repeat;" >
+		 
+		 <div class="more best" id="itemBest" >
+		  {if $cat_rec[3]}
+      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(3, 0);">{$lang.all_goods}</a> |</h2>
+      {foreach from=$cat_rec[3] item=rec_data}
+      <h2 class="h2bg">
+			<a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(3, {$rec_data.cat_id})">{$rec_data.cat_name}</a> |
+			</h2>
+      {/foreach}
+      {/if}
+		  <a href="../search.php?intro=hot">更多<img src="images/tubiao1.gif" style=" position:absolute; top: 10px; left: 505px;" /></a>
+		 </div>
+		</h1>
+
+
+		<div class="recommendContent entry-content"  id="show_hot_area" >
+        
+		<!-- {/if} -->
+		 <!--{foreach from=$hot_goods item=goods}-->
+			<div class="goodsbox" >
+				<div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+			 <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+              <font class="goodspice market">{$goods.market_price}</font>
+			 <!-- {if $goods.promote_price neq ""} -->
+			 <b class="f1">{$goods.promote_price}</b><br />
+			 <!-- {else}-->
+			 <b class="f1">{$goods.shop_price}</b><br />
+			 <!--{/if}-->
+
+			</div>
+		<!--{/foreach}-->
+		<!-- {if $cat_rec_sign neq 1} -->
+		</div>
+
+   </div>
+<!-- {/if} -->
+<!-- {/if} -->
+
+
+
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-			
-		</div>
-		
-		<!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
-		
-		<div class="rs_left_box">
-		<!-- TemplateBeginEditable name="首页左侧抢购下方广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-		</div>
-		
-		<!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" --><!-- #EndLibraryItem -->
-		
-		<div class="rs_l_art_box">
+        <!--行业资讯  商城资讯 开始-->
+        <div class="rs_l_art_box">
 			<div class="rs_left_art_head">
 			<!--{foreach from=$rs_articles item=titartcats name="artcat_foreach"}-->
 				<div class="rs_l_art_tit {if $smarty.foreach.artcat_foreach.first} rs_l_art_t_lt rs_l_art_t_cur {else} rs_l_art_t_rt {/if}" onmouseover="rs_tabs(this , 'rs_l_art_tit' , 'rs_art_tabs' , {$smarty.foreach.artcat_foreach.index}, 'rs_l_art_t_cur');">{$titartcats.cat_name}</div>
@@ -81,28 +141,13 @@
 			<!--{/foreach}-->
 			</div>
 		</div>
-		
-	</div>
-	
-	<div class="fr clearfix rs_main_right_index" >
-		<!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem -->
-		
-		<!-- {assign var="rs_index_r_step" value="1"} -->
-		<div class="rs_right_box">
-			<div class="rs_right_box_tit">
-				<img class="rs_right_box_tit_logo" src="images/rs_r_tit_1.jpg" />
-				<div class="rs_right_box_tit_banner">
-				<!-- TemplateBeginEditable name="首页右侧1楼横幅广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-				</div>
-			</div>
-			<!-- TemplateBeginEditable name="商品分类1楼" -->
+        <!--行业资讯  商城资讯 结束-->
+  </div>
+    <!--右部-->
+    <div class="right fr">
+	  <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+        <img src="images/ad_bottom.gif" />
+		<!-- TemplateBeginEditable name="商品楼层展示区" -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 			<div class="rs_right_box_list">
@@ -192,15 +237,10 @@
 
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-		</div>
-		
-		
-		<!-- {assign var="rs_index_r_step" value="2"} -->
-		<div class="rs_right_box">
-			<div class="rs_right_box_tit">
-				<img class="rs_right_box_tit_logo" src="images/rs_r_tit_2.jpg" />
-				<div class="rs_right_box_tit_banner">
-				<!-- TemplateBeginEditable name="首页右侧2楼横幅广告位" -->
+        
+    </div>
+    <!--底部全航空广告展示-->
+	<!-- TemplateBeginEditable name="底部全行宽广告" -->
 <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
 
 <div class="ads">
@@ -208,58 +248,15 @@
 </div>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-				</div>
-			</div>
-			
-			<!-- TemplateBeginEditable name="商品分类2楼" -->
-<!-- TemplateEndEditable -->
-		</div>
-		
-		<!-- {assign var="rs_index_r_step" value="3"} -->
-		<div class="rs_right_box">
-			<div class="rs_right_box_tit">
-				<img class="rs_right_box_tit_logo" src="images/rs_r_tit_3.jpg" />
-				<div class="rs_right_box_tit_banner">
-				<!-- TemplateBeginEditable name="首页右侧3楼横幅广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-				</div>
-			</div>
-			
-			<!-- TemplateBeginEditable name="商品分类3楼" -->
-<!-- TemplateEndEditable -->
-		</div>
-		
-		<!-- {assign var="rs_index_r_step" value="4"} -->
-		<div class="rs_right_box">
-			<div class="rs_right_box_tit">
-				<img class="rs_right_box_tit_logo" src="images/rs_r_tit_4.jpg" />
-				<div class="rs_right_box_tit_banner">
-				<!-- TemplateBeginEditable name="首页右侧4楼横幅广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-				</div>
-			</div>
-			
-			<!-- TemplateBeginEditable name="商品分类4楼" -->
-<!-- TemplateEndEditable -->
-		</div>
-		
-	</div>
-	
-</div>
 
 </div>
+
+
+
+
+
+
+
 
 <!--鼠标切换js Star-->
 <script>
@@ -285,12 +282,6 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 </script>
 <div class="block blank">
 	<!-- TemplateBeginEditable name="首页友情链接上方广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 </div>
 

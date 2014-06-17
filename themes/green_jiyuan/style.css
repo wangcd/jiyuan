@@ -1478,7 +1478,7 @@ _height:1px;
 .rs_br_lft {border-left: 1px solid #CCC;}
 /*************************************************************************/
 
-.rs_head_wrap {width: 100%; background: #62C40D; height: 141px;}
+.rs_head_wrap {width: 1190px; background: #62C40D; height: 141px;}
 .rs_head {width: 1190px; margin: 0 auto; height: 141px; background: #62C40D;}
 .rs_h_logo {float: left; margin: 50px 0 0 60px;}
 .rs_h_logoright {float: left; margin-top: 50px;}
@@ -1486,7 +1486,7 @@ _height:1px;
 .rs_h_bigpic {float: left; position: relative;}
 .rs_h_bigpic_bot {position: absolute; top: 124px; left: -13px;}
 
-.rs_headnav_wrap {width: 100%; background: #333333; height: 40px; margin-bottom: 1px;}
+.rs_headnav_wrap {width: 1190px; background: #333333; height: 40px; margin-bottom: 1px;}
 .rs_headnav {width: 1190px; margin: 0 auto; height: 40px; background: #333333;}
 .rs_navlist {padding-left: 130px;}
 .rs_navlist li {float: left; /* margin-right: 1px; */}
@@ -1609,3 +1609,6 @@ _height:1px;
 /*************************************************************************/
 
 
+.main{ width:1190px; margin:0px auto;}
+.left{ width:255px; background:#9CF;}
+.right{ width:935px; background: #9CC;}
