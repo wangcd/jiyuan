@@ -29,14 +29,15 @@
 	<!--左部-->
     <div class="left fl">
    	  <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
-        <img src="images/miao.gif" />
+		<div class="xsqg">
+        
+        </div>
 		<!-- TemplateBeginEditable name="左部模块列表" -->
 <!-- #BeginLibraryItem "/library/group_buy.lbi" -->
 
 <!-- {if $group_buy_goods} -->
 <div class="mod1 blank" id="groups">
-	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
-	<h1 class="mod1tit">{$lang.group_buy_goods}<a href="group_buy.php" class="more">更多</a></h1>
+
 	<div class="mod1con group">
 	<!--{foreach from=$group_buy_goods item=goods}-->
 	<div class="goodsbox">
@@ -153,10 +154,42 @@
 {insert name='ads' id=$ads_id num=$ads_num}
 </div>
  <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads">
+{insert name='ads' id=$ads_id num=$ads_num}
+</div>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads">
+{insert name='ads' id=$ads_id num=$ads_num}
+</div>
+ <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
       </div>
       <div class="hhth">
       	<img src="images/hhth.jpg" />
+        <!--哼哼特惠-->
+        <div class="goods_floor_box">
+            <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
+                <div class="goods_floor_list fl">
+                   <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+                    <div style="text-align:center">
+                        <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a><br />
+                        <!--<span>{$goods.market_price}</span>-->
+                        <!-- {if $goods.promote_price neq ""} -->
+                        <b>{$goods.promote_price}</b><br />
+                        <!-- {else}-->
+                        <b>{$goods.shop_price}</b><br />
+                        <!--{/if}-->
+                        
+                    </div>
+                </div>
+            <!--{/foreach}-->    
+        </div>
+        
+        
       </div>       
         
       <div class="goods_floor">  
@@ -164,173 +197,89 @@
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">标题</div>
+	<div class="goods_floor_box_title">{$goods.cat_id}</div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-            <div class="">
-                <span>{$goods.market_price}</span>
+            <div style="text-align:center">
+            	<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a><br />
+                <!--<span>{$goods.market_price}</span>-->
                 <!-- {if $goods.promote_price neq ""} -->
                 <b>{$goods.promote_price}</b><br />
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+                
 			</div>
         </div>
     <!--{/foreach}-->    
 </div>
-
-
-
-
-			<div class="rs_right_box_list">
-				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
-				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
-					<div class="rs_r_{$rs_index_r_step}_imgbox">
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-					</div>
-					<div class="rs_right_box_word">
-						<span class="goodspice market">{$goods.market_price}</span>
-						<!-- {if $goods.promote_price neq ""} -->
-						<b class="rs_r_b_f">{$goods.promote_price}</b><br />
-						<!-- {else}-->
-						<b class="rs_r_b_f">{$goods.shop_price}</b><br />
-						<!--{/if}-->
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
-					</div>
-				</div>
-				 <!--{/foreach}-->
-			</div>
 
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">标题</div>
+	<div class="goods_floor_box_title">{$goods.cat_id}</div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-            <div class="">
-                <span>{$goods.market_price}</span>
+            <div style="text-align:center">
+            	<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a><br />
+                <!--<span>{$goods.market_price}</span>-->
                 <!-- {if $goods.promote_price neq ""} -->
                 <b>{$goods.promote_price}</b><br />
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+                
 			</div>
         </div>
     <!--{/foreach}-->    
 </div>
-
-
-
-
-			<div class="rs_right_box_list">
-				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
-				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
-					<div class="rs_r_{$rs_index_r_step}_imgbox">
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-					</div>
-					<div class="rs_right_box_word">
-						<span class="goodspice market">{$goods.market_price}</span>
-						<!-- {if $goods.promote_price neq ""} -->
-						<b class="rs_r_b_f">{$goods.promote_price}</b><br />
-						<!-- {else}-->
-						<b class="rs_r_b_f">{$goods.shop_price}</b><br />
-						<!--{/if}-->
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
-					</div>
-				</div>
-				 <!--{/foreach}-->
-			</div>
 
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">标题</div>
+	<div class="goods_floor_box_title">{$goods.cat_id}</div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-            <div class="">
-                <span>{$goods.market_price}</span>
+            <div style="text-align:center">
+            	<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a><br />
+                <!--<span>{$goods.market_price}</span>-->
                 <!-- {if $goods.promote_price neq ""} -->
                 <b>{$goods.promote_price}</b><br />
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+                
 			</div>
         </div>
     <!--{/foreach}-->    
 </div>
-
-
-
-
-			<div class="rs_right_box_list">
-				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
-				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
-					<div class="rs_r_{$rs_index_r_step}_imgbox">
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-					</div>
-					<div class="rs_right_box_word">
-						<span class="goodspice market">{$goods.market_price}</span>
-						<!-- {if $goods.promote_price neq ""} -->
-						<b class="rs_r_b_f">{$goods.promote_price}</b><br />
-						<!-- {else}-->
-						<b class="rs_r_b_f">{$goods.shop_price}</b><br />
-						<!--{/if}-->
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
-					</div>
-				</div>
-				 <!--{/foreach}-->
-			</div>
 
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">标题</div>
+	<div class="goods_floor_box_title">{$goods.cat_id}</div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-            <div class="">
-                <span>{$goods.market_price}</span>
+            <div style="text-align:center">
+            	<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a><br />
+                <!--<span>{$goods.market_price}</span>-->
                 <!-- {if $goods.promote_price neq ""} -->
                 <b>{$goods.promote_price}</b><br />
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+                
 			</div>
         </div>
     <!--{/foreach}-->    
 </div>
-
-
-
-
-			<div class="rs_right_box_list">
-				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
-				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
-					<div class="rs_r_{$rs_index_r_step}_imgbox">
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-					</div>
-					<div class="rs_right_box_word">
-						<span class="goodspice market">{$goods.market_price}</span>
-						<!-- {if $goods.promote_price neq ""} -->
-						<b class="rs_r_b_f">{$goods.promote_price}</b><br />
-						<!-- {else}-->
-						<b class="rs_r_b_f">{$goods.shop_price}</b><br />
-						<!--{/if}-->
-						<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
-					</div>
-				</div>
-				 <!--{/foreach}-->
-			</div>
 
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->

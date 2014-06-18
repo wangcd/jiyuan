@@ -4,14 +4,15 @@
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
-            <div class="">
-                <span>{$goods.market_price}</span>
+            <div style="text-align:center">
+            	<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a><br />
+                <!--<span>{$goods.market_price}</span>-->
                 <!-- {if $goods.promote_price neq ""} -->
                 <b>{$goods.promote_price}</b><br />
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+                
 			</div>
         </div>
     <!--{/foreach}-->    

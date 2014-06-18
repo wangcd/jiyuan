@@ -1,29 +1,10 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-
+<div class="rs_foot_banner">
+    <img src="images/rs_foot_banner.jpg" />
+</div>
 <div class="rs_foot_wrap">
-	<div class="rs_links_wrap block">
-		<div class="rs_links">
-			<div class="rs_links_tit">友情链接：</div>
-			<!-- {if $img_links} -->
-			<!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
-			<div class="rs_links_img_li">
-				<a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" /></a>
-			</div>
-			<!--结束图片类型的友情链接{/foreach}-->
-			<!-- {/if} -->
-			<!-- {if $txt_links} -->
-			<!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
-			<div class="rs_links_word_li">
-				<a href="{$link.url}" target="_blank" title="{$link.name}" class="linkTxt">{$link.name}</a>
-			</div>
-			<!--结束文字类型的友情链接{/foreach}-->
-			<!-- {/if} -->
-		</div>
-	</div>
-	<div class="rs_foot_banner">
-		<img src="images/rs_foot_banner.jpg" />
-	</div>
+
 	<div class="rs_foot_helps_wrap">
 	<!--{if $helps}-->
 		<div class="rs_foot_helps">
@@ -44,13 +25,14 @@
 	<!--{/if}-->
 	</div>
 	<div class="rs_foot_copy_wrap">
-		<p style="width:195px;height:42px; margin: 0 auto; line-height: 20px;">
-			<img src="images/rs_foot_tel.jpg" style="float:left;" />
-			<span class="rs_ft_stel">订购热线（免长途费）</span><br />
-			<span class="">{$service_phone}</span>
+		<p class="tel_bg">
+			<span class="rs_ft_stel">订购热线（免长途费）</span><br>
+
+			<span class="">{$service_phone}</span><br>
+
+            <span class="f13b">客户服务热线</span>
 		</p>
 		<!-- {if $baojian_tel || $shipin_tel || $jiujiu_tel} -->
-		<p class="f13b">客户服务热线</p>
 			<!-- {if $baojian_tel} -->
 			<span class="plr8">吉元保健食品 </span><span class="plr8">{$baojian_tel}</span>
 			<!-- {/if} -->
@@ -82,6 +64,18 @@
 	</div>
 	<!-- {/if} -->
 </div>
+
+<div class="rs_links_wrap block">
+    <div class="rs_links">
+        <!-- {if $img_links} -->
+        <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+            <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" /></a>
+        <!--结束图片类型的友情链接{/foreach}-->
+        <!-- {/if} -->
+    </div>
+</div>
+
+
 <script type="text/javascript">
 $(function($) {
 	$('#qqflip').hover(

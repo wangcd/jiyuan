@@ -138,8 +138,7 @@ a:active {color: #424242; text-decoration:none;}
 
 /* ====================通用模块==================== */
 .mod1{
-	width:245px;
-	border:3px solid #2b8d17;
+border:1px solid #ccc;  position: relative; min-height:2px; _height:2px; clear: both;
 }
 .mod1 span{
 display:block; width:5px; height:5px; position: absolute; overflow:hidden;
@@ -1322,14 +1321,7 @@ display:block; width:78px; height:38px; border:1px solid #ccc; background:#fff; 
 /******************
 gyyadd 2010 0727
 *******************/
-.Landing{ 
-width: 100%;
-height: 30px;
-line-height: 30px;
-margin: 0 auto;
-background:#f4f4f4}
-
-
+.Landing{ width:1190px; height:30px; line-height:30px; margin:0 auto;}
 .Landing  a{color:#5B5B5B}
 .Landing  a:hover{color:#F47427}
 .rs_welcom {padding-left: 8%;}
@@ -1486,8 +1478,7 @@ _height:1px;
 .rs_br_lft {border-left: 1px solid #CCC;}
 /*************************************************************************/
 
-.rs_head_wrap {width: 1090px; padding-left:100px; height: 141px;}
-
+.rs_head_wrap {width: 1190px; background: #62C40D; height: 141px;}
 .rs_head {width: 1190px; margin: 0 auto; height: 141px; background: #62C40D;}
 .rs_h_logo {float: left; margin: 50px 0 0 60px;}
 .rs_h_logoright {float: left; margin-top: 50px;}
@@ -1495,10 +1486,8 @@ _height:1px;
 .rs_h_bigpic {float: left; position: relative;}
 .rs_h_bigpic_bot {position: absolute; top: 124px; left: -13px;}
 
-.rs_headnav_wrap {width: 100%; background: #4ea90f; height: 42px; margin-bottom: 1px;}
-
-.rs_headnav {width: 1190px; margin: 0 auto; height: 42px; background: #4ea90f;}
-
+.rs_headnav_wrap {width: 1190px; background: #333333; height: 40px; margin-bottom: 1px;}
+.rs_headnav {width: 1190px; margin: 0 auto; height: 40px; background: #333333;}
 .rs_navlist {padding-left: 130px;}
 .rs_navlist li {float: left; /* margin-right: 1px; */}
 .rs_navlist a {float: left; height: 40px; width: 100px; text-align: center; line-height: 40px; color: #FFF; font-size: 14px; font-weight: bold;}
@@ -1517,19 +1506,7 @@ _height:1px;
 .rs_left_box_head {border: 1px solid #CCC; border-top: 2px solid #79AC4F; background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold; padding-left: 13px;}
 .rs_left_box_list {background: #fff; padding-top: 8px;}
 .rs_l_b_l_border {border: 1px solid #CCC; border-top: none;}
-
-
-
-.rs_cate_tree {
-	width: 245px;
-	background: #fff;
-	border-bottom: 3px solid #2b8d17;
-	border-left: 3px solid #2b8d17;
-	border-right: 3px solid #2b8d17;
-	margin-bottom: 10px;}
-
-
-
+.rs_cate_tree {width: 255px; border: 1px solid #CCC; background: #fff;}
 .rs_left_box_head_videoad {margin-bottom: 1px;}
 /***左侧抢购(recommend_promotion_left)********************/
 .rs_left_rp_goodsbox {padding: 0 15px 10px 10px; height: 132px;}
@@ -1546,7 +1523,7 @@ _height:1px;
 .rs_l_ht_word {float: left; width: 82px; height:87px; padding-left: 10px;}
 /*********************************************************/
 /***左侧文章***********************************************/
-.rs_l_art_box {width: 238px; border: 1px solid #CCC; border-top: none; margin-bottom:20px;}
+.rs_l_art_box {width: 238px; margin: 5px 0 0 17px; border: 1px solid #CCC; border-top: none;}
 .rs_left_art_head { border-top: 2px solid #79AC4F;  background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold;}
 .rs_l_art_t_lt {width: 118px; border-right: 1px solid #CCC;}
 .rs_l_art_t_rt {width: 119px;}
@@ -1567,12 +1544,7 @@ _height:1px;
 .rs_right_box_tit_logo {width: 60px; height: 60px; margin-right: 1px; float: left;}
 .rs_right_box_tit_banner {width: 840px; height: 60px; float: left;}
 .rs_right_box_tit_banner img {width: 840px; height: 60px; float: left;}
-
-
 .rs_right_box_list {margin-top: 1px; clear: both; }
-
-
-
 .rs_r_b_goodsbox {float: left; width: 214px; }
 .rs_r_b_goodsbox img {width: 208px;}
 .rs_r_b_goodsbox a {color: #ffe1a8;}
@@ -1603,18 +1575,17 @@ _height:1px;
 /*************************************************************************/
 
 /**************底部*******************************************************/
-.rs_foot_wrap {width: 100%; height: 400px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat -35px 10px; z-index: 1; }
-.rs_links_wrap {margin-top: 24px; background: #fff; height: 40px; padding: 4px 0; text-align:center}
-.rs_links { margin: 0 4px; background: #fff; height:40px;color: #333; overflow: hidden}
+.rs_foot_wrap {width: 100%; height: 621px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat center; position: relative; z-index: 1; }
+.rs_links_wrap {margin-top: 24px; background: #fff; height: 65px; padding: 4px 0;}
+.rs_links { margin: 0 4px; background: #fff; height:63px; border: 1px solid #e5e5e5; color: #333; overflow: hidden}
 .rs_links a {color: #333;}
 .rs_links_tit {float: left; width: 103px; height: 63px; line-height: 63px; background: #e5e5e5; text-align: center; font-weight: bold;}
 .rs_links_img_li {float:left; margin: 4px 0 4px 8px; height: 53px; border: 1px solid #efefef;}
 .rs_links_img_li img {height: 53px;}
 .rs_links_word_li {float:left; margin: 4px 0 4px 8px; height: 55px; line-height: 55px;}
 .rs_foot_banner {clear: both; padding-top: 21px; text-align: center;}
-/*.rs_foot_banner img {width: 915px; height: 44px;}*/
-.rs_foot_helps_wrap {clear: both; padding-top: 21px; margin-bottom:30px;}
-
+.rs_foot_banner img {width: 915px; height: 44px;}
+.rs_foot_helps_wrap {clear: both; padding-top: 21px;}
 .rs_foot_helps {width: 1130px; height: 200px; padding-left: 60px;}
 .rs_helps_box {float: left; padding: 0 15px 0 28px; height: 200px; overflow: hidden;}
 .rs_h_0 {width: 135px;}
@@ -1625,10 +1596,7 @@ _height:1px;
 .rs_h_5 {width: 147px; padding-right: 0;}
 .rs_helps_box dt {font-size: 15px; font-weight: bold; padding: 5px 0 12px 0;}
 .rs_helps_box dd {height: 18px; overflow: hidden; font-size: 13px;}
-.rs_foot_copy_wrap {clear: both; height: 143px; width: 1190px; text-align: center; color: #333;}
-
-
-
+.rs_foot_copy_wrap {clear: both; padding-top: 90px; height: 143px; width: 1190px; text-align: center; color: #333;}
 .rs_foot_copy_wrap p {line-height: 25px;}
 .rs_ft_stel {padding-left: 10px; font-size: 13px; font-weight: bold;}
 .rs_float_window {position: fixed; top: 300px; right:0px; z-index: 100; width: 100px;}
@@ -1640,21 +1608,6 @@ _height:1px;
 
 /*************************************************************************/
 
-
-.main{ width:1190px; margin:0px auto;}
-.left{ width:255px; background:#fff;}
-.xsqg{ width:251px; height:330px; background:url(images/xsqg.jpg); margin-bottom:10px;}
-.right{ width:925px; background: #fff/*fcc*/; padding-top:10px;}
-.banna_bottom{ width:925px; height:140px;}
-.banna_bottom div{ float:left; margin-right:6px; margin-left:5px;}
-.hhth{ width:925px; height:250px;}
-.goods_floor{width:925px;}
-.goods_floor_box{  clear:both;width:925px;overflow:hidden; margin-bottom:10px;}
-.goods_floor_box_title{width:925px; height:50px; line-height:50px; background:url(images/floor.jpg) no-repeat;}
-.goods_floor_list{ width:231px;
-}
-.bottom_ad{ width:1190px;}
-
-
-.tel_bg{width:170px;height:70px; margin: 0 auto; line-height: 20px; background:url(images/tel.gif) no-repeat; padding-left:50px;
-}
+.main{ width:1190px; margin:0px auto; height:100px; border:1px solid;}
+.left{ width:275px; border:1px solid;}
+.right{ width:915px; border:1px solid;}

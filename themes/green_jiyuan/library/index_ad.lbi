@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- {if $index_ad eq 'sys'} -->
   <script type="text/javascript">
-  var swf_width=935;
+  var swf_width=925;
   var swf_height=368;
   </script>
   <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script>
