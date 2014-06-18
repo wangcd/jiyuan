@@ -71,7 +71,7 @@
 	<div class="rs_float_msg"><a href="/message.php" target="_blank"><img src="images/rs_float_window_msg.jpg" /></a></div>
 	<!--{if count($qq) > 0}-->
 	<div class="rs_float_qq" id="qqflip">
-		<span class="flipmove"><img src="images/rs_float_window_qq.jpg" /></span>
+		<span class="flipmove"><img src="images/heng.jpg" /></span>
 		<span class="qqlist">
 			<!-- QQ 号码 {foreach from=$qq item=im} -->
 			<!-- {if $im} -->

@@ -1,7 +1,7 @@
-imgUrl1="data/afficheimg/20140617ulvizp.jpg";
+imgUrl1="data/afficheimg/20140617qxbrck.jpg";
 imgtext1="";
 imgLink1=escape("http://");
-imgUrl2="data/afficheimg/20140617qxbrck.jpg";
+imgUrl2="data/afficheimg/20140618takqvm.jpg";
 imgtext2="";
 imgLink2=escape("http://");
 

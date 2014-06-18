@@ -29,7 +29,6 @@
 	<!--左部-->
     <div class="left fl">
    	  <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
-      <img src="images/tuan.gif"/>
         <img src="images/miao.gif" />
 		<!-- TemplateBeginEditable name="左部模块列表" -->
 <!-- #BeginLibraryItem "/library/group_buy.lbi" -->
@@ -41,7 +40,7 @@
 	<div class="mod1con group">
 	<!--{foreach from=$group_buy_goods item=goods}-->
 	<div class="goodsbox">
-	 <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
+	 <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" class="goodsimg" /></a></div>
 	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
    {$lang.last_price}<b class="f1">{$goods.last_price}</b>
 	</div>
@@ -146,10 +145,45 @@
     <!--右部-->
     <div class="right fr">
 	  <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
-        <img src="images/ad_bottom.gif" />
+      <div class="banna_bottom">
+		<!-- TemplateBeginEditable name="banna下方" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads">
+{insert name='ads' id=$ads_id num=$ads_num}
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+      </div>
+      <div class="hhth">
+      	<img src="images/hhth.jpg" />
+      </div>       
+        
+      <div class="goods_floor">  
 		<!-- TemplateBeginEditable name="商品楼层展示区" -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
+<div class="goods_floor_box">
+	<div class="goods_floor_box_title">标题</div>
+    <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
+    	<div class="goods_floor_list fl">
+        	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+            <div class="">
+                <span>{$goods.market_price}</span>
+                <!-- {if $goods.promote_price neq ""} -->
+                <b>{$goods.promote_price}</b><br />
+                <!-- {else}-->
+                <b>{$goods.shop_price}</b><br />
+                <!--{/if}-->
+                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+			</div>
+        </div>
+    <!--{/foreach}-->    
+</div>
+
+
+
+
 			<div class="rs_right_box_list">
 				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
 				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
@@ -172,6 +206,27 @@
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
+<div class="goods_floor_box">
+	<div class="goods_floor_box_title">标题</div>
+    <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
+    	<div class="goods_floor_list fl">
+        	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+            <div class="">
+                <span>{$goods.market_price}</span>
+                <!-- {if $goods.promote_price neq ""} -->
+                <b>{$goods.promote_price}</b><br />
+                <!-- {else}-->
+                <b>{$goods.shop_price}</b><br />
+                <!--{/if}-->
+                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+			</div>
+        </div>
+    <!--{/foreach}-->    
+</div>
+
+
+
+
 			<div class="rs_right_box_list">
 				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
 				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
@@ -194,6 +249,27 @@
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
+<div class="goods_floor_box">
+	<div class="goods_floor_box_title">标题</div>
+    <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
+    	<div class="goods_floor_list fl">
+        	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+            <div class="">
+                <span>{$goods.market_price}</span>
+                <!-- {if $goods.promote_price neq ""} -->
+                <b>{$goods.promote_price}</b><br />
+                <!-- {else}-->
+                <b>{$goods.shop_price}</b><br />
+                <!--{/if}-->
+                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+			</div>
+        </div>
+    <!--{/foreach}-->    
+</div>
+
+
+
+
 			<div class="rs_right_box_list">
 				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
 				<div class="rs_r_b_goodsbox rs_r_{$rs_index_r_step}_gbox {if $smarty.foreach.catgoods.last neq 1}rs_r_b_gb_unlast{/if}">
@@ -215,6 +291,27 @@
 
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<div class="goods_floor_box">
+	<div class="goods_floor_box_title">标题</div>
+    <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
+    	<div class="goods_floor_list fl">
+        	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+            <div class="">
+                <span>{$goods.market_price}</span>
+                <!-- {if $goods.promote_price neq ""} -->
+                <b>{$goods.promote_price}</b><br />
+                <!-- {else}-->
+                <b>{$goods.shop_price}</b><br />
+                <!--{/if}-->
+                <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a>
+			</div>
+        </div>
+    <!--{/foreach}-->    
+</div>
+
+
+
 
 			<div class="rs_right_box_list">
 				<!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -237,8 +334,9 @@
 
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-        
+    	</div>    
     </div>
+    <div class="bottom_ad">
     <!--底部全航空广告展示-->
 	<!-- TemplateBeginEditable name="底部全行宽广告" -->
 <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
@@ -248,7 +346,7 @@
 </div>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-
+	</div>
 </div>
 
 

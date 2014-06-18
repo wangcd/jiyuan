@@ -1523,7 +1523,7 @@ _height:1px;
 .rs_l_ht_word {float: left; width: 82px; height:87px; padding-left: 10px;}
 /*********************************************************/
 /***左侧文章***********************************************/
-.rs_l_art_box {width: 238px; margin: 5px 0 0 17px; border: 1px solid #CCC; border-top: none;}
+.rs_l_art_box {width: 238px; border: 1px solid #CCC; border-top: none; margin-bottom:20px;}
 .rs_left_art_head { border-top: 2px solid #79AC4F;  background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold;}
 .rs_l_art_t_lt {width: 118px; border-right: 1px solid #CCC;}
 .rs_l_art_t_rt {width: 119px;}
@@ -1544,7 +1544,12 @@ _height:1px;
 .rs_right_box_tit_logo {width: 60px; height: 60px; margin-right: 1px; float: left;}
 .rs_right_box_tit_banner {width: 840px; height: 60px; float: left;}
 .rs_right_box_tit_banner img {width: 840px; height: 60px; float: left;}
+
+
 .rs_right_box_list {margin-top: 1px; clear: both; }
+
+
+
 .rs_r_b_goodsbox {float: left; width: 214px; }
 .rs_r_b_goodsbox img {width: 208px;}
 .rs_r_b_goodsbox a {color: #ffe1a8;}
@@ -1611,4 +1616,12 @@ _height:1px;
 
 .main{ width:1190px; margin:0px auto;}
 .left{ width:255px; background:#9CF;}
-.right{ width:935px; background: #9CC;}
+.right{ width:935px; background: #fff;}
+.banna_bottom{ width:915px; height:140px; padding:10px 10px 10px 10px;}
+.hhth{ width:915px; height:250px; padding:10px 10px 10px 10px;}
+.goods_floor{width:915px; padding:10px 10px 10px 10px;}
+.goods_floor_box{  clear:both;width:915px;overflow:hidden; margin-bottom:10px;}
+.goods_floor_box_title{width:915px; height:50px; line-height:50px; background:url(images/floor.jpg) no-repeat;}
+.goods_floor_list{ width:228px;
+}
+.bottom_ad{ width:1190px;}
