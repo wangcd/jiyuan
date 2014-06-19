@@ -1675,7 +1675,7 @@ padding-left: 130px;
 .gdcp{ display:block; float:right; width:60px; height:18px; line-height:18px; border:1px solid #CCC; text-align:center; margin-right:30px; color:#CCC !important;}
 .goods_floor_list{ width:231px;
 }
-.bottom_ad{ width:1190px;}
+.bottom_ad{ width:1190px; clear:both}
 
 
 .tel_bg{width:170px;height:70px; margin: 0 auto; line-height: 20px; background:url(images/tel.gif) no-repeat; padding-left:50px;

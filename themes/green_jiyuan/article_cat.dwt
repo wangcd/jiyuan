@@ -35,7 +35,7 @@
 	</div>
 	<div id="pageRight" class="fr">
 	<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
-	<div class="mod1" id="articleCat">
+	<div class="" id="articleCat">
 	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
 	<h1 class="mod1tit">{$lang.article_list}</p>
 	 <div class="more">

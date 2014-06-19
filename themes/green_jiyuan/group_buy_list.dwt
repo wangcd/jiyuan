@@ -19,7 +19,6 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
 	 <!-- TemplateBeginEditable name="左边区域" -->

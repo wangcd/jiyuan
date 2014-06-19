@@ -35,7 +35,6 @@ var select_spe = "{$lang.select_spe}";
 <div class="rs_headnav_wrap">
 	<div class="rs_headnav">
 		<ul class="rs_navlist">
-			<li {if $navigator_list.config.index eq 1} class="rs_curt" {/if}>{if $navigator_list.config.index eq 1}<span class="l"></span><span class="r"></span>{/if}<a href="../index.php">{$lang.home}</a></li>
 			<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
 			<li {if $nav.active eq 1} class="rs_curt"{/if}>{if $nav.active eq 1} <span class="l"></span><span class="r"></span>{/if}<a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></li>
 			<!-- {/foreach} -->
