@@ -335,8 +335,16 @@ font-weight:bold; font-size:14px; padding:0 10px; position:relative;
 position:absolute; top:0px; right:10px; font-weight:100; font-size:12px;
 }
 .cagegoryTit a,.cagegoryTit a:visited{color:#fff;}
+/*商品分类列表*/
 .cagegoryCon{
-padding:5px 10px;
+	padding:5px 10px;
+	background: #fff;
+	border-bottom: 3px solid #2b8d17;
+	border-left: 3px solid #2b8d17;
+	border-right: 3px solid #2b8d17;
+	border-top: 3px solid #2b8d17;
+	margin-bottom: 10px;
+	border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px 10px 0px 0px;-o-border-radius:10px;
 }
    .cagegoryCon dl{
 	 border-bottom:1px solid #ececec; margin-bottom:2px; padding-bottom:1px; padding-top:2px;
@@ -1495,9 +1503,18 @@ _height:1px;
 .rs_h_bigpic {float: left; position: relative;}
 .rs_h_bigpic_bot {position: absolute; top: 124px; left: -13px;}
 
-.rs_headnav_wrap {width: 100%; background: #4ea90f; height: 42px; margin-bottom: 1px;}
+.rs_headnav_wrap {width: 100%; background: #4ea90f; height: 42px; margin-bottom: 1px;
 
-.rs_headnav {width: 1190px; margin: 0 auto; height: 42px; background: #4ea90f;}
+
+}
+
+.rs_headnav {
+width: 1060px;
+margin: 0 auto;
+height: 42px;
+background: #4ea90f;
+padding-left: 130px;	
+}
 
 .rs_navlist {padding-left: 130px;}
 .rs_navlist li {float: left; /* margin-right: 1px; */}
@@ -1521,12 +1538,9 @@ _height:1px;
 
 
 .rs_cate_tree {
-	width: 245px;
-	background: #fff;
-	border-bottom: 3px solid #2b8d17;
-	border-left: 3px solid #2b8d17;
-	border-right: 3px solid #2b8d17;
-	margin-bottom: 10px;}
+	width: 251px;
+	margin-top:-30px;
+}
 
 
 
@@ -1643,14 +1657,22 @@ _height:1px;
 
 .main{ width:1190px; margin:0px auto;}
 .left{ width:255px; background:#fff;}
-.xsqg{ width:251px; height:330px; background:url(images/xsqg.jpg); margin-bottom:10px;}
+/*哼哼秒杀*/
+.xsqg{width: 221px;
+		height: 260px;
+		background: url(images/xsqg.jpg);
+		overflow: hidden;
+		margin-bottom: 10px;
+		padding: 60px 20px 10px 10px;
+}
 .right{ width:925px; background: #fff/*fcc*/; padding-top:10px;}
-.banna_bottom{ width:925px; height:140px;}
+.banna_bottom{ width:925px; height:140px; margin-bottom: 10px;}
 .banna_bottom div{ float:left; margin-right:6px; margin-left:5px;}
 .hhth{ width:925px; height:250px;}
 .goods_floor{width:925px;}
 .goods_floor_box{  clear:both;width:925px;overflow:hidden; margin-bottom:10px;}
 .goods_floor_box_title{width:925px; height:50px; line-height:50px; background:url(images/floor.jpg) no-repeat;}
+.gdcp{ display:block; float:right; width:60px; height:18px; line-height:18px; border:1px solid #CCC; text-align:center; margin-right:30px; color:#CCC !important;}
 .goods_floor_list{ width:231px;
 }
 .bottom_ad{ width:1190px;}

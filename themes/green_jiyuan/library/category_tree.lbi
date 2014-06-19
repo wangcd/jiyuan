@@ -1,6 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="rs_cate_tree">
     <div class="cagegoryCon clearfix">
+    <p style="font-size:20px; font-weight:500; color:#2b8d17; font-weight:900; text-align:center; height:40px; line-height:40px;">所有商品分类</p>
     <!--{foreach from=get_categories_tree() item=cat}-->
      <dl>
      <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>

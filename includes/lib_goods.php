@@ -159,7 +159,7 @@ function get_top10($cats = '')
            "AND (o.pay_status = '" . PS_PAYED . "' OR o.pay_status = '" . PS_PAYING . "') " .
            "AND (o.shipping_status = '" . SS_SHIPPED . "' OR o.shipping_status = '" . SS_RECEIVED . "') " .
            'GROUP BY g.goods_id ORDER BY goods_number DESC, g.goods_id DESC LIMIT ' . $GLOBALS['_CFG']['top_number'];
-           
+
     $arr = $GLOBALS['db']->getAll($sql);
 
     for ($i = 0, $count = count($arr); $i < $count; $i++)
@@ -297,7 +297,7 @@ function get_recommend_goods($type = '', $cats = '')
         $type_merge = array_unique($type_merge);
         $sql .= ' WHERE g.goods_id ' . db_create_in($type_merge);
         $sql .= ' ORDER BY g.sort_order, g.last_update DESC';
-        
+
         $result = $GLOBALS['db']->getAll($sql);
         foreach ($result AS $idx => $row)
         {
@@ -368,7 +368,7 @@ function get_promote_goods($cats = '')
     $sql .= $order_type == 0 ? ' ORDER BY g.sort_order, g.last_update DESC' : ' ORDER BY rnd';
     $sql .= " LIMIT $num ";
     $result = $GLOBALS['db']->getAll($sql);
-	
+
     $goods = array();
     foreach ($result AS $idx => $row)
     {
@@ -381,7 +381,7 @@ function get_promote_goods($cats = '')
         {
             $goods[$idx]['promote_price'] = '';
         }
-		
+
         $goods[$idx]['end_date'] = $row['promote_end_date'];
         $goods[$idx]['end_date_str'] = date('M j,Y H:i:s',$row['promote_end_date']);
         $goods[$idx]['id']           = $row['goods_id'];
@@ -397,7 +397,7 @@ function get_promote_goods($cats = '')
         $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
         $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
     }
-	
+
     return $goods;
 }
 
@@ -787,7 +787,7 @@ function assign_cat_goods($cat_id, $num = 0, $from = 'web', $order_rule = '')
 		$tmp_p = $promote_price > 0 ? $promote_price : $row['shop_price'];
 		@$goods[$idx]['discount_rate'] = floor($tmp_p*100/$row['market_price'])/10;
 		/****************************************************************************************/
-		
+
         $goods[$idx]['id']           = $row['goods_id'];
         $goods[$idx]['name']         = $row['goods_name'];
         $goods[$idx]['brief']        = $row['goods_brief'];
@@ -814,7 +814,6 @@ function assign_cat_goods($cat_id, $num = 0, $from = 'web', $order_rule = '')
     $cat['name'] = $GLOBALS['db']->getOne($sql);
     $cat['url']  = build_uri('category', array('cid' => $cat_id), $cat['name']);
     $cat['id']   = $cat_id;
-
     return $cat;
 }
 

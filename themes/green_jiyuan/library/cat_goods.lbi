@@ -1,6 +1,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">{$goods.cat_id}</div>
+	<div class="goods_floor_box_title">
+    	<a href="../search.php" class="gdcp">更多产品</a>
+    </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
@@ -17,3 +19,6 @@
         </div>
     <!--{/foreach}-->    
 </div>
+<script>
+
+</script>
