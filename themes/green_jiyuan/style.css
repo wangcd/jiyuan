@@ -1586,7 +1586,7 @@ padding-left: 130px;
 .rs_l_ht_word {float: left; width: 82px; height:87px; padding-left: 10px;}
 /***左侧热销 修改 (recommend_hot_left)***************************/
 
-.rs_left_box2 {width: 257px;}
+.rs_left_box2 {width: 257px; margin-bottom:20px;}
 .rs_left_box_head {border: 1px solid #CCC; background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold; padding-left: 13px;}
 .rs_left_hot_list{ border-left:1px solid #CCC; border-bottom:1px solid #CCC; border-right:1px solid #CCC;}
 .rs_left_box_listnone{ border-bottom: none !important;}
