@@ -64,74 +64,68 @@
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
 
-<div class="xsqg">
-<!-- {if $promotion_goods} -->
-<div class="module">
-	<h1 class="modTitle"><p>{$lang.promotion_goods}</p><a href="../search.php?intro=promotion" class="more">more</a></h1>
-	<div class="promotion_goods">
-	 <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
-	 <!-- {if $smarty.foreach.promotion_foreach.index lt 3} 限制显示数量 -->
-   
-   <div class="goodsbox">
-	   <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}"/></a></div>
-	 	 <strong class="f1">{$goods.promote_price}</strong><br />
-	   <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|truncate:4}</a>
-	</div>
-	 <!-- {/if} -->
-   <!--{/foreach}-->
-	</div>
-</div>
+<!-- {assign var=all_pro_goods value=get_promote_goods()} -->
+<!-- {* if $promotion_goods *} -->
+<!-- {if $all_pro_goods} -->
+		<div class="rs_left_box1">
+			<div class="rs_left_recomm_box_list">
+				<!--{foreach from=get_promote_goods() item=goods name="promotion_foreach"}-->
+				<!-- {if $smarty.foreach.promotion_foreach.index lt 1} 限制显示数量 -->
+				<div class="rs_left_rp_goodsbox">
+					<div class="rs_l_rp_imgbox1">
+						<a href="{$goods.url}" target="_blank">
+						
+						<img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+						</a>
+					</div>
+					<div class="rs_l_rp_word1">
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>	
+                     </div>	
+                     <div class="rs_l_rp_word2">			
+                         <!-- {if $goods.promote_price neq ""} -->
+                         <b class="f1 fc">{$goods.promote_price}</b>
+                         <!-- {else}-->
+                         <b class="f1 fc">{$goods.shop_price}</b>
+                         <!--{/if}-->
+                         <b class="time">剩余时间</b>
+                       </div>
+						<a href="goods-1.html" target="_blank" class="qianggou"></a>
+					   
+				</div>
+				<!-- {/if} -->
+				<!--{/foreach}-->
+			</div>
+		</div>
 <!-- {/if} -->
-</div>
-
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
 
-
 <!-- {if $hot_goods} -->
-<!-- {if $cat_rec_sign neq 1} -->
-	 <div class="mod1 blank"style="border:none" >
-	  <span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
-      
-
-
-<h1 class="mod1tita" style=" background:url(images/index_bg25.gif) no-repeat;" >
-		 
-		 <div class="more best" id="itemBest" >
-		  {if $cat_rec[3]}
-      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(3, 0);">{$lang.all_goods}</a> |</h2>
-      {foreach from=$cat_rec[3] item=rec_data}
-      <h2 class="h2bg">
-			<a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(3, {$rec_data.cat_id})">{$rec_data.cat_name}</a> |
-			</h2>
-      {/foreach}
-      {/if}
-		  <a href="../search.php?intro=hot">更多<img src="images/tubiao1.gif" style=" position:absolute; top: 10px; left: 505px;" /></a>
-		 </div>
-		</h1>
-
-
-		<div class="recommendContent entry-content"  id="show_hot_area" >
-        
-		<!-- {/if} -->
-		 <!--{foreach from=$hot_goods item=goods}-->
-			<div class="goodsbox" >
-				<div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
-			 <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
-              <font class="goodspice market">{$goods.market_price}</font>
-			 <!-- {if $goods.promote_price neq ""} -->
-			 <b class="f1">{$goods.promote_price}</b><br />
-			 <!-- {else}-->
-			 <b class="f1">{$goods.shop_price}</b><br />
-			 <!--{/if}-->
-
+		<div class="rs_left_box2">
+			<div class="rs_left_box_head"><a href="../search.php?intro=hot" target="_blank">热销商品</a></div>
+            <div class="rs_left_hot_list">
+			<!--{foreach from=$hot_goods item=goods name="hot_foreach"}-->
+			<!-- {if $smarty.foreach.hot_foreach.index lt 6} 限制显示数量 -->
+			<div class="rs_left_box_list">
+				<div class="rs_left_goodsbox {if $smarty.foreach.hot_foreach.last} rs_left_box_listnone {/if}">
+					<div class="rs_l_ht_imgbox"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+                    </div>
+					<div class="rs_l_ht_word">
+                        <a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+						
+                         <!-- {if $goods.promote_price neq ""} -->
+                         <b class="f1">{$goods.promote_price}</b><br />
+                         <!-- {else}-->
+                         <b class="f1">{$goods.shop_price}</b><br />
+                         <!--{/if}-->
+					</div>
+				</div>
 			</div>
-		<!--{/foreach}-->
-		<!-- {if $cat_rec_sign neq 1} -->
+			<!--{/if}-->
+			<!--{/foreach}-->
+            </div>
 		</div>
-
-   </div>
-<!-- {/if} -->
 <!-- {/if} -->
 
 
@@ -174,6 +168,19 @@
 	</div>
 	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
 	</div>
+    
+    <div class="bottom_ad">
+    <!--底部全航空广告展示-->
+	<!-- TemplateBeginEditable name="底部全行宽广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads">
+{insert name='ads' id=$ads_id num=$ads_num}
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+	</div>  
+    
 </div>
 
 <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->

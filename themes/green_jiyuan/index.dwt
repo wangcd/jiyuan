@@ -30,8 +30,8 @@
     <div class="left fl">
    	  <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
 	<!-- TemplateBeginEditable name="左部模块列表" -->
-    <!--今日团购-->
 <!-- #BeginLibraryItem "/library/group_buy.lbi" -->
+
 <!-- {if $group_buy_goods} -->
 <div class="blank" id="left_groups">
 	<!--{foreach from=$group_buy_goods item=goods}-->
@@ -49,9 +49,8 @@
 </div>
 <!-- {/if} -->
  <!-- #EndLibraryItem -->
- 
- <!--哼哼秒杀-->
-<!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
+
 <!-- {assign var=all_pro_goods value=get_promote_goods()} -->
 <!-- {* if $promotion_goods *} -->
 <!-- {if $all_pro_goods} -->
@@ -86,9 +85,8 @@
 		</div>
 <!-- {/if} -->
  <!-- #EndLibraryItem -->
- 
- <!--热销商品-->
-<!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+
 <!-- {if $hot_goods} -->
 		<div class="rs_left_box2">
 			<div class="rs_left_box_head"><a href="../search.php?intro=hot" target="_blank">热销商品</a></div>
@@ -116,6 +114,9 @@
             </div>
 		</div>
 <!-- {/if} -->
+
+
+
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
         <!--行业资讯  商城资讯 开始-->
@@ -169,7 +170,9 @@
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">{$goods.cat_id}</div>
+	<div class="goods_floor_box_title">
+    	<a href="../search.php" class="gdcp">更多产品</a>
+    </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
@@ -186,12 +189,16 @@
         </div>
     <!--{/foreach}-->    
 </div>
+<script>
 
+</script>
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">{$goods.cat_id}</div>
+	<div class="goods_floor_box_title">
+    	<a href="../search.php" class="gdcp">更多产品</a>
+    </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
@@ -208,12 +215,16 @@
         </div>
     <!--{/foreach}-->    
 </div>
+<script>
 
+</script>
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">{$goods.cat_id}</div>
+	<div class="goods_floor_box_title">
+    	<a href="../search.php" class="gdcp">更多产品</a>
+    </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
@@ -230,12 +241,16 @@
         </div>
     <!--{/foreach}-->    
 </div>
+<script>
 
+</script>
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">{$goods.cat_id}</div>
+	<div class="goods_floor_box_title">
+    	<a href="../search.php" class="gdcp">更多产品</a>
+    </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
     	<div class="goods_floor_list fl">
         	<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
@@ -252,7 +267,9 @@
         </div>
     <!--{/foreach}-->    
 </div>
+<script>
 
+</script>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
     	</div>    

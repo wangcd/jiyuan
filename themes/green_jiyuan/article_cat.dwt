@@ -29,9 +29,36 @@
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
 	 <!-- TemplateBeginEditable name="左边区域" -->
-	 <!-- #BeginLibraryItem "/library/article_category_tree.lbi" --><!-- #EndLibraryItem -->
-	 <!-- #BeginLibraryItem "/library/helpleft.lbi" --><!-- #EndLibraryItem -->
-   <!-- TemplateEndEditable -->
+<!-- #BeginLibraryItem "/library/article_category_tree.lbi" -->
+
+<!-- {if $article_categories } -->
+<div class="mod1 mod2 blank" id="historybox">
+<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
+<h1 class="mod2tit">{$lang.article_cat}</h1>
+
+
+<div class="cagegoryConNew clearfix">
+		 <!--{foreach from=$article_categories item=cat}-->
+			<div class="goodsbox1">
+			 <div class="helpTit1"><a href="{$cat.url}">{$cat.name|escape:html}</a></div>
+			 <div class="helpList1 tl">
+				 <!--{foreach from=$cat.children item=child}-->
+				·<a href="{$child.url}">{$child.name|escape:html}</a><br />
+				 <!--{/foreach}-->
+			 </div>
+			</div>
+		 <!-- {/foreach} -->	
+		</div>
+
+
+</div>
+<!--{/if} -->
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- #BeginLibraryItem "/library/helpleft.lbi" --><!-- #EndLibraryItem -->
 	</div>
 	<div id="pageRight" class="fr">
 	<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
@@ -66,10 +93,21 @@
 	</div>
 	<script type="text/javascript">divheight("articleCat");</script>
 	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
-	<!-- TemplateBeginEditable name="文章列表下可编辑区域" -->  
-  <!-- TemplateEndEditable -->
+	<!-- TemplateBeginEditable name="文章列表下可编辑区域" -->
+<!-- TemplateEndEditable -->
 
 	</div>
+    <div class="bottom_ad">
+    <!--底部全航空广告展示-->
+	<!-- TemplateBeginEditable name="底部全行宽广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads">
+{insert name='ads' id=$ads_id num=$ads_num}
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+	</div>      
 </div>
 
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
