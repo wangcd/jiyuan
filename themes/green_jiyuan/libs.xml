@@ -81,6 +81,9 @@
       <lib>goods_attrlinked</lib>
       <lib>history</lib>
       <lib>goods_article</lib>
+	  <lib>recommend_hot</lib>
+	  <lib>group_buy</lib>
+	  <lib>recommend_promotion</lib>
     </region>
     <region name="右边可编辑区">
       <lib>comments</lib>
@@ -98,6 +101,9 @@
       <lib>category_tree</lib>
       <lib>history</lib>
       <lib>promotion_info</lib>
+	  <lib>group_buy</lib>
+	  <lib>recommend_promotion</lib>
+	  <lib>recommend_hot</lib>	  
     </region>
   </file>
   <file name="index.dwt">
@@ -138,6 +144,9 @@
       <lib>top10</lib>
       <lib>history</lib>
       <lib>promotion_info</lib>
+	  <lib>group_buy</lib>
+	  <lib>recommend_promotion</lib>
+	  <lib>recommend_hot</lib>
     </region>
   </file>
   <file name="snatch.dwt">

@@ -20,11 +20,135 @@
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
 	 <!-- TemplateBeginEditable name="左边区域" -->
-	 <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem --> 
-	 <!-- #BeginLibraryItem "/library/top10.lbi" --><!-- #EndLibraryItem -->
-	 <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
-	 <!-- #BeginLibraryItem "/library/promotion_info.lbi" --><!-- #EndLibraryItem -->
-   <!-- TemplateEndEditable -->
+<!-- #BeginLibraryItem "/library/category_tree.lbi" -->
+
+<div class="rs_cate_tree">
+    <div class="cagegoryCon clearfix">
+    <p style="font-size:20px; font-weight:500; color:#2b8d17; font-weight:900; text-align:center; height:40px; line-height:40px;">所有商品分类</p>
+    <!--{foreach from=get_categories_tree() item=cat}-->
+     <dl>
+     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+     <!--{if $cat.cat_id}-->
+     <dd class="clearfix">
+     <!--{foreach name=childs from=$cat.cat_id item=child}-->
+         <p onMouseOver="this.className='itemsbg'" onMouseOut="this.className=''"><a href="{$child.url}" title="{$child.name|escape:html}">{$child.name|escape:html}</a></p>
+     <!--{/foreach}-->
+     </dd>
+     <!--{/if}-->
+     </dl>
+     <!--{/foreach}-->
+    </div>
+<div class="blank"></div>
+</div>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
+
+<div class="xsqg">
+<!-- {if $promotion_goods} -->
+<div class="module">
+	<h1 class="modTitle"><p>{$lang.promotion_goods}</p><a href="../search.php?intro=promotion" class="more">more</a></h1>
+	<div class="promotion_goods">
+	 <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+	 <!-- {if $smarty.foreach.promotion_foreach.index lt 3} 限制显示数量 -->
+   
+   <div class="goodsbox">
+	   <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}"/></a></div>
+	 	 <strong class="f1">{$goods.promote_price}</strong><br />
+	   <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|truncate:4}</a>
+	</div>
+	 <!-- {/if} -->
+   <!--{/foreach}-->
+	</div>
+</div>
+<!-- {/if} -->
+</div>
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/group_buy.lbi" -->
+
+<!-- {if $group_buy_goods} -->
+<div class="blank" id="left_groups">
+	<!--{foreach from=$group_buy_goods item=goods}-->
+	<div class="goodsbox">
+	 <div class="imgbox1"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
+     
+	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
+    <div class="fontbox">
+   ￥{$lang.last_price}<b class="f1">{$goods.last_price}</b>
+   <del>原价：{$goods.market_price}</del>
+   <a href="{$goods.url}" title="{$goods.name|escape:html}" class="imgbut"></a>
+   </div>
+</div>
+ <!--{/foreach}-->
+</div>
+<!-- {/if} -->
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+
+<!-- {if $hot_goods} -->
+		<div class="rs_left_box2">
+			<div class="rs_left_box_head"><a href="../search.php?intro=hot" target="_blank">热销商品</a></div>
+            <div class="rs_left_hot_list">
+			<!--{foreach from=$hot_goods item=goods name="hot_foreach"}-->
+			<!-- {if $smarty.foreach.hot_foreach.index lt 6} 限制显示数量 -->
+			<div class="rs_left_box_list">
+				<div class="rs_left_goodsbox {if $smarty.foreach.hot_foreach.last} rs_left_box_listnone {/if}">
+					<div class="rs_l_ht_imgbox"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a>
+                    </div>
+					<div class="rs_l_ht_word">
+                        <a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+						
+                         <!-- {if $goods.promote_price neq ""} -->
+                         <b class="f1">{$goods.promote_price}</b><br />
+                         <!-- {else}-->
+                         <b class="f1">{$goods.shop_price}</b><br />
+                         <!--{/if}-->
+					</div>
+				</div>
+			</div>
+			<!--{/if}-->
+			<!--{/foreach}-->
+            </div>
+		</div>
+<!-- {/if} -->
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/top10.lbi" -->
+
+<!--{if $top_goods}-->
+	
+
+<div class="mod1 mod2 blank" id="topbox"><h1 class="mod3tit">{$lang.top10}</h1>
+	<span class="lb"></span><span class="rb"></span>
+
+	 <ul id="top10">
+		 <!-- {foreach name=top_goods from=$top_goods item=goods}-->
+		  <li>
+			 <div class="first">
+			  <div class="fl">
+				<font style="color:#F00; font-weight:bold; border: red 1px solid">{$smarty.foreach.top_goods.iteration}.</font> <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name}</a>
+				</div>
+				<div class="fr"><b class="f1">{$goods.price}</b></div>
+			 </div> 
+			 <div class="last">
+			  <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" align="left" /></a>
+				<b class="f1">{$smarty.foreach.top_goods.iteration}。</b> <a href="{$goods.url}" title="{$goods.name|escape:html}"><b>{$goods.short_name}</b></a><br />
+				{$lang.shop_price}<b class="f1">{$goods.price}</b><br /> 
+			 </div>
+			</li>
+		 <!-- {/foreach} -->	
+		 </ul>
+</div>
+<script type="text/javascript">
+top10("top10","cur");
+divheight("topbox");
+</script>
+<!--{/if}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
 	</div>
 	<div id="pageRight" class="fr">
 	

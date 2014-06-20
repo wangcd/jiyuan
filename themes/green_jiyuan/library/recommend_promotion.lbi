@@ -1,20 +1,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="xsqg">
-<!-- {if $promotion_goods} -->
-<div class="module">
-	<h1 class="modTitle"><p>{$lang.promotion_goods}</p><a href="../search.php?intro=promotion" class="more">more</a></h1>
-	<div class="promotion_goods">
-	 <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
-	 <!-- {if $smarty.foreach.promotion_foreach.index lt 3} 限制显示数量 -->
-   
-   <div class="goodsbox">
-	   <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}"/></a></div>
-	 	 <strong class="f1">{$goods.promote_price}</strong><br />
-	   <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|truncate:4}</a>
-	</div>
-	 <!-- {/if} -->
-   <!--{/foreach}-->
-	</div>
-</div>
+<!-- {assign var=all_pro_goods value=get_promote_goods()} -->
+<!-- {* if $promotion_goods *} -->
+<!-- {if $all_pro_goods} -->
+		<div class="rs_left_box1">
+			<div class="rs_left_recomm_box_list">
+				<!--{foreach from=get_promote_goods() item=goods name="promotion_foreach"}-->
+				<!-- {if $smarty.foreach.promotion_foreach.index lt 1} 限制显示数量 -->
+				<div class="rs_left_rp_goodsbox">
+					<div class="rs_l_rp_imgbox1">
+						<a href="{$goods.url}" target="_blank">
+						
+						<img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+						</a>
+					</div>
+					<div class="rs_l_rp_word1">
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>	
+                     </div>	
+                     <div class="rs_l_rp_word2">			
+                         <!-- {if $goods.promote_price neq ""} -->
+                         <b class="f1 fc">{$goods.promote_price}</b>
+                         <!-- {else}-->
+                         <b class="f1 fc">{$goods.shop_price}</b>
+                         <!--{/if}-->
+                         <b class="time">剩余时间</b>
+                       </div>
+						<a href="goods-1.html" target="_blank" class="qianggou"></a>
+					   
+				</div>
+				<!-- {/if} -->
+				<!--{/foreach}-->
+			</div>
+		</div>
 <!-- {/if} -->
-</div>

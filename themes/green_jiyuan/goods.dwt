@@ -31,7 +31,8 @@
   <div id="pageLeft" class="fl">
 <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/group_buy.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->
 
 	 <!-- TemplateBeginEditable name="左边区域" -->
 <!-- #BeginLibraryItem "/library/goods_attrlinked.lbi" -->
@@ -57,39 +58,6 @@
 <script type="text/javascript">divheight("attribute{$smarty.foreach.links.iteration}");</script>
 <!-- {/if} -->
 <!-- 结束属性关联的商品 {/foreach}-->
- <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/history.lbi" -->
-
-<h1 class="mod2tit" style="background:url(images/cateBg.gif); height:27px;"><font  style="color:#fff">{$lang.view_history}</font></h1>
-<div id='history_div'>
-<div class="mod1 mod2 blank" id="historybox">
-	<span class="lb"></span><span class="rb"></span>
-
-	<div id='history_list' class="history_list mod2con">
-	 {insert name='history'}
-  </div>
-</div>
-</div>
-<script type="text/javascript">
-divheight("historybox");
-if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
-{
-    document.getElementById('history_div').style.display='none';
-}
-else
-{
-    document.getElementById('history_div').style.display='block';
-}
-function clear_history()
-{
-Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
-}
-function clear_history_Response(res)
-{
-document.getElementById('history_list').innerHTML = '{$lang.no_history}';
-}
-</script>
-
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/goods_article.lbi" -->
 
@@ -351,12 +319,6 @@ document.getElementById('history_list').innerHTML = '{$lang.no_history}';
 </div>
 <div class="block pb8 rs_bgf rs_ptR">
 	<!-- TemplateBeginEditable name="友情链接上方广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 </div>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

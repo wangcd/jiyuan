@@ -157,6 +157,9 @@ $page_libs = array(
         '/library/goods_related.lbi' => 0,
         '/library/goods_article.lbi' => 0,
         '/library/relatetag.lbi' => 0,
+		'/library/group_buy.lbi' => 3,
+		'/library/recommend_promotion.lbi' => 4,
+		'/library/recommend_hot.lbi' => 3,
     ),
     'search_result' => array(
         '/library/ur_here.lbi' => 0,
@@ -203,6 +206,9 @@ $page_libs = array(
         '/library/cart.lbi' => 0,
         '/library/top10.lbi' => 0,
         '/library/history.lbi' => 0,
+		'/library/group_buy.lbi' => 3,
+		'/library/recommend_promotion.lbi' => 4,
+		'/library/recommend_hot.lbi' => 3,
     ),
     'search' => array(
         '/library/ur_here.lbi' => 0,
@@ -213,6 +219,9 @@ $page_libs = array(
         '/library/cart.lbi' => 0,
         '/library/top10.lbi' => 0,
         '/library/history.lbi' => 0,
+		'/library/group_buy.lbi' => 3,
+		'/library/recommend_promotion.lbi' => 4,
+		'/library/recommend_hot.lbi' => 3,
     ),
     'snatch' => array(
         '/library/ur_here.lbi' => 0,
