@@ -464,6 +464,18 @@ padding:15px 0 10px 25px; *padding:15px 0 10px 30px;
 .group .goodsbox .imgbox{
 	width:170px; border:1px solid #e9e9e9; margin:0 auto 5px auto;
 	}
+	
+	/**group修改***/
+	#left_groups{ width:255px; height:255px; overflow:hidden; background:url(images/tuangou_11.jpg) no-repeat; z-index:1;}
+.goodsbox .imgbox{	width:160px;height:160px;	margin:0 auto 5px auto;	overflow:hidden; border:0 !important;	} 
+.goodsbox{ width:220px; margin:0 auto; margin-top:20px; margin-left:25px; overflow:hidden;}
+.imgbox1{width: 160px; height: 165px;}
+.imgbox1 img{ width:150px; height:150px; border:0;}
+.fontbox{ margin-left:-60px;}
+.imgbut{ float:right; width:80px; height:35px; margin-top:-10px; margin-right:5px;}
+.f1{color:#383838; font-size:14px;}
+	
+	
 /*brands*/
 .brandboxs1{ height: 200px;}
 .brandboxs1 h1 a{ float:right; font-size:10px; font-weight: normal;}
@@ -1551,6 +1563,20 @@ padding-left: 130px;
 .rs_l_rp_imgbox img {width:130px; height:130px;}
 .rs_l_rp_sale_img {width: 65px; height: 67px; position: absolute; top:0;left:0; z-index: 2; background: url(images/sales_pro.gif) no-repeat;}
 .rs_l_rp_word {width: 76px; height: 132px; float: left; padding-left: 5px;}
+/***左侧抢购   修改(recommend_promotion_left)********************/
+.rs_left_box1{ height:340px; overflow:hidden; background:url(images/miaosha_13.jpg) no-repeat;}
+.rs_left_recomm_box_list{ width:240px; margin:0 auto; margin-top:50px;}
+.rs_left_rp_goodsbox {padding: 0 15px 10px 10px; height: 250px; margin-top:80px;}
+.rs_l_rp_imgbox1 {width:160px; height:160px; border: 1px solid #CCC; position: relative; z-index: 1;}
+.rs_l_rp_imgbox1 img {width:160px; height:160px; border:0;}
+.rs_l_rp_word1 {width: 160px; text-align:center; line-height:30px;}
+.fc{ color:#F00;}
+.rs_l_rp_word2{width: 150px; text-align:left; line-height:30px; float:left;}
+.time{ margin-left:10px;}
+.qianggou{width: 60px; height: 20px; float: left; margin-top: 10px;}
+
+
+
 /*********************************************************/
 /***左侧热销(recommend_hot_left)***************************/
 .rs_left_ht_goodsbox {padding: 0 15px 8px 10px; height: 87px;}
@@ -1558,6 +1584,21 @@ padding-left: 130px;
 .rs_l_ht_imgbox {float: left; width: 85px; height: 85px; border: 1px solid #CCC; margin-left: 10px;}
 .rs_l_ht_imgbox img {width: 85px; height: 85px;}
 .rs_l_ht_word {float: left; width: 82px; height:87px; padding-left: 10px;}
+/***左侧热销 修改 (recommend_hot_left)***************************/
+
+.rs_left_box2 {width: 257px;}
+.rs_left_box_head {border: 1px solid #CCC; background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold; padding-left: 13px;}
+.rs_left_hot_list{ border-left:1px solid #CCC; border-bottom:1px solid #CCC; border-right:1px solid #CCC;}
+.rs_left_box_listnone{ border-bottom: none !important;}
+.rs_left_goodsbox{padding: 0 15px 8px 10px; height: 87px; border-bottom:1px solid #ccc; width: 200px;}
+.rs_left_box_list {background: #fff; padding-top: 8px; padding-bottom:5px;}
+.rs_l_b_l_border {border: 1px solid #CCC; border-top: none;}
+.rs_left_box_head_videoad {margin-bottom: 1px;}
+.rs_l_ht_sort {float: left; width: 26px; height: 28px;}
+.rs_l_ht_imgbox {float: left; width: 85px; height: 85px; border: 1px solid #CCC; margin-left: 10px;}
+.rs_l_ht_imgbox img {width: 85px; height: 85px;}
+.rs_l_ht_word {float: left; width: 82px; height:87px; padding-left: 10px;}
+
 /*********************************************************/
 /***左侧文章***********************************************/
 .rs_l_art_box {width: 238px; border: 1px solid #CCC; border-top: none; margin-bottom:20px;}
