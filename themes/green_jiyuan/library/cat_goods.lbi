@@ -1,7 +1,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="goods_floor_box">
 	<div class="goods_floor_box_title">
-    	{$good_cat.name|escape:html}
+    	<!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}-->           
+            <span><!-- {$goods_cat.name} --></span>
+        <!--{/foreach}-->
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->

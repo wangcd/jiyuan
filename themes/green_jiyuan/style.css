@@ -468,7 +468,7 @@ padding:15px 0 10px 25px; *padding:15px 0 10px 30px;
 	/**group修改***/
 	#left_groups{ width:255px; height:255px; overflow:hidden; background:url(images/tuangou_11.jpg) no-repeat; z-index:1;}
 .goodsbox .imgbox{	width:160px;height:160px;	margin:0 auto 5px auto;	overflow:hidden; border:0 !important;	} 
-.goodsbox{ width:220px; margin:0 auto; margin-top:20px; margin-left:25px; overflow:hidden;}
+.goodsbox{ width:220px; margin:0 auto; margin-top:22px; margin-left:25px; overflow:hidden;}
 .imgbox1{width: 160px; height: 165px;}
 .imgbox1 img{ width:150px; height:150px; border:0;}
 .fontbox{ margin-left:-60px;}
@@ -1586,7 +1586,7 @@ padding-left: 130px;
 .rs_l_ht_word {float: left; width: 82px; height:87px; padding-left: 10px;}
 /***左侧热销 修改 (recommend_hot_left)***************************/
 
-.rs_left_box2 {width: 257px; margin-bottom:20px;}
+.rs_left_box2 {width: 257px;}
 .rs_left_box_head {border: 1px solid #CCC; background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold; padding-left: 13px;}
 .rs_left_hot_list{ border-left:1px solid #CCC; border-bottom:1px solid #CCC; border-right:1px solid #CCC;}
 .rs_left_box_listnone{ border-bottom: none !important;}
@@ -1601,10 +1601,10 @@ padding-left: 130px;
 
 /*********************************************************/
 /***左侧文章***********************************************/
-.rs_l_art_box {width: 238px; border: 1px solid #CCC; border-top: none; margin-bottom:20px;}
-.rs_left_art_head { border-top: 2px solid #79AC4F;  background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold;}
-.rs_l_art_t_lt {width: 118px; border-right: 1px solid #CCC;}
-.rs_l_art_t_rt {width: 119px;}
+.rs_l_art_box {width: 255px; border: 1px solid #CCC; margin-bottom:20px; margin-top:10px;}
+.rs_left_art_head { background: #F2F2F2; height: 35px; line-height: 35px; font-size: 15px; color: #000; font-weight: bold;}
+.rs_l_art_t_lt {width: 49.5%; border-right: 1px solid #CCC;}
+.rs_l_art_t_rt {width: 49.9%;}
 .rs_l_art_tit {float: left; padding: 0; text-align: center; border-bottom: 1px solid #CCC;}
 .rs_l_art_t_cur {background: #fff; border-bottom: none; height: 36px;}
 .rs_l_art_list {display: table-cell; width: 238px; margin-top: 1px; padding:0;}
@@ -1658,7 +1658,7 @@ padding-left: 130px;
 /*************************************************************************/
 
 /**************底部*******************************************************/
-.rs_foot_wrap {width: 100%; height: 400px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat -35px 10px; z-index: 1; }
+.rs_foot_wrap {width: 100%; height: 400px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat; z-index: 1; }
 .rs_links_wrap {margin-top: 24px; background: #fff; height: 40px; padding: 4px 0; text-align:center}
 .rs_links { margin: 0 4px; background: #fff; height:40px;color: #333; overflow: hidden}
 .rs_links a {color: #333;}
@@ -1713,6 +1713,7 @@ padding-left: 130px;
 .goods_floor{width:925px;}
 .goods_floor_box{  clear:both;width:925px;overflow:hidden; margin-bottom:10px;}
 .goods_floor_box_title{width:925px; height:50px; line-height:50px; background:url(images/floor.jpg) no-repeat;}
+.goods_floor_box_title span{ font-size:24px; font-weight:800; margin-left:40px; line-height:30px;}
 .gdcp{ display:block; float:right; width:60px; height:18px; line-height:18px; border:1px solid #CCC; text-align:center; margin-right:30px; color:#CCC !important;}
 .goods_floor_list{ width:231px;
 }
@@ -1721,3 +1722,11 @@ padding-left: 130px;
 
 .tel_bg{width:170px;height:70px; margin: 0 auto; line-height: 20px; background:url(images/tel.gif) no-repeat; padding-left:50px;
 }
+
+/*首页楼层  样式**/
+/*.rs_igl_tit_img span{ margin-left:40px;font-size: 20px; font-weight: bold;}
+.goods_floor_title_1{ background:url(images/floor1.jpg) no-repeat;}
+.goods_floor_title_2{ background:url(images/floor2.jpg) no-repeat;}
+.goods_floor_title_3{ background:url(images/floor3.jpg) no-repeat;}
+.goods_floor_title_4{ background:url(images/floor4.jpg) no-repeat;}
+.goods_floor_title_5{ background:url(images/floor5.jpg) no-repeat;}*/
