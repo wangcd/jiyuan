@@ -220,7 +220,7 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 <!-- {/foreach} -->	
 
 <!--商品搜索条件开始-->
-	<!--{if $brands.1 || $price_grade.1 || $filter_attr_list}--><!-- {/if} -->
+	<!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
 	<div class="mod1 blank" id="filter">
 	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
 	<h1 class="mod1tita1">{$lang.goods_filter}</h1>
@@ -263,6 +263,7 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
       <!--{/foreach}--> 
 		</div>
 	</div>
+<!-- {/if} -->    
 	<script type="text/javascript">divheight("filter");</script>
 <!--商品搜索条件结束-->
    
