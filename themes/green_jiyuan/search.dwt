@@ -219,79 +219,53 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 	<h4><span>{$brand_data.brand_name}</span>({$brand_data.goods_num})</h4>
 <!-- {/foreach} -->	
 
-<!--搜索框判断开始-->
-	<div class="blank" id="searchbox">
+<!--商品搜索条件开始-->
+	<!--{if $brands.1 || $price_grade.1 || $filter_attr_list}--><!-- {/if} -->
+	<div class="mod1 blank" id="filter">
 	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
-	<h1 class="mod1tit">{$lang.advanced_search}</h1>
+	<h1 class="mod1tita1">{$lang.goods_filter}</h1>
 	<div class="mod1con">
-				<form action="search.php" method="get" name="advancedSearchForm" id="advancedSearchForm">
-							<table width="100%" border="0" align="center" cellpadding="0" cellspacing="8">
-								<tr>
-									<td align="right">{$lang.brand}：</td>
-									<td><select name="brand" id="brand" class="InputBorder">
-											<option value="0">{$lang.all_brand}</option>
-											{html_options options=$brand_list selected=$adv_val.brand}
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td align="right">{$lang.price}：</td>
-									<td><input name="min_price" type="text" id="min_price" class="InputBorder" value="{$adv_val.min_price}" size="10" maxlength="8" />
-										-
-										<input name="max_price" type="text" id="max_price" class="InputBorder" value="{$adv_val.max_price}" size="10" maxlength="8" />
-									</td>
-								</tr>
-								<!--{if $goods_type_list}-->
-								<tr>
-									<td align="right">{$lang.extension}：</td>
-									<td><select name="goods_type" onchange="this.form.submit()" class="InputBorder">
-											<option value="0">{$lang.all_option}</option>
-											{html_options options=$goods_type_list selected=$goods_type_selected}
-										</select>
-									</td>
-								</tr>
-								<!--{/if}-->
-								<!--{if $goods_type_selected > 0}-->
-								<!--{foreach from=$goods_attributes item=item}-->
-								<!--{if $item.type eq 1}-->
-								<tr>
-									<td align="right">{$item.attr}：</td>
-									<td colspan="3"><input name="attr[{$item.id}]" value="{$item.value}" class="InputBorder" type="text" size="20" maxlength="120" /></td>
-								</tr>
-								<!--{/if}-->
-								<!--{if $item.type eq 2}-->
-								<tr>
-									<td align="right">{$item.attr}：</td>
-									<td colspan="3"><input name="attr[{$item.id}][from]" class="InputBorder" value="{$item.value.from}" type="text" size="5" maxlength="5" />
-										-
-										<input name="attr[{$item.id}][to]" value="{$item.value.to}"  class="InputBorder" type="text" maxlength="5" /></td>
-								</tr>
-								<!--{/if}-->
-								<!--{if $item.type eq 3}-->
-								<tr>
-									<td align="right">{$item.attr}：</td>
-									<td colspan="3"><select name="attr[{$item.id}]" class="InputBorder">
-											<option value="0">{$lang.all_option}</option>
-											{html_options options=$item.options selected=$item.value}
-										</select></td>
-								</tr>
-								<!--{/if}-->
-								<!--{/foreach}-->
-								<!--{/if}-->
-
-								<!-- {if $use_storage eq 1} -->
-								<tr>
-									<td align="right">&nbsp;</td>
-									<td><label for="outstock"><input type="checkbox" name="outstock" value="1" id="outstock" <!-- {if $outstock} -->checked="checked"<!--{/if}-->/> {$lang.hidden_outstock}</label></td>
-								</tr>
-								<!--{/if}-->
-						</table>
-						</form>
-	 </div>
+		  <!--{if $brands.1}-->
+			<div class="screeBox">
+			  <strong>{$lang.brand}：</strong>
+				<!--{foreach from=$brands item=brand}-->
+					<!-- {if $brand.selected} -->
+					<p>{$brand.brand_name}</p>
+					<!-- {else} -->
+					<a href="{$brand.url}">{$brand.brand_name}</a>&nbsp;
+					<!-- {/if} -->
+				<!--{/foreach}-->
+			</div>
+			<!--{/if}-->
+			<!--{if $price_grade.1}-->
+			<div class="screeBox">
+			<strong>{$lang.price}：</strong>
+			<!--{foreach from=$price_grade item=grade}-->
+				<!-- {if $grade.selected} -->
+				<p>{$grade.price_range}</p>
+				<!-- {else} -->
+				<a href="{$grade.url}">{$grade.price_range}</a>&nbsp;
+				<!-- {/if} -->
+			<!--{/foreach}-->
+			</div>
+			<!--{/if}-->
+	  <!--{foreach from=$filter_attr_list item=filter_attr}-->
+      <div class="screeBox">
+			<strong>{$filter_attr.filter_attr_name|escape:html}：</strong>
+			<!--{foreach from=$filter_attr.attr_list item=attr}-->
+				<!-- {if $attr.selected} -->
+				<p>{$attr.attr_value}</p>
+				<!-- {else} -->
+				<a href="{$attr.url}">{$attr.attr_value}</a>&nbsp;
+				<!-- {/if} -->
+			<!--{/foreach}-->
+	  </div>
+      <!--{/foreach}--> 
+		</div>
 	</div>
-	<script type="text/javascript">divheight("searchbox");</script>
-	<!--搜索框判断结束-->
-
+	<script type="text/javascript">divheight("filter");</script>
+<!--商品搜索条件结束-->
+   
 <div class="goods_list"><!--商品显示框-->
 	    <!-- {if isset($goods_list)} -->
     <div class="goodsTitle clearfix blank">
