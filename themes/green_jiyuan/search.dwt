@@ -214,6 +214,10 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 	</div>
 	<div id="pageRight" class="fr">
     <!-- #BeginLibraryItem "/library/index_ad1.lbi" --><!-- #EndLibraryItem -->
+    
+<!-- {foreach from=$brand_list name="brand_list_foreach" item=brand_data} -->
+	<h4><span>{$brand_data.brand_name}</span>({$brand_data.goods_num})</h4>
+<!-- {/foreach} -->	
 
 <!--搜索框判断开始-->
 	<div class="blank" id="searchbox">
@@ -222,20 +226,6 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 	<div class="mod1con">
 				<form action="search.php" method="get" name="advancedSearchForm" id="advancedSearchForm">
 							<table width="100%" border="0" align="center" cellpadding="0" cellspacing="8">
-								<tr>
-									<td width="22%" align="right" valign="top">{$lang.keywords}：</td>
-									<td width="78%">
-										<input name="keywords" id="keywords" type="text" size="40" maxlength="120" class="InputBorder" value="{$adv_val.keywords}" />
-										<label for="sc_ds"><input type="checkbox" name="sc_ds" value="1" id="sc_ds" {$scck} />{$lang.sc_ds}</label>
-										<br />{$lang.searchkeywords_notice}
-									</td>
-								</tr>
-								<tr>
-									<td align="right">{$lang.category}：</td>
-									<td><select name="category" id="select" class="InputBorder">
-											<option value="0">{$lang.all_category}</option>{$cat_list}</select>
-									</td>
-								</tr>
 								<tr>
 									<td align="right">{$lang.brand}：</td>
 									<td><select name="brand" id="brand" class="InputBorder">
@@ -295,11 +285,6 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 									<td><label for="outstock"><input type="checkbox" name="outstock" value="1" id="outstock" <!-- {if $outstock} -->checked="checked"<!--{/if}-->/> {$lang.hidden_outstock}</label></td>
 								</tr>
 								<!--{/if}-->
-
-								<tr>
-									<td colspan="4" align="center"><input type="hidden" name="action" value="form" />
-										<input type="submit" name="Submit" value="{$lang.button_search}" class="bnt_number4" /></td>
-								</tr>
 						</table>
 						</form>
 	 </div>

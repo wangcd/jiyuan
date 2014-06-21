@@ -36,7 +36,7 @@
 	<!--{foreach from=$group_buy_goods item=goods}-->
 	<div class="goodsbox">
 	 <div class="imgbox1"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
-
+     
 	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
     <div class="fontbox">
    ￥{$lang.last_price}<b class="f1">{$goods.last_price}</b>
@@ -60,14 +60,14 @@
 				<div class="rs_left_rp_goodsbox">
 					<div class="rs_l_rp_imgbox1">
 						<a href="{$goods.url}" target="_blank">
-
+						
 						<img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
 						</a>
 					</div>
 					<div class="rs_l_rp_word1">
-						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>
-                     </div>
-                     <div class="rs_l_rp_word2">
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>	
+                     </div>	
+                     <div class="rs_l_rp_word2">			
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1 fc">{$goods.promote_price}</b>
                          <!-- {else}-->
@@ -76,7 +76,7 @@
                          <b class="time">剩余时间</b>
                        </div>
 						<a href="goods-1.html" target="_blank" class="qianggou"></a>
-
+					   
 				</div>
 				<!-- {/if} -->
 				<!--{/foreach}-->
@@ -99,7 +99,7 @@
 					<div class="rs_l_ht_word">
                         <a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
 						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
-
+						
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1">{$goods.promote_price}</b><br />
                          <!-- {else}-->
@@ -169,7 +169,9 @@
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">
+<!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
+	<div class="goods_floor_box_title">  	          
+            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -183,19 +185,24 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-
+                
 			</div>
         </div>
     <!--{/foreach}-->
+<!--{/foreach}-->  
 </div>
 <script>
-
+$(function(){
+	$(".goods_floor_box_title").css("background-image","images/floor.jpg");
+})
 </script>
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">
+<!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
+	<div class="goods_floor_box_title">  	          
+            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -209,19 +216,24 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-
+                
 			</div>
         </div>
     <!--{/foreach}-->
+<!--{/foreach}-->  
 </div>
 <script>
-
+$(function(){
+	$(".goods_floor_box_title").css("background-image","images/floor.jpg");
+})
 </script>
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">
+<!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
+	<div class="goods_floor_box_title">  	          
+            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -235,19 +247,24 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-
+                
 			</div>
         </div>
     <!--{/foreach}-->
+<!--{/foreach}-->  
 </div>
 <script>
-
+$(function(){
+	$(".goods_floor_box_title").css("background-image","images/floor.jpg");
+})
 </script>
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
 
 <div class="goods_floor_box">
-	<div class="goods_floor_box_title">
+<!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
+	<div class="goods_floor_box_title">  	          
+            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -261,13 +278,16 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-
+                
 			</div>
         </div>
     <!--{/foreach}-->
+<!--{/foreach}-->  
 </div>
 <script>
-
+$(function(){
+	$(".goods_floor_box_title").css("background-image","images/floor.jpg");
+})
 </script>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->

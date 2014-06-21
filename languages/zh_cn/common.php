@@ -96,7 +96,7 @@ $_LANG['is_cancel'] = '取消';
 $_LANG['amend_amount'] = '修改数量';
 $_LANG['end'] = '结束';
 $_LANG['require_field'] = '(必填)';
-$_LANG['search_result'] = '搜索结果';
+$_LANG['search_result'] = "商品显示";
 $_LANG['order_number'] = '订单号';
 $_LANG['consignment'] = '发货单';
 $_LANG['activities'] = '商品正在进行的活动';
@@ -374,7 +374,7 @@ $_LANG['pick_out'] = '选购中心';
 $_LANG['fit_count'] = "共有 %s 件商品符合条件";
 $_LANG['goods_type'] = "商品类型";
 $_LANG['remove_all'] = '移除所有';
-$_LANG['advanced_search'] = '高级搜索';
+$_LANG['advanced_search'] = "商品筛选";
 $_LANG['activity'] = '本商品正在进行';
 $_LANG['order_not_exists'] = "非常抱歉，没有找到指定的订单。请和网站管理员联系。";
 
