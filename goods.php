@@ -280,6 +280,7 @@ $db->query('UPDATE ' . $ecs->table('goods') . " SET click_count = click_count + 
 $smarty->assign('group_buy_goods', index_get_group_buy());      // 团购商品
 $smarty->assign('promotion_goods', get_promote_goods()); // 特价商品
 $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
+ $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //
 
 $smarty->assign('now_time',  gmtime());           // 当前系统时间
 $smarty->display('goods.dwt',      $cache_id);

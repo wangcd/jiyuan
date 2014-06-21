@@ -107,6 +107,26 @@ document.getElementById('history_list').innerHTML = '{$lang.no_history}';
 <!-- {/if} -->			
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
+
+        <!--行业资讯  商城资讯 开始-->
+        <div class="rs_l_art_box">
+			<div class="rs_left_art_head">
+			<!--{foreach from=$rs_articles item=titartcats name="artcat_foreach"}-->
+				<div class="rs_l_art_tit {if $smarty.foreach.artcat_foreach.first} rs_l_art_t_lt rs_l_art_t_cur {else} rs_l_art_t_rt {/if}" onmouseover="rs_tabs(this , 'rs_l_art_tit' , 'rs_art_tabs' , {$smarty.foreach.artcat_foreach.index}, 'rs_l_art_t_cur');">{$titartcats.cat_name}</div>
+			<!--{/foreach}-->
+			</div>
+			<div class="rs_left_box_list rs_l_art_list">
+			<!--{foreach from=$rs_articles item=artcats name="artcat2_foreach"}-->
+				<ul class="rs_art_tabs" style="{if $smarty.foreach.artcat2_foreach.first neq 1} display:none; {/if} ">
+					<!--{foreach from=$artcats.article item=cat_articles name="catarts_foreach"}-->
+						<li class="{if $smarty.foreach.catarts_foreach.last} rs_br_bot_none {/if}"><a href="{$cat_articles.url}" target="_blank">{$cat_articles.title}</a></li>
+					<!--{/foreach}-->
+				</ul>
+			<!--{/foreach}-->
+			</div>
+		</div>
+        <!--行业资讯  商城资讯 结束-->
+
 	</div>
 	<div id="pageRight" class="fr">
 	
@@ -264,5 +284,27 @@ onload = function()
   {}
 }
 <!-- {/literal} -->
+</script>
+<!--鼠标切换js Star-->
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+	for(i=1;i<=n;i++){
+	var menu=document.getElementById(name+i);
+	var con=document.getElementById("con_"+name+"_"+i);
+	menu.className=i==cursel?"hover":"";
+	con.style.display=i==cursel?"block":"none";
+	}
+}
+
+function rs_tabs(obj, o_c, to_c, num, cur) {
+	$("."+o_c).removeClass(cur);
+	$(obj).addClass(cur);
+	$("."+to_c).hide();
+	$("."+to_c).eq(num).show();
+	return false;
+}
+-->
 </script>
 </html>

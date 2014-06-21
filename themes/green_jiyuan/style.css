@@ -585,7 +585,7 @@ background: url(images/helpIcon001.gif) no-repeat  6px center;
 /*-------帮助中心第二版仿凡客end--------*/
 /*位置*/
 .ur_here{
-width:990px; height:29px; line-height:30px; padding:0 0 0 10px; background:url(images/ico-crumb.png) no-repeat left center; text-indent:10px; overflow:hidden;
+width:900px !important; height:29px; line-height:30px; padding:0 0 0 10px; background:url(images/ico-crumb.png) no-repeat left center; text-indent:10px; overflow:hidden;
 }
 .ur_here span{height:29px; display:block; overflow:hidden; position:absolute;}
 
@@ -818,9 +818,10 @@ line-height:27px;
 font-weight:bold;
 font-size:14px;
 padding:0 5px;
-border-bottom: #4ea307 2px solid;
+background: url(images/baike_bg.jpg) left center;
+/*border-bottom: #4ea307 2px solid;
 background: url(images/biao_title211.jpg) no-repeat;
-color: #fff;
+color: #fff;*/
 clear: both;
 }
 
@@ -1615,7 +1616,7 @@ padding-left: 130px;
 
 /**************右侧*******************************************************/
 .rs_main_right_index {width:933px; position: relative; top:0; background: #fff; }
-.rs_r_b_f {color: #ffe1a8;}
+/*.rs_r_b_f {color: #ffe1a8;}*/
 .rs_r_b_gb_unlast {margin-right: 7px;}
 .rs_right_box {padding: 0 16px 0 16px;  clear: both;}
 .rs_right_box_tit {padding-top: 10px; display: table-cell;}
@@ -1630,7 +1631,8 @@ padding-left: 130px;
 
 .rs_r_b_goodsbox {float: left; width: 214px; }
 .rs_r_b_goodsbox img {width: 208px;}
-.rs_r_b_goodsbox a {color: #ffe1a8;}
+/
+/*商品下文字颜色.rs_r_b_goodsbox a {color: #ffe1a8;}*/
 .rs_right_box_word {padding: 8px 0; text-align: center;}
 /***右侧新品(recommend_new)********************************/
 .rs_r_new_tit {padding-top: 5px;}
@@ -1639,9 +1641,9 @@ padding-left: 130px;
 .rs_r_new_word_box {position: absolute; bottom:20px;left:15px; z-index: 2;  width: 110px; height: 18px; font-size: 15px; padding: 10px 20px; overflow: hidden; background:#fff; filter:Alpha(opacity=60);background: rgba(255, 255, 255, 0.4);}
 .rs_r_new_word {color: #000; text-align: center;/* position: absolute; bottom:30px;left:35px; width: 110px; height: 18px; overflow: hidden; font-size: 15px; */}
 /*********************************************************/
-/***右侧1楼(cat_goods)************************************/
-.rs_r_1_gbox {border: 3px solid #A9D828; background: #059B1D;}
-.rs_r_1_imgbox {border: 3px solid #059B1D;}
+/***商品样式右侧1楼(cat_goods)************************************/
+/*.rs_r_1_gbox {border: 3px solid #A9D828; background: #059B1D;}
+.rs_r_1_imgbox {border: 3px solid #059B1D;}*/
 /*********************************************************/
 /***右侧2楼(cat_goods)************************************/
 .rs_r_2_gbox {border: 3px solid #6fc9e2; background: #1a91c3;}
@@ -1658,7 +1660,7 @@ padding-left: 130px;
 /*************************************************************************/
 
 /**************底部*******************************************************/
-.rs_foot_wrap {width: 100%; height: 400px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat; z-index: 1; }
+.rs_foot_wrap {width: 100%; height: 400px; overflow: hidden; background: url(images/rs_foot_bg.jpg) no-repeat -35px 10px; z-index: 1; }
 .rs_links_wrap {margin-top: 24px; background: #fff; height: 40px; padding: 4px 0; text-align:center}
 .rs_links { margin: 0 4px; background: #fff; height:40px;color: #333; overflow: hidden}
 .rs_links a {color: #333;}
@@ -1712,7 +1714,7 @@ padding-left: 130px;
 .hhth{ width:925px; height:250px;}
 .goods_floor{width:925px;}
 .goods_floor_box{  clear:both;width:925px;overflow:hidden; margin-bottom:10px;}
-.goods_floor_box_title{width:925px; height:50px; line-height:50px; background:url(images/floor.jpg) no-repeat;}
+.goods_floor_box_title{width:925px; height:50px; line-height:50px; background:url(images/floor.jpg) no-repeat; }
 .goods_floor_box_title span{ font-size:24px; font-weight:800; margin-left:40px; line-height:30px;}
 .gdcp{ display:block; float:right; width:60px; height:18px; line-height:18px; border:1px solid #CCC; text-align:center; margin-right:30px; color:#CCC !important;}
 .goods_floor_list{ width:231px;
@@ -1730,3 +1732,11 @@ padding-left: 130px;
 .goods_floor_title_3{ background:url(images/floor3.jpg) no-repeat;}
 .goods_floor_title_4{ background:url(images/floor4.jpg) no-repeat;}
 .goods_floor_title_5{ background:url(images/floor5.jpg) no-repeat;}*/
+.goods_list{ border:1px solid #ccc;}  /*商品列表   整个部分    新加div 的 class */
+.goodsTitle{ height:35px; background:#DDDDDD; border-bottom:1px solid #ccc;}
+.goods_list_content{ margin-left:10px;}/*商品图片展示    新加class*/
+.goodsTitle h3{ font-size:16px !important; line-height:35px !important;}
+.goodsTitle span{ padding-left:20px;}
+.goodsTitle h3 .sort{ margin-right:10px;}
+.rs_r_b_gb_unlast{ margin:5px !important;}
+.pagebar form{ margin-right:10px;}

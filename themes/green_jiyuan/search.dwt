@@ -16,6 +16,11 @@
 <script type="text/javascript" src="js/action.js"></script>
 </head>
 <body>
+<!--商品品牌开始-->
+     <!-- {foreach from=$brand_list name="brand_list_foreach" item=brand_data} -->
+						<a href="{$brand_data.url}">{$brand_data.brand_name}</a>
+	 <!-- {/foreach} -->
+<!--商品品牌结束-->
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
@@ -48,7 +53,7 @@
 	<!--{foreach from=$group_buy_goods item=goods}-->
 	<div class="goodsbox">
 	 <div class="imgbox1"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
-     
+
 	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
     <div class="fontbox">
    ￥{$lang.last_price}<b class="f1">{$goods.last_price}</b>
@@ -72,14 +77,14 @@
 				<div class="rs_left_rp_goodsbox">
 					<div class="rs_l_rp_imgbox1">
 						<a href="{$goods.url}" target="_blank">
-						
+
 						<img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
 						</a>
 					</div>
 					<div class="rs_l_rp_word1">
-						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>	
-                     </div>	
-                     <div class="rs_l_rp_word2">			
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>
+                     </div>
+                     <div class="rs_l_rp_word2">
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1 fc">{$goods.promote_price}</b>
                          <!-- {else}-->
@@ -88,7 +93,7 @@
                          <b class="time">剩余时间</b>
                        </div>
 						<a href="goods-1.html" target="_blank" class="qianggou"></a>
-					   
+
 				</div>
 				<!-- {/if} -->
 				<!--{/foreach}-->
@@ -111,7 +116,7 @@
 					<div class="rs_l_ht_word">
                         <a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
 						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
-						
+
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1">{$goods.promote_price}</b><br />
                          <!-- {else}-->
@@ -132,7 +137,7 @@
 <!-- #BeginLibraryItem "/library/top10.lbi" -->
 
 <!--{if $top_goods}-->
-	
+
 
 <div class="mod1 mod2 blank" id="topbox"><h1 class="mod3tit">{$lang.top10}</h1>
 	<span class="lb"></span><span class="rb"></span>
@@ -145,14 +150,14 @@
 				<font style="color:#F00; font-weight:bold; border: red 1px solid">{$smarty.foreach.top_goods.iteration}.</font> <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name}</a>
 				</div>
 				<div class="fr"><b class="f1">{$goods.price}</b></div>
-			 </div> 
+			 </div>
 			 <div class="last">
 			  <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" align="left" /></a>
 				<b class="f1">{$smarty.foreach.top_goods.iteration}。</b> <a href="{$goods.url}" title="{$goods.name|escape:html}"><b>{$goods.short_name}</b></a><br />
-				{$lang.shop_price}<b class="f1">{$goods.price}</b><br /> 
+				{$lang.shop_price}<b class="f1">{$goods.price}</b><br />
 			 </div>
 			</li>
-		 <!-- {/foreach} -->	
+		 <!-- {/foreach} -->
 		 </ul>
 </div>
 <script type="text/javascript">
@@ -163,11 +168,55 @@ divheight("topbox");
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 
+        <!--行业资讯  商城资讯 开始-->
+        <div class="rs_l_art_box">
+			<div class="rs_left_art_head">
+			<!--{foreach from=$rs_articles item=titartcats name="artcat_foreach"}-->
+				<div class="rs_l_art_tit {if $smarty.foreach.artcat_foreach.first} rs_l_art_t_lt rs_l_art_t_cur {else} rs_l_art_t_rt {/if}" onmouseover="rs_tabs(this , 'rs_l_art_tit' , 'rs_art_tabs' , {$smarty.foreach.artcat_foreach.index}, 'rs_l_art_t_cur');">{$titartcats.cat_name}</div>
+			<!--{/foreach}-->
+			</div>
+			<div class="rs_left_box_list rs_l_art_list">
+			<!--{foreach from=$rs_articles item=artcats name="artcat2_foreach"}-->
+				<ul class="rs_art_tabs" style="{if $smarty.foreach.artcat2_foreach.first neq 1} display:none; {/if} ">
+					<!--{foreach from=$artcats.article item=cat_articles name="catarts_foreach"}-->
+						<li class="{if $smarty.foreach.catarts_foreach.last} rs_br_bot_none {/if}"><a href="{$cat_articles.url}" target="_blank">{$cat_articles.title}</a></li>
+					<!--{/foreach}-->
+				</ul>
+			<!--{/foreach}-->
+			</div>
+		</div>
+        <!--行业资讯  商城资讯 结束-->
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+//	alert("111");
+	for(i=1;i<=n;i++){
+	var menu=document.getElementById(name+i);
+	var con=document.getElementById("con_"+name+"_"+i);
+	menu.className=i==cursel?"hover":"";
+	con.style.display=i==cursel?"block":"none";
+	}
+}
+
+function rs_tabs(obj, o_c, to_c, num, cur) {
+//	alert("111");
+	$("."+o_c).removeClass(cur);
+	$(obj).addClass(cur);
+	$("."+to_c).hide();
+	$("."+to_c).eq(num).show();
+	return false;
+}
+-->
+</script>
+
+
 	</div>
 	<div id="pageRight" class="fr">
-	
-	<!-- {if $action eq "form"} 搜索表单-->
-	<div class="mod1 blank" id="searchbox">
+    <!-- #BeginLibraryItem "/library/index_ad1.lbi" --><!-- #EndLibraryItem -->
+
+<!--搜索框判断开始-->
+	<div class="blank" id="searchbox">
 	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
 	<h1 class="mod1tit">{$lang.advanced_search}</h1>
 	<div class="mod1con">
@@ -239,14 +288,14 @@ divheight("topbox");
 								<!--{/if}-->
 								<!--{/foreach}-->
 								<!--{/if}-->
-					
+
 								<!-- {if $use_storage eq 1} -->
 								<tr>
 									<td align="right">&nbsp;</td>
 									<td><label for="outstock"><input type="checkbox" name="outstock" value="1" id="outstock" <!-- {if $outstock} -->checked="checked"<!--{/if}-->/> {$lang.hidden_outstock}</label></td>
 								</tr>
 								<!--{/if}-->
-					
+
 								<tr>
 									<td colspan="4" align="center"><input type="hidden" name="action" value="form" />
 										<input type="submit" name="Submit" value="{$lang.button_search}" class="bnt_number4" /></td>
@@ -256,7 +305,9 @@ divheight("topbox");
 	 </div>
 	</div>
 	<script type="text/javascript">divheight("searchbox");</script>
-	<!-- {/if} -->	
+	<!--搜索框判断结束-->
+
+<div class="goods_list"><!--商品显示框-->
 	    <!-- {if isset($goods_list)} -->
     <div class="goodsTitle clearfix blank">
     <h3>
@@ -322,7 +373,7 @@ divheight("topbox");
     </li>
     <li>
 
-  
+
     <font class="market">{$lang.market_price}{$goods.market_price}</font><br />
 
     <!--{if $goods.promote_price neq "" } -->
@@ -332,8 +383,8 @@ divheight("topbox");
     <!--{/if}-->
     </li>
     <li class="action">
-		<a href="javascript:addToCart({$goods.goods_id})">购买</a> | 
-		<a href="javascript:collect({$goods.goods_id})">收藏</a> |  
+		<a href="javascript:addToCart({$goods.goods_id})">购买</a> |
+		<a href="javascript:collect({$goods.goods_id})">收藏</a> |
 		<a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:"quotes"}','{$goods.type}')">比较</a>
     </li>
     </ul>
@@ -348,6 +399,8 @@ divheight("topbox");
 				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name|escape:html}" /></a>
 			</div>
 			<div class="rs_right_box_word">
+            	<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.goods_name|escape:html}</a><br />
+
 				<!-- {if $show_marketprice} -->
 				<span class="goodspice market">{$goods.market_price}</span>
 				<!-- {/if} -->
@@ -356,12 +409,12 @@ divheight("topbox");
 				<!-- {else}-->
 				<b class="rs_r_b_f">{$goods.shop_price}</b><br />
 				<!--{/if}-->
-				<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.goods_name|escape:html}</a>
+				
 			</div>
 		</div>
     <!--{/if}-->
     <!--{/foreach}-->
-    </div>		
+    </div>
 					<!-- {elseif $pager.display == 'text'} -->
 					<div class="cateGoodList">
     <!--{foreach name=goods_list from=$goods_list item=goods}-->
@@ -379,9 +432,9 @@ divheight("topbox");
     <!-- {/if} -->
     </li>
     <li>
-    
+
     <font class="market">{$lang.market_price}{$goods.market_price}</font><br />
-   
+
     <!--{if $goods.promote_price neq "" } -->
     <font class="price">{$lang.promote_price}{$goods.promote_price}</font><br />
     <!--{else}-->
@@ -389,8 +442,8 @@ divheight("topbox");
     <!--{/if}-->
     </li>
     <li class="action">
-		<a href="javascript:addToCart({$goods.goods_id})">购买</a> | 
-		<a href="javascript:collect({$goods.goods_id})">收藏</a> |  
+		<a href="javascript:addToCart({$goods.goods_id})">购买</a> |
+		<a href="javascript:collect({$goods.goods_id})">收藏</a> |
 		<a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:"quotes"}','{$goods.type}')">比较</a>
     </li>
     </ul>
@@ -402,7 +455,7 @@ divheight("topbox");
         {foreach from=$lang.compare_js item=item key=key}
         var {$key} = "{$item}";
         {/foreach}
-				
+
 				{foreach from=$lang.compare_js item=item key=key}
         {if $key neq 'button_compare'}
         var {$key} = "{$item}";
@@ -410,8 +463,8 @@ divheight("topbox");
         var button_compare = '';
         {/if}
         {/foreach}
-				
-				
+
+
         var compare_no_goods = "{$lang.compare_no_goods}";
         window.onload = function()
         {
@@ -426,8 +479,9 @@ divheight("topbox");
         <div class="tips">{$lang.no_search_result}</div>
         <!--{/if}-->
     <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
-   <!-- {/if} -->	
-		</div>	
+   <!-- {/if} -->
+   </div><!--商品显示框结束--->
+		</div>
 	</div>
     <div class="bottom_ad">
     <!--底部全航空广告展示-->
@@ -439,9 +493,11 @@ divheight("topbox");
 </div>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-	</div>    
+	</div>
 </div>
 <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!--鼠标切换js Star-->
+
 </body>
 </html>

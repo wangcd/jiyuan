@@ -22,7 +22,6 @@
 <script type="text/javascript" src="js/roll.js"></script>
 </head>
 <body>
-<!--头部-->
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
 <div class="main">
@@ -37,7 +36,7 @@
 	<!--{foreach from=$group_buy_goods item=goods}-->
 	<div class="goodsbox">
 	 <div class="imgbox1"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
-     
+
 	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
     <div class="fontbox">
    ￥{$lang.last_price}<b class="f1">{$goods.last_price}</b>
@@ -61,14 +60,14 @@
 				<div class="rs_left_rp_goodsbox">
 					<div class="rs_l_rp_imgbox1">
 						<a href="{$goods.url}" target="_blank">
-						
+
 						<img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
 						</a>
 					</div>
 					<div class="rs_l_rp_word1">
-						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>	
-                     </div>	
-                     <div class="rs_l_rp_word2">			
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>
+                     </div>
+                     <div class="rs_l_rp_word2">
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1 fc">{$goods.promote_price}</b>
                          <!-- {else}-->
@@ -77,7 +76,7 @@
                          <b class="time">剩余时间</b>
                        </div>
 						<a href="goods-1.html" target="_blank" class="qianggou"></a>
-					   
+
 				</div>
 				<!-- {/if} -->
 				<!--{/foreach}-->
@@ -100,7 +99,7 @@
 					<div class="rs_l_ht_word">
                         <a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
 						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
-						
+
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1">{$goods.promote_price}</b><br />
                          <!-- {else}-->
@@ -163,8 +162,8 @@
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
       </div>
-    
-      <div class="goods_floor">  
+
+      <div class="goods_floor">
 
 		<!-- TemplateBeginEditable name="商品楼层展示区" -->
 <!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
@@ -184,10 +183,10 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                
+
 			</div>
         </div>
-    <!--{/foreach}-->    
+    <!--{/foreach}-->
 </div>
 <script>
 
@@ -210,10 +209,10 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                
+
 			</div>
         </div>
-    <!--{/foreach}-->    
+    <!--{/foreach}-->
 </div>
 <script>
 
@@ -236,10 +235,10 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                
+
 			</div>
         </div>
-    <!--{/foreach}-->    
+    <!--{/foreach}-->
 </div>
 <script>
 
@@ -262,17 +261,17 @@
                 <!-- {else}-->
                 <b>{$goods.shop_price}</b><br />
                 <!--{/if}-->
-                
+
 			</div>
         </div>
-    <!--{/foreach}-->    
+    <!--{/foreach}-->
 </div>
 <script>
 
 </script>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-    	</div>    
+    	</div>
     </div>
     <div class="bottom_ad">
     <!--底部全航空广告展示-->
@@ -286,13 +285,6 @@
 <!-- TemplateEndEditable -->
 	</div>
 </div>
-
-
-
-
-
-
-
 
 <!--鼠标切换js Star-->
 <script>
@@ -329,19 +321,19 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 	 <span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
 	  <div class="links clearfix">
 
-       
+
         <p>
 			<!-- {if $img_links} -->
 			<!--开始文字类型的友情链接{foreach from=$img_links item=link}-->
 			<a href="{$link.url}" target="_blank" title="{$link.name}" class="linkTxt">{$link.name}</a>
 			<!--结束文字类型的友情链接{/foreach}-->
 			<!-- {/if} -->
-            
+
        </p>
 		</div>
   </div>
-<script type="text/javascript">divheight("links");</script>	
-</div> 
+<script type="text/javascript">divheight("links");</script>
+</div>
 <!--{/if}-->
 
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

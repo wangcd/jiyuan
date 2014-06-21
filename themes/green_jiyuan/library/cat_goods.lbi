@@ -23,5 +23,7 @@
     <!--{/foreach}-->    
 </div>
 <script>
-
+$(function(){
+	$(".goods_floor_box_title").css("background-image","images/floor.jpg");
+})
 </script>

@@ -46,8 +46,8 @@
 	<script type="text/javascript">divheight("articleRelated");</script>
 	<!-- {/if} --> 
 	<!-- TemplateBeginEditable name="右边区域" -->
-	<!-- #BeginLibraryItem "/library/helpleft.lbi" --><!-- #EndLibraryItem -->
-  <!-- TemplateEndEditable -->
+<!-- TemplateEndEditable -->
+<!-- #BeginLibraryItem "/library/helpleft.lbi" --><!-- #EndLibraryItem -->
 	</div>
 
 
@@ -96,6 +96,17 @@
 </div>
 </div>
 </div>
+    <div class="bottom_ad">
+    <!--底部全航空广告展示-->
+	<!-- TemplateBeginEditable name="底部全行宽广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads">
+{insert name='ads' id=$ads_id num=$ads_num}
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+	</div>
 </div>
 
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

@@ -686,7 +686,6 @@ function get_brands($cat = 0, $app = 'brand')
         $row[$key]['url'] = build_uri($app, array('cid' => $cat, 'bid' => $val['brand_id']), $val['brand_name']);
         $row[$key]['brand_desc'] = htmlspecialchars($val['brand_desc'],ENT_QUOTES);
     }
-
     return $row;
 }
 
