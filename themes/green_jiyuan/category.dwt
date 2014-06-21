@@ -24,19 +24,34 @@
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <div class="rs_main_wrap">
-<div class="rs_main_bg">
-	<div class="fl"><img src="images/main_bg_left.jpg" /></div>
-	<div class="fr"><img src="images/main_bg_right.jpg" /></div>
-</div>
 <div class="block clearfix rs_bgf">
   <div id="pageLeft" class="fl">
 
 <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_hot_left.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/top10.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/promotion_info.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateBeginEditable name="左部" -->
+<!-- #BeginLibraryItem "/library/group_buy.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+        <!--行业资讯  商城资讯 开始-->
+        <div class="rs_l_art_box">
+			<div class="rs_left_art_head">
+			<!--{foreach from=$rs_articles item=titartcats name="artcat_foreach"}-->
+				<div class="rs_l_art_tit {if $smarty.foreach.artcat_foreach.first} rs_l_art_t_lt rs_l_art_t_cur {else} rs_l_art_t_rt {/if}" onmouseover="rs_tabs(this , 'rs_l_art_tit' , 'rs_art_tabs' , {$smarty.foreach.artcat_foreach.index}, 'rs_l_art_t_cur');">{$titartcats.cat_name}</div>
+			<!--{/foreach}-->
+			</div>
+			<div class="rs_left_box_list rs_l_art_list">
+			<!--{foreach from=$rs_articles item=artcats name="artcat2_foreach"}-->
+				<ul class="rs_art_tabs" style="{if $smarty.foreach.artcat2_foreach.first neq 1} display:none; {/if} ">
+					<!--{foreach from=$artcats.article item=cat_articles name="catarts_foreach"}-->
+						<li class="{if $smarty.foreach.catarts_foreach.last} rs_br_bot_none {/if}"><a href="{$cat_articles.url}" target="_blank">{$cat_articles.title}</a></li>
+					<!--{/foreach}-->
+				</ul>
+			<!--{/foreach}-->
+			</div>
+		</div>
+        <!--行业资讯  商城资讯 结束-->
+
  
 
 	</div>
@@ -99,16 +114,32 @@
 </div>
 <div class="block pb8 rs_bgf">
 	<!-- TemplateBeginEditable name="友情链接上方广告位" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-<div class="ads">
-{insert name='ads' id=$ads_id num=$ads_num}
-</div>
- <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 </div>
 </div>
 
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!--鼠标切换js Star-->
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+	for(i=1;i<=n;i++){
+	var menu=document.getElementById(name+i);
+	var con=document.getElementById("con_"+name+"_"+i);
+	menu.className=i==cursel?"hover":"";
+	con.style.display=i==cursel?"block":"none";
+	}
+}
+
+function rs_tabs(obj, o_c, to_c, num, cur) {
+	$("."+o_c).removeClass(cur);
+	$(obj).addClass(cur);
+	$("."+to_c).hide();
+	$("."+to_c).eq(num).show();
+	return false;
+}
+-->
+</script>
 </body>
 </html>

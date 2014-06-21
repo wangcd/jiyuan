@@ -50,7 +50,7 @@
 	</div>
 </div>
 <div class="rs_float_window">
-	<div class="rs_float_msg"><a href="/message.php" target="_blank"><img src="images/rs_float_window_msg.jpg" /></a></div>
+	<div class="rs_float_msg"><a href="message.php" target="_blank"><img src="images/rs_float_window_msg.jpg" /></a></div>
 	<!--{if count($qq) > 0}-->
 	<div class="rs_float_qq" id="qqflip">
 		<span class="flipmove"><img src="images/heng.jpg" /></span>

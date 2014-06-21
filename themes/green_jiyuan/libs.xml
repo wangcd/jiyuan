@@ -46,6 +46,9 @@
       <lib>top10</lib>
       <lib>history</lib>
       <lib>promotion_info</lib>
+	  <lib>recommend_hot</lib>
+	  <lib>group_buy</lib>
+	  <lib>recommend_promotion</lib>
     </region>
     <region name="商品列表上可编辑区域"/>
   </file>
@@ -94,6 +97,9 @@
       <lib>category_tree</lib>
       <lib>history</lib>
       <lib>promotion_info</lib>
+      <lib>recommend_hot</lib>
+	  <lib>group_buy</lib>
+	  <lib>recommend_promotion</lib>	  
     </region>
   </file>
   <file name="group_buy_list.dwt">
@@ -124,6 +130,9 @@
       <lib>history</lib>
       <lib>promotion_info</lib>
       <lib>top10</lib>
+      <lib>recommend_hot</lib>
+	  <lib>group_buy</lib>
+	  <lib>recommend_promotion</lib>	  
     </region>
   </file>
   <file name="myship.dwt"/>

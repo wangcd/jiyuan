@@ -17,13 +17,13 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
 <!--主体内容 start-->
 <div class="block clearfix">
  <div id="userLeft" class="fl">
  <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem -->
  </div>
  <div id="userRight" class="fr">
+ <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
    <!-- 用户信息界面 start-->
 	  <!--{if $action eq 'profile'}-->
 	  {insert_scripts files='utils.js'}

@@ -21,17 +21,57 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
 <!--主体内容 start-->
 <div class="block clearfix">
   <!--left start-->
 	<div id="pageLeft" class="fl">
 	<!-- TemplateBeginEditable name="左边区域" -->
-	  <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
-		<!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
-		<!-- #BeginLibraryItem "/library/promotion_info.lbi" --><!-- #EndLibraryItem -->
-		<!-- #BeginLibraryItem "/library/top10.lbi" --><!-- #EndLibraryItem -->
-	<!-- TemplateEndEditable -->
+<!-- #BeginLibraryItem "/library/category_tree.lbi" -->
+
+<div class="rs_cate_tree">
+    <div class="cagegoryCon clearfix">
+    <p style="font-size:20px; font-weight:500; color:#2b8d17; font-weight:900; text-align:center; height:40px; line-height:40px;">所有商品分类</p>
+    <!--{foreach from=get_categories_tree() item=cat}-->
+     <dl>
+     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+     <!--{if $cat.cat_id}-->
+     <dd class="clearfix">
+     <!--{foreach name=childs from=$cat.cat_id item=child}-->
+         <p onMouseOver="this.className='itemsbg'" onMouseOut="this.className=''"><a href="{$child.url}" title="{$child.name|escape:html}">{$child.name|escape:html}</a></p>
+     <!--{/foreach}-->
+     </dd>
+     <!--{/if}-->
+     </dl>
+     <!--{/foreach}-->
+    </div>
+<div class="blank"></div>
+</div>
+ <!-- #EndLibraryItem -->
+ <!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/group_buy.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+        <!--行业资讯  商城资讯 开始-->
+        <div class="rs_l_art_box">
+			<div class="rs_left_art_head">
+			<!--{foreach from=$rs_articles item=titartcats name="artcat_foreach"}-->
+				<div class="rs_l_art_tit {if $smarty.foreach.artcat_foreach.first} rs_l_art_t_lt rs_l_art_t_cur {else} rs_l_art_t_rt {/if}" onmouseover="rs_tabs(this , 'rs_l_art_tit' , 'rs_art_tabs' , {$smarty.foreach.artcat_foreach.index}, 'rs_l_art_t_cur');">{$titartcats.cat_name}</div>
+			<!--{/foreach}-->
+			</div>
+			<div class="rs_left_box_list rs_l_art_list">
+			<!--{foreach from=$rs_articles item=artcats name="artcat2_foreach"}-->
+				<ul class="rs_art_tabs" style="{if $smarty.foreach.artcat2_foreach.first neq 1} display:none; {/if} ">
+					<!--{foreach from=$artcats.article item=cat_articles name="catarts_foreach"}-->
+						<li class="{if $smarty.foreach.catarts_foreach.last} rs_br_bot_none {/if}"><a href="{$cat_articles.url}" target="_blank">{$cat_articles.title}</a></li>
+					<!--{/foreach}-->
+				</ul>
+			<!--{/foreach}-->
+			</div>
+		</div>
+        <!--行业资讯  商城资讯 结束-->
+
+
 	</div>
 	<!--left end-->
 	<!--right start-->

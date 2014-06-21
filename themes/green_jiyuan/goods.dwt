@@ -23,10 +23,6 @@
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
 <div class="rs_main_wrap">
-<div class="rs_main_bg">
-	<div class="fl"><img src="images/main_bg_left.jpg" /></div>
-	<div class="fr"><img src="images/main_bg_right.jpg" /></div>
-</div>
 <div class="block clearfix rs_bgf">
   <div id="pageLeft" class="fl">
 <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
