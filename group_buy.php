@@ -92,6 +92,18 @@ $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文
 
         assign_dynamic('group_buy_list');
     }
+	
+/*轮换图*/
+    $smarty->assign('flash_theme',     $_CFG['flash_theme']);  // Flash轮播图片模板
+
+    $smarty->assign('index_ad',     $_CFG['index_ad']);
+    if ($_CFG['index_ad'] == 'cus')
+    {
+        $sql = 'SELECT ad_type, content, url FROM ' . $ecs->table("ad_custom") . ' WHERE ad_status = 1';
+        $ad = $db->getRow($sql, true);
+        $smarty->assign('ad', $ad);
+    }	
+	
 
     /* 显示模板 */
     $smarty->display('group_buy_list.dwt', $cache_id);
@@ -171,6 +183,20 @@ $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文
  $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //		
         assign_dynamic('group_buy_goods');
     }
+	
+	
+/*轮换图*/
+    $smarty->assign('flash_theme',     $_CFG['flash_theme']);  // Flash轮播图片模板
+
+    $smarty->assign('index_ad',     $_CFG['index_ad']);
+    if ($_CFG['index_ad'] == 'cus')
+    {
+        $sql = 'SELECT ad_type, content, url FROM ' . $ecs->table("ad_custom") . ' WHERE ad_status = 1';
+        $ad = $db->getRow($sql, true);
+        $smarty->assign('ad', $ad);
+    }	
+	
+	
 
     //更新商品点击次数
     $sql = 'UPDATE ' . $ecs->table('goods') . ' SET click_count = click_count + 1 '.

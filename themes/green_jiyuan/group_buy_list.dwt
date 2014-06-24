@@ -156,7 +156,7 @@
 
 	</div>
 	<div id="pageRight" class="fr">
-		<!-- #BeginLibraryItem "/library/index_ad1.lbi" --><!-- #EndLibraryItem -->
+		<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
 		<div class="goodsTitle">{$lang.group_buy_goods}</div>
 		<div class="grouplist clearfix">
 			 <!-- {if $gb_list} 如果有团购活动 -->

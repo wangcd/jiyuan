@@ -16,11 +16,6 @@
 <script type="text/javascript" src="js/action.js"></script>
 </head>
 <body>
-<!--商品品牌开始-->
-     <!-- {foreach from=$brand_list name="brand_list_foreach" item=brand_data} -->
-						<a href="{$brand_data.url}">{$brand_data.brand_name}</a>
-	 <!-- {/foreach} -->
-<!--商品品牌结束-->
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
@@ -213,7 +208,7 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 
 	</div>
 	<div id="pageRight" class="fr">
-    <!-- #BeginLibraryItem "/library/index_ad1.lbi" --><!-- #EndLibraryItem -->
+    <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
     
 <!-- {foreach from=$brand_list name="brand_list_foreach" item=brand_data} -->
 	<h4><span>{$brand_data.brand_name}</span>({$brand_data.goods_num})</h4>

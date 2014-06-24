@@ -135,6 +135,7 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //
 	/****************************************************************************************************/
     /* 首页主广告设置 */
+	//$smarty->assign('flash_theme',     $_CFG['flash_theme']);   Flash轮播图片模板
     $smarty->assign('index_ad',     $_CFG['index_ad']);
     if ($_CFG['index_ad'] == 'cus')
     {

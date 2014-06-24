@@ -73,7 +73,6 @@
 
 	</div>
 	<div id="pageRight" class="fr">
-	
   <div class="blank" id="group_goods_info">
 	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
 	<h1 class="mod1tit">{$lang.groupbuy_goods_info}</h1>

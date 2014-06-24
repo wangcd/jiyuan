@@ -107,7 +107,17 @@ $smarty->assign('group_buy_goods', index_get_group_buy());      // 团购商品
 $smarty->assign('promotion_goods', get_promote_goods()); // 特价商品
 $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
 $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //	
+/*轮换图*/
+    $smarty->assign('flash_theme',     $_CFG['flash_theme']);  // Flash轮播图片模板
 
+    $smarty->assign('index_ad',     $_CFG['index_ad']);
+    if ($_CFG['index_ad'] == 'cus')
+    {
+        $sql = 'SELECT ad_type, content, url FROM ' . $ecs->table("ad_custom") . ' WHERE ad_status = 1';
+        $ad = $db->getRow($sql, true);
+        $smarty->assign('ad', $ad);
+    }
+	
 
     $smarty->display('search.dwt');
 
@@ -526,6 +536,17 @@ $smarty->assign('group_buy_goods', index_get_group_buy());      // 团购商品
 $smarty->assign('promotion_goods', get_promote_goods()); // 特价商品
 $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
 $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //	
+/*轮换图*/
+    $smarty->assign('flash_theme',     $_CFG['flash_theme']);  // Flash轮播图片模板
+
+    $smarty->assign('index_ad',     $_CFG['index_ad']);
+    if ($_CFG['index_ad'] == 'cus')
+    {
+        $sql = 'SELECT ad_type, content, url FROM ' . $ecs->table("ad_custom") . ' WHERE ad_status = 1';
+        $ad = $db->getRow($sql, true);
+        $smarty->assign('ad', $ad);
+    }
+
     $smarty->display('search.dwt');
 }
 
