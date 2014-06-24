@@ -272,13 +272,15 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
         }
 
         /* 如果不是促销，处理促销日期 */
+        /*如果变量is_promote存在 且值为0   即该商品不是促销商品*/
         if (isset($goods['is_promote']) && $goods['is_promote'] == '0')
-        {
+        {	/*销毁 促销开始时间变量*/
             unset($goods['promote_start_date']);
+			/*销毁 促销结束时间变量*/
             unset($goods['promote_end_date']);
         }
         else
-        {
+        {	/*处理时间戳*/
             $goods['promote_start_date'] = local_date('Y-m-d', $goods['promote_start_date']);
             $goods['promote_end_date'] = local_date('Y-m-d', $goods['promote_end_date']);
         }
@@ -795,6 +797,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
     $shop_price = !empty($_POST['shop_price']) ? $_POST['shop_price'] : 0;
     $market_price = !empty($_POST['market_price']) ? $_POST['market_price'] : 0;
     $promote_price = !empty($_POST['promote_price']) ? floatval($_POST['promote_price'] ) : 0;
+	/*促销价格 promote_price*/
     $is_promote = empty($promote_price) ? 0 : 1;
     $promote_start_date = ($is_promote && !empty($_POST['promote_start_date'])) ? local_strtotime($_POST['promote_start_date']) : 0;
     $promote_end_date = ($is_promote && !empty($_POST['promote_end_date'])) ? local_strtotime($_POST['promote_end_date']) : 0;

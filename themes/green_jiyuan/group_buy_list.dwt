@@ -157,11 +157,12 @@
 	</div>
 	<div id="pageRight" class="fr">
 		<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+        <div class="group_buy">
 		<div class="goodsTitle">{$lang.group_buy_goods}</div>
 		<div class="grouplist clearfix">
-			 <!-- {if $gb_list} 如果有团购活动 -->
-				<!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
-				<div class="group_buy_list clearfix">
+			 <!-- {if $gb_list} 如果有团购活动 --><!--有改动-->
+				<!-- {foreach from=$gb_list item=group_buy name="group_foreach"} 循环团购活动开始 -->
+				<div class="group_buy_list clearfix {if $smarty.foreach.group_foreach.last} rs_left_box_listnone {/if}">
 					<div class="fl groupImg">
 						<a href="{$group_buy.url}"><img src="{$group_buy.goods_thumb}" border="0" alt="{$group_buy.goods_name|escape:html}" /></a>
 					</div>
@@ -190,7 +191,7 @@
 	</div>
 	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
 	</div>
-    
+    </div>
     <div class="bottom_ad">
     <!--底部全航空广告展示-->
 	<!-- TemplateBeginEditable name="底部全行宽广告" -->
