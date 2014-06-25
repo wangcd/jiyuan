@@ -166,9 +166,12 @@
             <td id="promote_3"><input type="text" id="promote_1" name="promote_price" value="{$goods.promote_price}" size="20" /></td>
           </tr>
           <tr id="promote_4">
+          <!--日历控件-->
+          <script language="javascript" type="text/javascript" src="js/rl/WdatePicker.js"></script>
             <td class="label" id="promote_5">{$lang.lab_promote_date}</td>
             <td id="promote_6">
-              <input name="promote_start_date" type="text" id="promote_start_date" size="12" value='{$goods.promote_start_date}' readonly="readonly" /><input name="selbtn1" type="button" id="selbtn1" onclick="return showCalendar('promote_start_date', '%Y-%m-%d', false, false, 'selbtn1');" value="{$lang.btn_select}" class="button"/> - <input name="promote_end_date" type="text" id="promote_end_date" size="12" value='{$goods.promote_end_date}' readonly="readonly" /><input name="selbtn2" type="button" id="selbtn2" onclick="return showCalendar('promote_end_date', '%Y-%m-%d', false, false, 'selbtn2');" value="{$lang.btn_select}" class="button"/>
+              <input type="text" onFocus="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})" value='{$goods.promote_start_date}'  name="promote_start_date" id="promote_start_date" readonly="readonly" size="22px;">
+              <input type="text" onFocus="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})" value='{$goods.promote_end_date}' name="promote_end_date" id="promote_end_date" readonly="readonly"  size="22px;"> 
             </td>
           </tr>
           <tr>

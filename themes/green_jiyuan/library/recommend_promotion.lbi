@@ -22,7 +22,7 @@
                          <!-- {else}-->
                          <b class="f1 fc">{$goods.shop_price}</b>
                          <!--{/if}-->
-                         <b class="time rs_jq_timer">剩余时间</b>
+                         <b class="time rs_jq_timer">剩余时间</b><!--$goods.end_date_str-->
                        </div>
 						<a href="goods-1.html" target="_blank" class="qianggou"></a>
 					   
