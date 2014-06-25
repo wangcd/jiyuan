@@ -141,6 +141,13 @@
     <div class="right fr">
 	  <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
       <div class="banna_bottom">
+      <!--banna下方广告-->
+<script>
+$(function(){
+	$(".ads:first").css("margin-right","12px");
+	$(".ads:eq(2)").css("margin-left","12px");
+})
+</script>
 		<!-- TemplateBeginEditable name="banna下方" -->
 <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
 

@@ -1718,7 +1718,7 @@ padding-left: 130px;
 }
 .right{ width:925px; background: #fff/*fcc*/; padding-top:10px;}
 .banna_bottom{ width:925px; height:140px; margin-bottom: 10px;}
-.banna_bottom div{ float:left; margin-right:6px; margin-left:5px;}
+.banna_bottom div{ float:left;}
 .hhth{ width:925px; height:250px;}
 .goods_floor{width:925px;}
 .goods_floor_box{  clear:both;width:925px;overflow:hidden; margin-bottom:10px;}
