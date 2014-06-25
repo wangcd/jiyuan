@@ -1579,7 +1579,7 @@ padding-left: 130px;
 .rs_l_rp_imgbox1 {width:160px; height:160px; border: 1px solid #CCC; position: relative; z-index: 1;}
 .rs_l_rp_imgbox1 img {width:160px; height:160px; border:0;}
 .rs_l_rp_word1 {width: 160px; text-align:center; line-height:30px;}
-.fc{ font-size:18px; color:#c90900;}
+.fc{ font-size:18px; color:#c90900; height:18px; display:block; line-height:18px;}
 .rs_l_rp_word2{width: 150px; text-align:left; line-height:30px; float:left;}
 .time{ margin-left:10px;}
 .qianggou{width: 60px; height: 20px; float: left; margin-top: 10px;}

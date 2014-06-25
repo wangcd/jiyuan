@@ -819,6 +819,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         $day = getdate();
         $today = local_mktime(23, 59, 59, $day['mon'], $day['mday'], $day['year']);
 
+
         $filter['cat_id']           = empty($_REQUEST['cat_id']) ? 0 : intval($_REQUEST['cat_id']);
         $filter['intro_type']       = empty($_REQUEST['intro_type']) ? '' : trim($_REQUEST['intro_type']);
         $filter['is_promote']       = empty($_REQUEST['is_promote']) ? 0 : intval($_REQUEST['is_promote']);
@@ -852,10 +853,10 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
                 $where .= ' AND is_new=1';
                 break;
             case 'is_promote':
-                $where .= " AND is_promote = 1 AND promote_price > 0 AND promote_start_date <= '$today' AND promote_end_date >= '$today'";
+                $where .= " AND is_promote = 1 AND promote_price > 0  AND promote_end_date >= '$today'";
                 break;
             case 'all_type';
-                $where .= " AND (is_best=1 OR is_hot=1 OR is_new=1 OR (is_promote = 1 AND promote_price > 0 AND promote_start_date <= '" . $today . "' AND promote_end_date >= '" . $today . "'))";
+                $where .= " AND (is_best=1 OR is_hot=1 OR is_new=1 OR (is_promote = 1 AND promote_price > 0  AND promote_end_date >= '" . $today . "'))";
         }
 
         /* 库存警告 */
@@ -909,7 +910,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         $filter = page_and_size($filter);
 
         $sql = "SELECT goods_id, goods_name, goods_type,goods_thumb,goods_sn, shop_price, is_on_sale, is_best, is_new, is_hot, sort_order, goods_number, integral, " .
-                    " (promote_price > 0 AND promote_end_date >= '$today') AS is_promote ".
+                    " (promote_price > 0 AND promote_end_date >= '".local_mktime()."') AS is_promote ".
                     " FROM " . $GLOBALS['ecs']->table('goods') . " AS g WHERE is_delete='$is_delete' $where" .
                     " ORDER BY $filter[sort_by] $filter[sort_order] ".
                     " LIMIT " . $filter['start'] . ",$filter[page_size]";
@@ -923,8 +924,8 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         $filter = $result['filter'];
     }
     $row = $GLOBALS['db']->getAll($sql);
-
     return array('goods' => $row, 'filter' => $filter, 'page_count' => $filter['page_count'], 'record_count' => $filter['record_count']);
+
 }
 
 /**

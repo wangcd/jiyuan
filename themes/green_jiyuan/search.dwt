@@ -453,6 +453,7 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 <!--鼠标切换js Star-->
-
+<!--秒杀js代码-->
+<script type="text/javascript" src="js/move_time.js"></script>
 </body>
 </html>

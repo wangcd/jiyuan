@@ -364,7 +364,7 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 <!--{/if}-->
 
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
-<!--秒杀js代码<script type="text/javascript" src="js/move_time.js"></script>-->
-
+<!--秒杀js代码-->
+<script type="text/javascript" src="js/move_time.js"></script>
 </body>
 </html>

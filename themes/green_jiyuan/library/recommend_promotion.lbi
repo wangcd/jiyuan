@@ -19,10 +19,11 @@
                      <div class="rs_l_rp_word2">			
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1 fc">{$goods.promote_price}</b>
+
                          <!-- {else}-->
                          <b class="f1 fc">{$goods.shop_price}</b>
                          <!--{/if}-->
-                         <b class="time rs_jq_timer">剩余时间</b><!--$goods.end_date_str-->
+                         <b class="time rs_jq_timer">{$goods.end_date_str}</b>
                        </div>
 						<a href="goods-1.html" target="_blank" class="qianggou"></a>
 					   

@@ -409,4 +409,6 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 }
 -->
 </script>
+<!--秒杀js代码-->
+<script type="text/javascript" src="js/move_time.js"></script>
 </html>
