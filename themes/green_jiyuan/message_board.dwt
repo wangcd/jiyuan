@@ -49,7 +49,7 @@
 <div class="blank"></div>
 </div>
  <!-- #EndLibraryItem -->
- <!-- #BeginLibraryItem "/library/recommend_promotion_left.lbi" --><!-- #EndLibraryItem -->
+ <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/group_buy.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
@@ -203,6 +203,28 @@
 
 <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!--鼠标切换js Star-->
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+	for(i=1;i<=n;i++){
+	var menu=document.getElementById(name+i);
+	var con=document.getElementById("con_"+name+"_"+i);
+	menu.className=i==cursel?"hover":"";
+	con.style.display=i==cursel?"block":"none";
+	}
+}
+
+function rs_tabs(obj, o_c, to_c, num, cur) {
+	$("."+o_c).removeClass(cur);
+	$(obj).addClass(cur);
+	$("."+to_c).hide();
+	$("."+to_c).eq(num).show();
+	return false;
+}
+-->
+</script>
 <!--秒杀js代码-->
 <script type="text/javascript" src="js/move_time.js"></script>
 </body>

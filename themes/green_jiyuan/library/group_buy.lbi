@@ -8,8 +8,8 @@
      
 	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
     <div class="fontbox">
-   ￥{$lang.last_price}<b class="f1">{$goods.last_price}</b>
-   <del>原价：{$goods.market_price}</del>
+   {$lang.last_price}<b class="f1 fl">{$goods.last_price}</b>
+   <del class="fl">　原价：{$goods.market_price}</del>　
    <a href="{$goods.url}" title="{$goods.name|escape:html}" class="imgbut"></a>
    </div>
 </div>

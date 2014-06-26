@@ -25,7 +25,7 @@
                          <!--{/if}-->
                          <b class="time rs_jq_timer">{$goods.end_date_str}</b>
                        </div>
-						<a href="goods-1.html" target="_blank" class="qianggou"></a>
+						<a href="{$goods.url}" target="_blank" class="qianggou"></a>
 					   
 				</div>
 				<!-- {/if} -->
