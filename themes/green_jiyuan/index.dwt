@@ -35,12 +35,13 @@
 <div class="blank" id="left_groups">
 	<!--{foreach from=$group_buy_goods item=goods}-->
 	<div class="goodsbox">
+    <span class="rs_l_rp_sale_img"></span>
 	 <div class="imgbox1"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
      
 	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
     <div class="fontbox">
-   ￥{$lang.last_price}<b class="f1">{$goods.last_price}</b>
-   <del>原价：{$goods.market_price}</del>
+   {$lang.last_price}<b class="f1 fl">{$goods.last_price}</b>
+   <del class="fl">　原价：{$goods.market_price}</del>　
    <a href="{$goods.url}" title="{$goods.name|escape:html}" class="imgbut"></a>
    </div>
 </div>
@@ -70,12 +71,13 @@
                      <div class="rs_l_rp_word2">			
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1 fc">{$goods.promote_price}</b>
+
                          <!-- {else}-->
                          <b class="f1 fc">{$goods.shop_price}</b>
                          <!--{/if}-->
-                         <b class="time">剩余时间</b>
+                         <b class="time rs_jq_timer">{$goods.end_date_str}</b>
                        </div>
-						<a href="goods-1.html" target="_blank" class="qianggou"></a>
+						<a href="{$goods.url}" target="_blank" class="qianggou"></a>
 					   
 				</div>
 				<!-- {/if} -->
@@ -177,8 +179,8 @@ $(function(){
 
 <div class="goods_floor_box">
 <!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
-	<div class="goods_floor_box_title">  	          
-            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
+	<div class="goods_floor_box_title" style="background:url(images/floor{$goods_cat.id}.jpg) no-repeat">  	          
+            <span><!-- {$goods_cat.name} --></span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -208,8 +210,8 @@ $(function(){
 
 <div class="goods_floor_box">
 <!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
-	<div class="goods_floor_box_title">  	          
-            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
+	<div class="goods_floor_box_title" style="background:url(images/floor{$goods_cat.id}.jpg) no-repeat">  	          
+            <span><!-- {$goods_cat.name} --></span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -239,8 +241,8 @@ $(function(){
 
 <div class="goods_floor_box">
 <!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
-	<div class="goods_floor_box_title">  	          
-            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
+	<div class="goods_floor_box_title" style="background:url(images/floor{$goods_cat.id}.jpg) no-repeat">  	          
+            <span><!-- {$goods_cat.name} --></span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->
@@ -270,8 +272,8 @@ $(function(){
 
 <div class="goods_floor_box">
 <!--{foreach from=$goods_cat.id item=goods key=key name=catgoods.id}--> 
-	<div class="goods_floor_box_title">  	          
-            <span><!-- {$goods_cat.name} -->{$goods_cat.id}</span> 
+	<div class="goods_floor_box_title" style="background:url(images/floor{$goods_cat.id}.jpg) no-repeat">  	          
+            <span><!-- {$goods_cat.name} --></span> 
     	<a href="../search.php" class="gdcp">更多产品</a>
     </div>
     <!--{foreach from=$cat_goods item=goods key=key name=catgoods}-->

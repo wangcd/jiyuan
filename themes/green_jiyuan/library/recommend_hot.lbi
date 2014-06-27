@@ -11,7 +11,7 @@
                     </div>
 					<div class="rs_l_ht_word">
                         <a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
-						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}" style="text-decoration: line-through">{$goods.market_price}</a><br />
 						
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1">{$goods.promote_price}</b><br />
