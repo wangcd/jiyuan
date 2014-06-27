@@ -1640,8 +1640,8 @@ padding-left: 130px;
 
 
 
-.rs_r_b_goodsbox {float: left; width: 214px; }
-.rs_r_b_goodsbox img {width: 208px;}
+.rs_r_b_goodsbox {float: left; width: 214px;}
+.rs_r_b_goodsbox img {width: 208px; display:block;}
 /
 /*商品下文字颜色.rs_r_b_goodsbox a {color: #ffe1a8;}*/
 .rs_right_box_word {padding: 8px 0; text-align: center;}
@@ -1762,7 +1762,7 @@ padding-left: 130px;
 /*楼层图片 大小*/
 .goods_floor_list img{ width:208px; height:208px;}
 /**哼哼团购**/
-.group_buy{ border:1px solid #ccc;}  /*新加 div*/
+.group_buy{ border:1px solid #ccc; margin-top:10px;}  /*新加 div*/
 .goodsTitle{
 line-height:36px;
 font-weight:bold;

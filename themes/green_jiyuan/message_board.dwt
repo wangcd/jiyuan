@@ -49,8 +49,9 @@
 <div class="blank"></div>
 </div>
  <!-- #EndLibraryItem -->
- <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
+
 <!-- #BeginLibraryItem "/library/group_buy.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 

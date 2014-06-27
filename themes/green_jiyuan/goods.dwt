@@ -26,8 +26,9 @@
 <div class="block clearfix rs_bgf">
   <div id="pageLeft" class="fl">
 <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
+
 <!-- #BeginLibraryItem "/library/group_buy.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->
 
         <!--行业资讯  商城资讯 开始-->
