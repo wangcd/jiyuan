@@ -103,7 +103,7 @@
 		 
      <!-- {if $pictures}-->
 <a style="position:relative" href="{$goods.goods_img}" id="zoom1" class="MagicZoom MagicThumb" title="{$goods.goods_name|escape:html}">
-      <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" width="298px" height="298px" style="border:1px solid #d2d0d0"/>
+      <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" width="360px" height="360px" style="border:1px solid #d2d0d0"/>
       
      </a>
          <!-- {else} -->
