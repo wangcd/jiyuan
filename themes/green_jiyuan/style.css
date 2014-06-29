@@ -336,17 +336,15 @@ position:absolute; top:0px; right:10px; font-weight:100; font-size:12px;
 .cagegoryTit a,.cagegoryTit a:visited{color:#fff;}
 /*商品分类列表*/
 .cagegoryCon{
-	padding:5px 10px;
-	background: #fff;
-	border-bottom: 3px solid #2b8d17;
-	border-left: 3px solid #2b8d17;
-	border-right: 3px solid #2b8d17;
-	border-top: 3px solid #2b8d17;
-	margin-bottom: 10px;
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px 10px 0px 0px;
-	-o-border-radius:10px;
+	padding:5px 10px 5px 10px;
+	margin-bottom:10px;
+	border-top:#2b8d17 solid 3px;
+	border-left:#2b8d17 solid 3px;
+	border-right:#2b8d17 solid 3px;
+	border-bottom:#2b8d17 solid 3px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	background:#FFF;
 }
    .cagegoryCon dl{
 	 border-bottom:1px solid #ececec; margin-bottom:2px; padding-bottom:1px; padding-top:2px;
@@ -824,10 +822,6 @@ font-weight:bold;
 font-size:14px;
 padding:0 5px;
 background: url(images/baike_bg.jpg) left center;
-*line-height:36px;
-*height:36px;
-_height:36px;
-_line-height:36px;
 /*border-bottom: #4ea307 2px solid;
 background: url(images/biao_title211.jpg) no-repeat;
 color: #fff;*/

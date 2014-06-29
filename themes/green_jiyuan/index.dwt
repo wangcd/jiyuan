@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="{$keywords}" />
 <meta name="Description" content="{$description}" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!--meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/-->
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>{$page_title}</title>
 <!-- TemplateEndEditable -->
