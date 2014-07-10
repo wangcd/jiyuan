@@ -14,6 +14,8 @@
 
 {* 包含脚本文件 *}
 {insert_scripts files='common.js,lefttime.js'}
+<script type="text/javascript" src="js/mzp-packed-me.js"></script>
+<script type="text/javascript" src="js/action.js"></script>
 <script type="text/javascript">
   {foreach from=$lang.js_languages item=item key=key}
     var {$key} = "{$item}";
@@ -77,11 +79,17 @@
 	<span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
 	<h1 class="mod1tit">{$lang.groupbuy_goods_info}</h1>
 	<div class="mod1con">
-	 <div class="grouplist clearfix">
+	 <div class="clearfix">
 	  <div class="group_buy_list clearfix" style="border-bottom:none;">
-						<div class="fl groupImg">
-							<a href="{$gb_goods.url}"><img src="{$gb_goods.goods_thumb}" alt="{$gb_goods.goods_name|escape:html}" /></a>
-						</div>
+
+<div class="goodsimgbox fl">
+	 <div id="focuscont">
+<a style="position:relative" href="{$gb_goods.goods_img}" id="zoom1" class="MagicZoom MagicThumb" title="{$gb_goods.goods_name|escape:html}">
+      <img src="{$gb_goods.goods_thumb}"  width="340px" height="340px" style="border:1px solid #d2d0d0"/></a>
+	 </div>
+</div>
+
+
 						<div class="fl">
 						{$lang.gb_goods_name} <font class="f14b">{$gb_goods.goods_name|escape:html}</font><br>
 						<!-- {if $cfg.show_goodssn && 0} -->
@@ -135,6 +143,26 @@
 						<!-- {elseif $group_buy.status eq 4} 团购失败 -->
 						{$lang.gbs_fail}
 						<!-- {/if} -->
+	<form action="group_buy.php?act=buy" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+<!-- {if $smarty.session.user_id > 0} 如果登录了，显示购买按钮 -->
+			<table>
+              <tr>
+                <td bgcolor="#FFFFFF">{$lang.number}:</td>
+                <td bgcolor="#FFFFFF">
+                <input name="number" type="text" class="InputBorder" id="number" value="1" size="4" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" />
+                <input type="hidden" name="group_buy_id" value="{$group_buy.group_buy_id}" />
+								<input type="submit" value="立即购买" class="bnt_number4" style="vertical-align:middle;" />
+                </td>
+              </tr>
+              <!-- {else} 如果没有登录，显示提示信息 -->
+              <tr>
+                <td colspan="2" align="right" bgcolor="#FFFFFF" class="tips">
+                  {$lang.gb_notice_login}
+								</td>
+              </tr>
+              </table>
+              <!-- {/if} 判断登录结束 -->
+
 						</div>
 					</div>	
 		</div>
@@ -144,7 +172,7 @@
 
 	<div class="goodsTitle blank">{$lang.properties}</div>
 	<div class="mod2con blank">
-	<form action="group_buy.php?act=buy" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+
            <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
               <!-- {foreach from=$specification item=spec key=spec_key} 循环规格开始 -->
               <tr>
@@ -166,33 +194,19 @@
                 </td>
               </tr>
               <!-- {/foreach} 循环规格结束 -->
-              <!-- {if $smarty.session.user_id > 0} 如果登录了，显示购买按钮 -->
-              <tr>
-                <td bgcolor="#FFFFFF">{$lang.number}:</td>
-                <td bgcolor="#FFFFFF">
-                <input name="number" type="text" class="InputBorder" id="number" value="1" size="4" />
-                <input type="hidden" name="group_buy_id" value="{$group_buy.group_buy_id}" />
-								<input type="submit" value="立即购买" class="bnt_number4" style="vertical-align:middle;" />
-                </td>
-              </tr>
-              <!-- {else} 如果没有登录，显示提示信息 -->
-              <tr>
-                <td colspan="2" align="right" bgcolor="#FFFFFF" class="tips">
-                  {$lang.gb_notice_login}
-								</td>
-              </tr>
-              <!-- {/if} 判断登录结束 -->
+             
             </table>
           </form>
 	</div>
-	
+
 	<div class="goodsTitle blank">{$lang.groupbuy_intro}</div>
 	<div class="mod2con">
 	{$group_buy.group_buy_desc}
 	</div>
-	
+<!-- #BeginLibraryItem "/library/comments.lbi" --> <!-- #EndLibraryItem -->	
     
 	</div>
+    </div>
     <div class="bottom_ad">
     <!--底部全航空广告展示-->
 	<!-- TemplateBeginEditable name="底部全行宽广告" -->
@@ -252,4 +266,5 @@ function rs_tabs(obj, o_c, to_c, num, cur) {
 </script>
 <!--秒杀js代码-->
 <script type="text/javascript" src="js/move_time.js"></script>
+
 </html>

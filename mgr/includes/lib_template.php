@@ -61,6 +61,10 @@ $page_libs = array(
         '/library/goods_related.lbi' => 0,
         '/library/recommend_promotion.lbi' => 3,
         '/library/history.lbi' => 0,
+		'/library/group_buy.lbi' => 3,
+		'/library/recommend_promotion.lbi' => 4,
+		'/library/recommend_hot.lbi' => 3,
+		'/library/category_tree.lbi' => 0,
     ),
     'article_cat' => array(
         '/library/ur_here.lbi' => 0,
@@ -76,6 +80,9 @@ $page_libs = array(
         '/library/cart.lbi' => 0,
         '/library/vote_list.lbi' => 0,
         '/library/article_category_tree.lbi' => 0,
+        '/library/group_buy.lbi' => 3,
+		'/library/recommend_promotion.lbi' => 4,
+		'/library/recommend_hot.lbi' => 3,
     ),
     'brand' => array(
         '/library/ur_here.lbi' => 0,
@@ -201,7 +208,8 @@ $page_libs = array(
         '/library/history.lbi' => 0,
 		'/library/recommend_hot.lbi' => 3,
         '/library/recommend_promotion.lbi' => 4,
-        '/library/group_buy.lbi' => 3
+        '/library/group_buy.lbi' => 3,
+        '/library/comments.lbi' => 0,
     ),
     'group_buy_list' => array(
         '/library/ur_here.lbi' => 0,
@@ -268,7 +276,7 @@ $page_libs = array(
         '/library/message_list.lbi' => 10,
 		'/library/group_buy.lbi' => 3,
 		'/library/recommend_promotion.lbi' => 4,
-		'/library/recommend_hot.lbi' => 3,		
+		'/library/recommend_hot.lbi' => 3,
     ),
     'exchange_list' => array(
         '/library/ur_here.lbi' => 0,

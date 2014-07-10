@@ -31,7 +31,8 @@ else
 }
 
 /* 权限判断 */
-admin_priv('user_account_manage');
+//admin_priv('user_account_manage');
+admin_priv('account_manage'); 
 
 /*------------------------------------------------------ */
 //--数据查询

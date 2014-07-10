@@ -55,9 +55,9 @@
   <tr>
     <td bgcolor="#ffffff">{$lang.phone}:</td>
     <td bgcolor="#ffffff"><input name="tel" type="text" class="InputBorder"  id="tel_{$sn}" value="{$consignee.tel|escape}" />
-    {$lang.require_field}</td>
+    </td>
     <td bgcolor="#ffffff">{$lang.backup_phone}:</td>
-    <td bgcolor="#ffffff"><input name="mobile" type="text" class="InputBorder"  id="mobile_{$sn}" value="{$consignee.mobile|escape}" /></td>
+    <td bgcolor="#ffffff"><input name="mobile" type="text" class="InputBorder"  id="mobile_{$sn}" value="{$consignee.mobile|escape}" />{$lang.require_field}</td>
   </tr>
   <!-- {if $real_goods_count gt 0} -->
   <!-- 购物车中存在实体商品显示最佳送货时间及标志行建筑 -->
@@ -65,7 +65,16 @@
     <td bgcolor="#ffffff">{$lang.sign_building}:</td>
     <td bgcolor="#ffffff"><input name="sign_building" type="text" class="InputBorder"  id="sign_building_{$sn}" value="{$consignee.sign_building|escape}" /></td>
     <td bgcolor="#ffffff">{$lang.deliver_goods_time}:</td>
-    <td bgcolor="#ffffff"><input name="best_time" type="text"  class="InputBorder" id="best_time_{$sn}" value="{$consignee.best_time|escape}" /></td>
+    <td bgcolor="#ffffff">
+    <select name="best_time" class="InputBorder" id="best_time_{$sn}">
+    	{if $consignee.best_time}
+    	<option value="{$consignee.best_time|escape}">{$consignee.best_time|escape}</option>
+        {/if}
+        <option value="8-12点">8-12点</option>
+        <option value="12点至17点">12点至17点</option>
+        <option value="17点以后">17点以后</option>
+    </select>
+    </td>
   </tr>
   <!-- {/if} -->
   <tr>

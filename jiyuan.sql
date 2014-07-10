@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-06-28 11:22:11
+Date: 2014-06-25 17:44:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -69,9 +69,9 @@ INSERT INTO `jiy_ad` VALUES ('6', '4', '0', '首页右侧2楼横幅', '', '13827
 INSERT INTO `jiy_ad` VALUES ('7', '5', '0', '首页右侧3楼横幅', '', '1382741980969824398.jpg', '1382688000', '1606204800', '', '', '', '0', '1');
 INSERT INTO `jiy_ad` VALUES ('8', '6', '0', '首页右侧4楼横幅', '', '1382741993228936728.jpg', '1382688000', '1606204800', '', '', '', '0', '1');
 INSERT INTO `jiy_ad` VALUES ('9', '7', '0', '首页友情链接上方广告', '', '1383414441888627794.jpg', '1383379200', '1606896000', '', '', '', '0', '1');
-INSERT INTO `jiy_ad` VALUES ('10', '8', '0', '底部全行宽', '', '1403027439443528572.jpg', '1402905600', '1405497600', '', '', '', '7', '1');
-INSERT INTO `jiy_ad` VALUES ('11', '9', '0', 'banna下方', '', '1403054620091291232.jpg', '1402992000', '1405584000', '', '', '', '6', '1');
-INSERT INTO `jiy_ad` VALUES ('12', '10', '0', 'banna下方2', '', '1403054330566482080.jpg', '1402992000', '1405584000', '', '', '', '1', '1');
+INSERT INTO `jiy_ad` VALUES ('10', '8', '0', '底部全行宽', '', '1403027439443528572.jpg', '1402905600', '1405497600', '', '', '', '5', '1');
+INSERT INTO `jiy_ad` VALUES ('11', '9', '0', 'banna下方', '', '1403054620091291232.jpg', '1402992000', '1405584000', '', '', '', '4', '1');
+INSERT INTO `jiy_ad` VALUES ('12', '10', '0', 'banna下方2', '', '1403054330566482080.jpg', '1402992000', '1405584000', '', '', '', '0', '1');
 INSERT INTO `jiy_ad` VALUES ('13', '11', '0', 'banna下方3', '', '1403054648572205843.jpg', '1402992000', '1405584000', '', '', '', '2', '1');
 
 -- ----------------------------
@@ -261,7 +261,7 @@ CREATE TABLE `jiy_admin_log` (
   PRIMARY KEY (`log_id`),
   KEY `log_time` (`log_time`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=419 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=409 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jiy_admin_log
@@ -674,16 +674,6 @@ INSERT INTO `jiy_admin_log` VALUES ('405', '1403658874', '1', '编辑商品: 啊
 INSERT INTO `jiy_admin_log` VALUES ('406', '1403658898', '1', '编辑商品: aaaaaa', '127.0.0.1');
 INSERT INTO `jiy_admin_log` VALUES ('407', '1403658956', '1', '编辑商品: aaaaaa', '127.0.0.1');
 INSERT INTO `jiy_admin_log` VALUES ('408', '1403659299', '1', '编辑前台语言项: ', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('409', '1403716928', '1', '编辑商品: aaaaaa', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('410', '1403716944', '1', '编辑商品: 益智仁核桃 固体饮料', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('411', '1403716956', '1', '编辑商品: 枣杞 固体饮料', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('412', '1403716971', '1', '编辑商品: 阿胶桂圆固体饮料', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('413', '1403717064', '1', '编辑商品: 多种维生素矿物质', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('414', '1403717091', '1', '编辑商品: 钙铁锌颗粒', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('415', '1403722226', '1', '编辑商品: 健骑机', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('416', '1403735304', '1', '编辑商店设置: ', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('417', '1403823454', '1', '删除操作日志: ', '127.0.0.1');
-INSERT INTO `jiy_admin_log` VALUES ('418', '1403830712', '1', '编辑商品: 阿胶桂圆固体饮料', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for `jiy_admin_message`
@@ -736,7 +726,7 @@ CREATE TABLE `jiy_admin_user` (
 -- ----------------------------
 -- Records of jiy_admin_user
 -- ----------------------------
-INSERT INTO `jiy_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1403892805', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
+INSERT INTO `jiy_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1403647829', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
 INSERT INTO `jiy_admin_user` VALUES ('2', 'jiyuan', 'jiyuan@111.com', 'c6a725208b914a543e15f24f566aa04c', null, '1383691440', '0', '', 'goods_manage,remove_back,cat_manage,cat_drop,attr_manage,brand_manage,comment_priv,goods_type,goods_auto,picture_batch,goods_batch,article_cat,article_manage,shopinfo_manage,shophelp_manage,vote_priv,article_auto,feedback_priv,integrate_users,sync_users,users_manage,users_drop,user_rank,surplus_manage,account_manage,shop_config,ship_manage,payment,shiparea_manage,area_manage,friendlink,flash_manage,navigator,affiliate,sitemap,reg_fields,order_os_edit,order_ps_edit,order_ss_edit,order_edit,order_view,order_view_finished,repay_manage,booking,sale_order_stats,delivery_view,back_view', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, '0');
 
 -- ----------------------------
@@ -755,10 +745,9 @@ CREATE TABLE `jiy_adsense` (
 -- ----------------------------
 INSERT INTO `jiy_adsense` VALUES ('6', '本站', '2');
 INSERT INTO `jiy_adsense` VALUES ('5', '本站', '1');
-INSERT INTO `jiy_adsense` VALUES ('10', '本站', '7');
-INSERT INTO `jiy_adsense` VALUES ('11', '本站', '6');
+INSERT INTO `jiy_adsense` VALUES ('10', '本站', '5');
+INSERT INTO `jiy_adsense` VALUES ('11', '本站', '4');
 INSERT INTO `jiy_adsense` VALUES ('13', '本站', '2');
-INSERT INTO `jiy_adsense` VALUES ('12', '本站', '1');
 
 -- ----------------------------
 -- Table structure for `jiy_affiliate_log`
@@ -1160,12 +1149,13 @@ CREATE TABLE `jiy_cart` (
   `goods_attr_id` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`rec_id`),
   KEY `session_id` (`session_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jiy_cart
 -- ----------------------------
-INSERT INTO `jiy_cart` VALUES ('22', '0', 'be357547d293a357f79e4dbe9026d443', '9', 'jiy000009', '0', '三花调味代用茶', '500.00', '388.00', '1', '', '1', '', '0', '0', '0', '0', '0', '');
+INSERT INTO `jiy_cart` VALUES ('15', '0', '30041cce447c568ee03d5476d00bfb47', '11', 'jiy000011', '0', '枣杞 固体饮料', '260.00', '2.00', '1', '', '1', '', '0', '0', '0', '0', '0', '');
+INSERT INTO `jiy_cart` VALUES ('13', '0', '73e56ead813872758184b52a3b12fbba', '11', 'jiy000011', '0', '枣杞 固体饮料', '260.00', '2.00', '2', '', '1', '', '0', '0', '0', '0', '0', '');
 
 -- ----------------------------
 -- Table structure for `jiy_cat_recommend`
@@ -1274,7 +1264,7 @@ CREATE TABLE `jiy_comment` (
   PRIMARY KEY (`comment_id`),
   KEY `parent_id` (`parent_id`),
   KEY `id_value` (`id_value`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jiy_comment
@@ -1592,22 +1582,22 @@ CREATE TABLE `jiy_goods` (
 -- ----------------------------
 -- Records of jiy_goods
 -- ----------------------------
-INSERT INTO `jiy_goods` VALUES ('1', '19', 'jiy000000', '阿胶桂圆固体饮料', '#FF9900+strong', '115', '0', '', '0', '0.000', '201.60', '168.00', '128.00', '1412064000', '1415001600', '0', '', '', '', 'images/201310/thumb_img/1_thumb_G_1382567061948.jpg', 'images/201310/goods_img/1_G_1382567061028.jpg', 'images/201310/source_img/1_G_1382567061265.JPG', '1', '', '1', '1', '0', '0', '1382489501', '99', '0', '0', '0', '1', '1', '0', '1403830712', '4', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('2', '17', 'jiy000002', '维葡固体饮料', '+', '35', '0', '', '3', '0.000', '268.00', '198.00', '0.00', '0', '0', '0', '', '', '', 'images/201310/thumb_img/2_thumb_G_1382573246745.jpg', 'images/201310/goods_img/2_G_1382573246715.jpg', 'images/201310/source_img/2_G_1382573246665.JPG', '1', '', '1', '1', '0', '0', '1382573246', '100', '0', '0', '0', '1', '1', '0', '1403805910', '4', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('3', '4', 'jiy000003', '乌梅山楂速溶茶', '+', '114', '0', '', '3', '0.000', '268.00', '198.00', '0.00', '0', '0', '0', '', '', '', 'images/201310/thumb_img/3_thumb_G_1382661873309.jpg', 'images/201310/goods_img/3_G_1382661873663.jpg', 'images/201310/source_img/3_G_1382661873404.jpg', '1', '', '1', '1', '0', '0', '1382661873', '100', '0', '1', '0', '1', '1', '0', '1403805908', '7', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('6', '6', 'jiy000006', '钙铁锌颗粒', '+', '5', '0', '', '3', '0.000', '150.00', '98.00', '14.00', '1403717085', '1405013087', '0', '', '', '', 'images/201311/thumb_img/6_thumb_G_1383601829794.jpg', 'images/201311/goods_img/6_G_1383601829952.jpg', 'images/201311/source_img/6_G_1383601829246.JPG', '1', '', '1', '1', '0', '0', '1383601829', '100', '0', '0', '0', '0', '1', '0', '1403805895', '0', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('5', '5', 'jiy000004', '朵康胶囊', '+', '9', '6', '', '3', '0.000', '488.00', '388.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/5_thumb_G_1383601438519.jpg', 'images/201311/goods_img/5_G_1383601438705.jpg', 'images/201311/source_img/5_G_1383601438208.JPG', '1', '', '1', '1', '0', '0', '1383600776', '100', '0', '0', '0', '0', '1', '0', '1403805905', '6', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('7', '8', 'jiy000007', '胡萝卜维他', '+', '34', '0', '', '3', '0.000', '260.00', '188.00', '0.00', '0', '0', '0', '', '', '<p>&nbsp;<img src=\"/images/upload/Image/temp_goods_desc.jpg\" width=\"871\" height=\"1625\" alt=\"\" /></p>', 'images/201311/thumb_img/7_thumb_G_1383608137965.jpg', 'images/201311/goods_img/7_G_1383608137056.jpg', 'images/201311/source_img/7_G_1383608137304.JPG', '1', '', '1', '1', '0', '0', '1383608137', '100', '0', '0', '0', '0', '1', '0', '1403805890', '0', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('8', '16', 'jiy000008', '黄菊 固体饮料', '+', '7', '0', '', '3', '0.000', '400.00', '288.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/8_thumb_G_1383679364100.jpg', 'images/201311/goods_img/8_G_1383679364586.jpg', 'images/201311/source_img/8_G_1383679364866.JPG', '1', '', '1', '1', '0', '0', '1383679364', '100', '0', '0', '0', '0', '1', '0', '1403805939', '4', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('9', '2', 'jiy000009', '三花调味代用茶', '+', '28', '0', '', '3', '0.000', '500.00', '388.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/9_thumb_G_1383687395924.jpg', 'images/201311/goods_img/9_G_1383687395105.jpg', 'images/201311/source_img/9_G_1383687395621.JPG', '1', '', '1', '1', '0', '0', '1383687395', '100', '0', '0', '0', '0', '1', '0', '1403805886', '5', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('10', '8', 'jiy000010', '沙棘黄精 固体饮料', '+', '251', '0', '', '3', '0.000', '260.00', '188.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/10_thumb_G_1383687487030.jpg', 'images/201311/goods_img/10_G_1383687487811.jpg', 'images/201311/source_img/10_G_1383687487633.JPG', '1', '', '1', '1', '0', '0', '1383687487', '100', '0', '0', '0', '0', '1', '0', '1403805884', '6', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('11', '8', 'jiy000011', '枣杞 固体饮料', '+', '96', '5', '', '3', '0.000', '225.60', '188.00', '2.00', '1403078400', '1408987352', '0', '', '', '', 'images/201311/thumb_img/11_thumb_G_1383687595629.jpg', 'images/201311/goods_img/11_G_1383687595701.jpg', 'images/201311/source_img/11_G_1383687595307.JPG', '1', '', '1', '1', '0', '0', '1383687595', '100', '0', '0', '0', '0', '1', '0', '1403805882', '6', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('12', '15', 'jiy000012', '白果枸杞子 速溶茶', '+', '25', '0', '', '3', '0.000', '468.00', '390.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/12_thumb_G_1383688083877.jpg', 'images/201311/goods_img/12_G_1383688083469.jpg', 'images/201311/source_img/12_G_1383688083478.JPG', '1', '', '1', '1', '0', '0', '1383688083', '100', '0', '0', '0', '0', '1', '0', '1403805877', '4', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('13', '1', 'jiy000013', '益智仁核桃 固体饮料', '+', '228', '7', '', '3', '0.100', '500.00', '388.00', '45.00', '1403467560', '1408987336', '0', '', '', '', 'images/201311/thumb_img/13_thumb_G_1383688290726.jpg', 'images/201311/goods_img/13_G_1383688290326.jpg', 'images/201311/source_img/13_G_1383688290959.JPG', '1', '', '1', '1', '0', '0', '1383688290', '100', '0', '0', '1', '0', '1', '0', '1403805874', '4', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('14', '4', 'jiy000014', '健骑机', '+', '168', '0', '', '3', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201406/thumb_img/14_thumb_G_1403722226717.jpg', 'images/201406/goods_img/14_G_1403722226682.jpg', 'images/201406/source_img/14_G_1403722226173.jpg', '1', '', '1', '1', '0', '0', '1402948217', '100', '0', '1', '1', '1', '0', '0', '1403805873', '4', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('15', '2', 'jiy000015', '洁面乳', '+', '21', '5', '', '3', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1403545369', '100', '0', '0', '0', '0', '1', '0', '1403805870', '5', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('16', '3', 'jiy000016', '多种维生素矿物质', '+', '4', '5', '', '23', '0.000', '0.00', '0.00', '13.00', '1403717056', '1405099459', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1403545517', '100', '0', '0', '0', '0', '1', '0', '1403805868', '6', '', '-1', '-1', '0', null, '');
-INSERT INTO `jiy_goods` VALUES ('17', '4', 'jiy000017', 'aaaaaa', '+', '23', '0', '', '3232', '0.000', '0.00', '0.00', '13.00', '1403669745', '1408987322', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1403633291', '100', '0', '0', '0', '0', '1', '0', '1403805864', '0', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('1', '19', 'jiy000000', '阿胶桂圆固体饮料', '+', '73', '0', '', '0', '0.000', '201.60', '168.00', '128.00', '1412064000', '1415001600', '0', '', '', '', 'images/201310/thumb_img/1_thumb_G_1382567061948.jpg', 'images/201310/goods_img/1_G_1382567061028.jpg', 'images/201310/source_img/1_G_1382567061265.JPG', '1', '', '1', '1', '0', '0', '1382489501', '99', '0', '0', '0', '0', '1', '0', '1403561837', '4', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('2', '17', 'jiy000002', '维葡固体饮料', '+', '16', '0', '', '0', '0.000', '268.00', '198.00', '0.00', '0', '0', '0', '', '', '', 'images/201310/thumb_img/2_thumb_G_1382573246745.jpg', 'images/201310/goods_img/2_G_1382573246715.jpg', 'images/201310/source_img/2_G_1382573246665.JPG', '1', '', '1', '1', '0', '0', '1382573246', '100', '0', '0', '0', '1', '1', '0', '1403545904', '4', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('3', '4', 'jiy000003', '乌梅山楂速溶茶', '+', '89', '0', '', '0', '0.000', '268.00', '198.00', '0.00', '0', '0', '0', '', '', '', 'images/201310/thumb_img/3_thumb_G_1382661873309.jpg', 'images/201310/goods_img/3_G_1382661873663.jpg', 'images/201310/source_img/3_G_1382661873404.jpg', '1', '', '1', '1', '0', '0', '1382661873', '100', '0', '1', '0', '1', '1', '0', '1403314554', '7', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('6', '6', 'jiy000006', '钙铁锌颗粒', '+', '2', '0', '', '100', '0.000', '150.00', '98.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/6_thumb_G_1383601829794.jpg', 'images/201311/goods_img/6_G_1383601829952.jpg', 'images/201311/source_img/6_G_1383601829246.JPG', '1', '', '1', '1', '0', '0', '1383601829', '100', '0', '0', '0', '0', '1', '0', '1403562143', '0', '', '-1', '-1', '0', null, null);
+INSERT INTO `jiy_goods` VALUES ('5', '5', 'jiy000004', '朵康胶囊', '+', '8', '6', '', '0', '0.000', '488.00', '388.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/5_thumb_G_1383601438519.jpg', 'images/201311/goods_img/5_G_1383601438705.jpg', 'images/201311/source_img/5_G_1383601438208.JPG', '1', '', '1', '1', '0', '0', '1383600776', '100', '0', '0', '0', '0', '1', '0', '1403547664', '6', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('7', '8', 'jiy000007', '胡萝卜维他', '+', '31', '0', '', '0', '0.000', '260.00', '188.00', '0.00', '0', '0', '0', '', '', '<p>&nbsp;<img src=\"/images/upload/Image/temp_goods_desc.jpg\" width=\"871\" height=\"1625\" alt=\"\" /></p>', 'images/201311/thumb_img/7_thumb_G_1383608137965.jpg', 'images/201311/goods_img/7_G_1383608137056.jpg', 'images/201311/source_img/7_G_1383608137304.JPG', '1', '', '1', '1', '0', '0', '1383608137', '100', '0', '0', '0', '0', '1', '0', '1403634391', '0', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('8', '16', 'jiy000008', '黄菊 固体饮料', '+', '7', '0', '', '0', '0.000', '400.00', '288.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/8_thumb_G_1383679364100.jpg', 'images/201311/goods_img/8_G_1383679364586.jpg', 'images/201311/source_img/8_G_1383679364866.JPG', '1', '', '1', '1', '0', '0', '1383679364', '100', '0', '0', '0', '0', '1', '0', '1403564323', '4', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('9', '2', 'jiy000009', '三花调味代用茶', '+', '16', '0', '', '0', '0.000', '500.00', '388.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/9_thumb_G_1383687395924.jpg', 'images/201311/goods_img/9_G_1383687395105.jpg', 'images/201311/source_img/9_G_1383687395621.JPG', '1', '', '1', '1', '0', '0', '1383687395', '100', '0', '0', '0', '0', '1', '0', '1403562142', '5', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('10', '8', 'jiy000010', '沙棘黄精 固体饮料', '+', '197', '0', '', '0', '0.000', '260.00', '188.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/10_thumb_G_1383687487030.jpg', 'images/201311/goods_img/10_G_1383687487811.jpg', 'images/201311/source_img/10_G_1383687487633.JPG', '1', '', '1', '1', '0', '0', '1383687487', '100', '0', '0', '0', '0', '1', '0', '1403562623', '6', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('11', '8', 'jiy000011', '枣杞 固体饮料', '+', '55', '5', '', '0', '0.000', '260.00', '188.00', '2.00', '1403078400', '1404028800', '0', '', '', '', 'images/201311/thumb_img/11_thumb_G_1383687595629.jpg', 'images/201311/goods_img/11_G_1383687595701.jpg', 'images/201311/source_img/11_G_1383687595307.JPG', '1', '', '1', '1', '0', '0', '1383687595', '100', '0', '0', '0', '0', '1', '0', '1403653943', '6', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('12', '15', 'jiy000012', '白果枸杞子 速溶茶', '+', '11', '0', '', '0', '0.000', '500.00', '390.00', '0.00', '0', '0', '0', '', '', '', 'images/201311/thumb_img/12_thumb_G_1383688083877.jpg', 'images/201311/goods_img/12_G_1383688083469.jpg', 'images/201311/source_img/12_G_1383688083478.JPG', '1', '', '1', '1', '0', '0', '1383688083', '100', '0', '0', '0', '0', '1', '0', '1403562624', '4', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('13', '1', 'jiy000013', '益智仁核桃 固体饮料', '+', '204', '7', '', '0', '0.100', '500.00', '388.00', '45.00', '1403467560', '1403856000', '0', '', '', '', 'images/201311/thumb_img/13_thumb_G_1383688290726.jpg', 'images/201311/goods_img/13_G_1383688290326.jpg', 'images/201311/source_img/13_G_1383688290959.JPG', '1', '', '1', '1', '0', '0', '1383688290', '100', '0', '0', '1', '0', '1', '0', '1403639434', '4', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('14', '4', 'jiy000014', '健骑机', '+', '146', '0', '', '0', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', 'images/201406/thumb_img/14_thumb_G_1402948217673.jpg', 'images/201406/goods_img/14_G_1402948217126.jpg', 'images/201406/source_img/14_G_1402948217657.jpg', '1', '', '1', '1', '0', '0', '1402948217', '100', '0', '1', '1', '1', '1', '0', '1403562627', '4', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('15', '2', 'jiy000015', '洁面乳', '+', '18', '5', '', '0', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1403545369', '100', '0', '0', '0', '0', '1', '0', '1403562626', '5', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('16', '3', 'jiy000016', '多种维生素矿物质', '+', '1', '5', '', '0', '0.000', '0.00', '0.00', '0.00', '0', '0', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1403545517', '100', '0', '0', '0', '0', '1', '0', '1403565409', '6', '', '-1', '-1', '0', null, '');
+INSERT INTO `jiy_goods` VALUES ('17', '4', 'jiy000017', 'aaaaaa', '+', '21', '0', '', '0', '0.000', '0.00', '0.00', '13.00', '1403669745', '1403680552', '0', '', '', '', '', '', '', '1', '', '1', '1', '0', '0', '1403633291', '100', '0', '0', '0', '0', '1', '0', '1403658956', '0', '', '-1', '-1', '0', null, '');
 
 -- ----------------------------
 -- Table structure for `jiy_goods_activity`
@@ -1722,7 +1712,7 @@ CREATE TABLE `jiy_goods_gallery` (
   `img_original` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`img_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jiy_goods_gallery
@@ -1747,7 +1737,6 @@ INSERT INTO `jiy_goods_gallery` VALUES ('30', '12', 'images/201311/goods_img/12_
 INSERT INTO `jiy_goods_gallery` VALUES ('31', '13', 'images/201311/goods_img/13_P_1383688291519.jpg', '', 'images/201311/thumb_img/13_thumb_P_1383688291577.jpg', 'images/201311/source_img/13_P_1383688290225.JPG');
 INSERT INTO `jiy_goods_gallery` VALUES ('32', '13', 'images/201311/goods_img/13_P_1383688291206.jpg', '', 'images/201311/thumb_img/13_thumb_P_1383688291769.jpg', 'images/201311/source_img/13_P_1383688291278.JPG');
 INSERT INTO `jiy_goods_gallery` VALUES ('33', '14', 'images/201406/goods_img/14_P_1402948217905.jpg', '', 'images/201406/thumb_img/14_thumb_P_1402948217365.jpg', 'images/201406/source_img/14_P_1402948217509.jpg');
-INSERT INTO `jiy_goods_gallery` VALUES ('34', '14', 'images/201406/goods_img/14_P_1403722226149.jpg', '', 'images/201406/thumb_img/14_thumb_P_1403722226345.jpg', 'images/201406/source_img/14_P_1403722226516.jpg');
 
 -- ----------------------------
 -- Table structure for `jiy_goods_type`
@@ -5670,9 +5659,13 @@ CREATE TABLE `jiy_sessions` (
 -- ----------------------------
 -- Records of jiy_sessions
 -- ----------------------------
-INSERT INTO `jiy_sessions` VALUES ('4859c19158e88b5b5443a59490d93733', '1403925727', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1403896927;s:12:\"suppliers_id\";s:1:\"0\";}');
-INSERT INTO `jiy_sessions` VALUES ('fdd195a12160ef83fcc553686b2dbea3', '1403924416', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:3:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;}');
-INSERT INTO `jiy_sessions` VALUES ('bbaa8d74a0210248e156fd64838af269', '1403924320', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:3:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;}');
+INSERT INTO `jiy_sessions` VALUES ('73e56ead813872758184b52a3b12fbba', '1403689293', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:4:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:14:\"display_search\";s:4:\"grid\";}');
+INSERT INTO `jiy_sessions` VALUES ('e2ec658d18911f1e7542461320b85f64', '1403689296', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:4:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:14:\"display_search\";s:4:\"grid\";}');
+INSERT INTO `jiy_sessions` VALUES ('2b1e5f7352cd4c4bfa7ca327709a941c', '1403688799', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1403659513;s:12:\"suppliers_id\";s:1:\"0\";}');
+INSERT INTO `jiy_sessions` VALUES ('dd113bb9f0584cb3d4cf0bbf99ff9f07', '1403689443', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1403660643;s:12:\"suppliers_id\";s:1:\"0\";}');
+INSERT INTO `jiy_sessions` VALUES ('946502a59699598a83230381542dcf01', '1403688983', '3', '0', '127.0.0.1', 'wqit', '1', '1.00', 'wqit@163.com', 'a:6:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:14:\"display_search\";s:4:\"grid\";s:9:\"last_time\";s:10:\"1403652245\";s:7:\"last_ip\";s:9:\"127.0.0.1\";}');
+INSERT INTO `jiy_sessions` VALUES ('8f74ea00573c3a0bf4a0ba405fd6023a', '1403687874', '0', '0', '127.0.0.1', '0', '0', '0.00', '0', 'a:0:{}');
+INSERT INTO `jiy_sessions` VALUES ('30041cce447c568ee03d5476d00bfb47', '1403688608', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:6:{s:7:\"from_ad\";i:10;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:9:\"flow_type\";i:0;s:10:\"flow_order\";a:1:{s:14:\"extension_code\";s:0:\"\";}s:14:\"display_search\";s:4:\"grid\";}');
 
 -- ----------------------------
 -- Table structure for `jiy_sessions_data`
@@ -5689,10 +5682,7 @@ CREATE TABLE `jiy_sessions_data` (
 -- ----------------------------
 -- Records of jiy_sessions_data
 -- ----------------------------
-INSERT INTO `jiy_sessions_data` VALUES ('afaaa9089169fa7bd3b99e44f2bac3d8', '2807661269', 'a:9:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:14:\"display_search\";s:4:\"grid\";s:9:\"last_time\";s:10:\"1403735877\";s:7:\"last_ip\";s:9:\"127.0.0.1\";s:9:\"flow_type\";i:0;s:10:\"flow_order\";a:8:{s:14:\"extension_code\";s:0:\"\";s:11:\"shipping_id\";i:0;s:6:\"pay_id\";i:0;s:7:\"pack_id\";i:0;s:7:\"card_id\";i:0;s:5:\"bonus\";i:0;s:8:\"integral\";i:0;s:7:\"surplus\";i:0;}s:14:\"flow_consignee\";a:15:{s:10:\"address_id\";s:1:\"1\";s:12:\"address_name\";s:0:\"\";s:7:\"user_id\";s:1:\"2\";s:9:\"consignee\";s:9:\"完成度\";s:5:\"email\";s:9:\"dd@45.com\";s:7:\"country\";s:1:\"1\";s:8:\"province\";s:1:\"4\";s:4:\"city\";s:2:\"55\";s:8:\"district\";s:3:\"539\";s:7:\"address\";s:13:\" 东方闪电\";s:7:\"zipcode\";s:7:\"4525542\";s:3:\"tel\";s:4:\"2452\";s:6:\"mobile\";s:8:\"52452452\";s:13:\"sign_building\";s:12:\"阿斯蒂芬\";s:9:\"best_time\";s:12:\"阿斯蒂芬\";}}');
 INSERT INTO `jiy_sessions_data` VALUES ('4b0619843460609fd52cc159bb41006f', '4294967295', 'a:9:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:9:\"last_time\";s:10:\"1403307055\";s:7:\"last_ip\";s:9:\"127.0.0.1\";s:14:\"display_search\";s:4:\"grid\";s:9:\"flow_type\";i:0;s:14:\"extension_code\";s:9:\"group_buy\";s:12:\"extension_id\";i:2;}');
-INSERT INTO `jiy_sessions_data` VALUES ('789bab723a0e278b3528ae6435cbeecc', '2807669613', 'a:9:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:14:\"display_search\";s:4:\"grid\";s:9:\"last_time\";s:10:\"1403801803\";s:7:\"last_ip\";s:9:\"127.0.0.1\";s:9:\"flow_type\";i:1;s:14:\"extension_code\";s:9:\"group_buy\";s:12:\"extension_id\";i:1;}');
-INSERT INTO `jiy_sessions_data` VALUES ('8243bc10e31863997c8e4a4f65831745', '4211585427', 'a:9:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:14:\"display_search\";s:4:\"grid\";s:9:\"flow_type\";i:0;s:10:\"flow_order\";a:8:{s:14:\"extension_code\";s:0:\"\";s:11:\"shipping_id\";i:0;s:6:\"pay_id\";i:0;s:7:\"pack_id\";i:0;s:7:\"card_id\";i:0;s:5:\"bonus\";i:0;s:8:\"integral\";i:0;s:7:\"surplus\";i:0;}s:9:\"last_time\";s:10:\"1403806271\";s:7:\"last_ip\";s:9:\"127.0.0.1\";s:14:\"flow_consignee\";a:14:{s:10:\"address_id\";i:0;s:9:\"consignee\";s:6:\"张三\";s:7:\"country\";s:1:\"1\";s:8:\"province\";s:2:\"11\";s:4:\"city\";s:3:\"150\";s:8:\"district\";s:4:\"1268\";s:5:\"email\";s:12:\"wqit@163.com\";s:7:\"address\";s:9:\"西工区\";s:7:\"zipcode\";s:6:\"461400\";s:3:\"tel\";s:11:\"18613792371\";s:6:\"mobile\";s:11:\"18613792371\";s:13:\"sign_building\";s:9:\"西工区\";s:9:\"best_time\";s:6:\"下午\";s:7:\"user_id\";s:1:\"3\";}}');
 
 -- ----------------------------
 -- Table structure for `jiy_shipping`
@@ -5766,8 +5756,8 @@ INSERT INTO `jiy_shop_config` VALUES ('6', '0', 'hidden', 'hidden', '', '', '', 
 INSERT INTO `jiy_shop_config` VALUES ('7', '0', 'goods', 'group', '', '', '', '1');
 INSERT INTO `jiy_shop_config` VALUES ('8', '0', 'sms', 'group', '', '', '', '1');
 INSERT INTO `jiy_shop_config` VALUES ('9', '0', 'wap', 'group', '', '', '', '1');
-INSERT INTO `jiy_shop_config` VALUES ('101', '1', 'shop_name', 'text', '', '', '吉元商城', '1');
-INSERT INTO `jiy_shop_config` VALUES ('102', '1', 'shop_title', 'text', '', '', '吉元商城', '1');
+INSERT INTO `jiy_shop_config` VALUES ('101', '1', 'shop_name', 'text', '', '', 'Rock Store', '1');
+INSERT INTO `jiy_shop_config` VALUES ('102', '1', 'shop_title', 'text', '', '', 'Rock Store', '1');
 INSERT INTO `jiy_shop_config` VALUES ('103', '1', 'shop_desc', 'text', '', '', 'Rock Store', '1');
 INSERT INTO `jiy_shop_config` VALUES ('104', '1', 'shop_keywords', 'text', '', '', '', '1');
 INSERT INTO `jiy_shop_config` VALUES ('105', '1', 'shop_country', 'manual', '', '', '', '1');
@@ -6278,107 +6268,6 @@ INSERT INTO `jiy_stats` VALUES ('1403655093', '127.0.0.1', '72', 'Safari 537.36'
 INSERT INTO `jiy_stats` VALUES ('1403659083', '127.0.0.1', '126', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/index.php', '/jy/search.php');
 INSERT INTO `jiy_stats` VALUES ('1403659934', '127.0.0.1', '73', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/category-2-b0.html', '/jy/group_buy.php');
 INSERT INTO `jiy_stats` VALUES ('1403660297', '127.0.0.1', '74', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/search.php?encode=YToyOntzOjU6ImludHJvIjtzOjk6InByb21vdGlvbiI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0MDM2ODg3OTk7fQ==', '/jy/search.php');
-INSERT INTO `jiy_stats` VALUES ('1403715110', '127.0.0.1', '75', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403715208', '127.0.0.1', '1', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403718920', '127.0.0.1', '76', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy1/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403718964', '127.0.0.1', '77', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jiyuan/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403719238', '127.0.0.1', '78', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/category-19-b0.html', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403719600', '127.0.0.1', '1', 'Safari 537.1', 'Windows NT', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403719640', '127.0.0.1', '93', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403719785', '127.0.0.1', '1', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403719855', '127.0.0.1', '2', 'Safari 537.1', 'Windows NT', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403719905', '127.0.0.1', '2', 'Safari 537.36', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403721338', '127.0.0.1', '16', 'Safari 537.1', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403721602', '127.0.0.1', '1', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403721679', '127.0.0.1', '17', 'Safari 537.1', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403722633', '127.0.0.1', '2', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403722751', '127.0.0.1', '18', 'Safari 537.1', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403722764', '127.0.0.1', '79', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403722876', '127.0.0.1', '19', 'Safari 537.1', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403722953', '127.0.0.1', '3', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403724158', '127.0.0.1', '20', 'Safari 537.1', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403724616', '127.0.0.1', '3', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403724841', '127.0.0.1', '94', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403724895', '127.0.0.1', '21', 'Safari 537.1', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403725499', '127.0.0.1', '4', 'Safari 537.1', 'Windows NT', 'zh-CN,zh', 'LAN', '', '', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403726169', '127.0.0.1', '2', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403733611', '127.0.0.1', '3', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403733622', '127.0.0.1', '80', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403735022', '127.0.0.1', '4', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403735094', '127.0.0.1', '95', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403735198', '127.0.0.1', '1', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403736903', '127.0.0.1', '96', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403736928', '127.0.0.1', '22', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403737117', '127.0.0.1', '1', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403737308', '127.0.0.1', '2', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403738323', '127.0.0.1', '5', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403739338', '127.0.0.1', '97', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403739620', '127.0.0.1', '6', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403740316', '127.0.0.1', '5', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403740912', '127.0.0.1', '2', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403741374', '127.0.0.1', '3', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403743772', '127.0.0.1', '81', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403744407', '127.0.0.1', '82', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403744584', '127.0.0.1', '23', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403744786', '127.0.0.1', '1', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/message.php');
-INSERT INTO `jiy_stats` VALUES ('1403744965', '127.0.0.1', '24', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403745567', '127.0.0.1', '7', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403745629', '127.0.0.1', '4', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/message.php');
-INSERT INTO `jiy_stats` VALUES ('1403745743', '127.0.0.1', '1', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', 'http://localhost', '/jy/category-3-b0.html', '/jy/message.php');
-INSERT INTO `jiy_stats` VALUES ('1403745801', '127.0.0.1', '6', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403745987', '127.0.0.1', '25', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/message.php');
-INSERT INTO `jiy_stats` VALUES ('1403747542', '127.0.0.1', '1', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403801335', '127.0.0.1', '83', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403801356', '127.0.0.1', '8', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403801417', '127.0.0.1', '2', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403801459', '127.0.0.1', '7', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403801510', '127.0.0.1', '1', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403801671', '127.0.0.1', '98', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403803252', '127.0.0.1', '5', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403803345', '127.0.0.1', '1', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403803376', '127.0.0.1', '8', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403803472', '127.0.0.1', '1', 'Safari 537.36', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403804123', '127.0.0.1', '99', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/jy/search.php?encode=YToxOntzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTQwMzgzMTQ4NTt9', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403806003', '127.0.0.1', '2', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/group_buy.php');
-INSERT INTO `jiy_stats` VALUES ('1403806680', '127.0.0.1', '26', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403807356', '127.0.0.1', '100', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/jy/search.php?encode=YToxOntzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTQwMzgzMTQ4NTt9', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403807845', '127.0.0.1', '9', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/search.php?encode=YToxOntzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTQwMzgzNjYzODt9', '/jy/search.php');
-INSERT INTO `jiy_stats` VALUES ('1403808936', '127.0.0.1', '84', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/index.php', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403809864', '127.0.0.1', '11', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403810116', '127.0.0.1', '1', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/search.php');
-INSERT INTO `jiy_stats` VALUES ('1403810247', '127.0.0.1', '6', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/search.php');
-INSERT INTO `jiy_stats` VALUES ('1403810273', '127.0.0.1', '27', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/search.php');
-INSERT INTO `jiy_stats` VALUES ('1403810544', '127.0.0.1', '1', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403810591', '127.0.0.1', '2', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403812441', '127.0.0.1', '12', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/index.php', '/jy/goods.php');
-INSERT INTO `jiy_stats` VALUES ('1403820336', '127.0.0.1', '13', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403820559', '127.0.0.1', '85', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403821905', '127.0.0.1', '3', 'Safari 537.36', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403822237', '127.0.0.1', '14', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403823589', '127.0.0.1', '101', 'FireFox 30.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403823688', '127.0.0.1', '4', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403825436', '127.0.0.1', '3', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403826865', '127.0.0.1', '7', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403827529', '127.0.0.1', '5', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403827717', '127.0.0.1', '1', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403828084', '127.0.0.1', '2', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403828796', '127.0.0.1', '8', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/category.php');
-INSERT INTO `jiy_stats` VALUES ('1403828827', '127.0.0.1', '4', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/group_buy.php');
-INSERT INTO `jiy_stats` VALUES ('1403828977', '127.0.0.1', '6', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403829279', '127.0.0.1', '15', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/index.php', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403830454', '127.0.0.1', '16', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/index.php', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403831003', '127.0.0.1', '86', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/group_buy.php', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403832387', '127.0.0.1', '87', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/search.php?encode=YToyOntzOjU6ImludHJvIjtzOjk6InByb21vdGlvbiI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0MDM4NjAzODI7fQ==', '/jy/search.php');
-INSERT INTO `jiy_stats` VALUES ('1403887664', '127.0.0.1', '3', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403887902', '127.0.0.1', '88', 'Safari 537.36', 'Windows XP', 'zh-CN,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403888142', '127.0.0.1', '5', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403888766', '127.0.0.1', '9', 'FireFox 28.0', 'Windows XP', 'zh-cn,zh', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403889490', '127.0.0.1', '28', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403892828', '127.0.0.1', '4', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/mgr/index.php?act=top', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403893209', '127.0.0.1', '7', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403893446', '127.0.0.1', '8', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', '', '', '/jy/index.php');
-INSERT INTO `jiy_stats` VALUES ('1403895497', '127.0.0.1', '1', 'Internet Explorer 8.0', 'Windows XP', 'zh-cn', 'LAN', '', '', '/jy/goods.php');
-INSERT INTO `jiy_stats` VALUES ('1403895615', '127.0.0.1', '5', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/jy/', '/jy/index.php');
 
 -- ----------------------------
 -- Table structure for `jiy_suppliers`
@@ -6452,22 +6341,22 @@ INSERT INTO `jiy_template` VALUES ('article_cat', '', '/library/recommend_hot.lb
 INSERT INTO `jiy_template` VALUES ('group_buy_goods', '左边区域', '/library/group_buy.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('group_buy_goods', '底部全行宽广告', '/library/ad_position.lbi', '0', '8', '1', '4', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('search', '左边区域', '/library/group_buy.lbi', '2', '0', '3', '0', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('goods', '', '/library/recommend_promotion.lbi', '0', '0', '4', '0', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('goods', '', '/library/recommend_hot.lbi', '0', '0', '5', '0', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('goods', '', '/library/recommend_hot.lbi', '3', '0', '5', '0', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('goods', '', '/library/recommend_promotion.lbi', '2', '0', '4', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('goods', '左边区域', '/library/goods_article.lbi', '1', '0', '0', '0', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('goods', '', '/library/group_buy.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('goods', '', '/library/group_buy.lbi', '1', '0', '3', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('goods', '左边区域', '/library/goods_attrlinked.lbi', '0', '0', '0', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('goods', '右边可编辑区', '/library/comments.lbi', '0', '0', '0', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('article', '', '/library/recommend_hot.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('index', '底部全行宽广告', '/library/ad_position.lbi', '0', '8', '1', '4', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('article', '', '/library/recommend_best.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('index', 'banna下方', '/library/ad_position.lbi', '2', '10', '1', '4', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('article', '', '/library/recommend_best.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('index', 'banna下方', '/library/ad_position.lbi', '1', '11', '1', '4', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('index', 'banna下方', '/library/ad_position.lbi', '0', '9', '1', '4', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '3', '4', '8', '1', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '2', '3', '8', '1', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '1', '2', '8', '1', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '0', '1', '8', '1', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '3', '4', '4', '1', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '2', '3', '4', '1', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '1', '2', '4', '1', 'green_jiyuan', '');
+INSERT INTO `jiy_template` VALUES ('index', '商品楼层展示区', '/library/cat_goods.lbi', '0', '1', '4', '1', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('index', '', '/library/brands.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('index', '', '/library/auction.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('index', '左部模块列表', '/library/group_buy.lbi', '0', '0', '3', '0', 'green_jiyuan', '');
@@ -6497,7 +6386,6 @@ INSERT INTO `jiy_template` VALUES ('search', '左边区域', '/library/category_
 INSERT INTO `jiy_template` VALUES ('category', 'banna下方', '/library/ad_position.lbi', '1', '10', '0', '4', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('category', 'banna下方', '/library/ad_position.lbi', '2', '11', '0', '4', 'green_jiyuan', '');
 INSERT INTO `jiy_template` VALUES ('category', '底部全行宽广告', '/library/ad_position.lbi', '0', '8', '0', '4', 'green_jiyuan', '');
-INSERT INTO `jiy_template` VALUES ('goods', '底部全行宽广告', '/library/ad_position.lbi', '0', '8', '0', '4', 'green_jiyuan', '');
 
 -- ----------------------------
 -- Table structure for `jiy_topic`
@@ -6572,12 +6460,12 @@ CREATE TABLE `jiy_user_address` (
   `best_time` varchar(120) NOT NULL DEFAULT '',
   PRIMARY KEY (`address_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jiy_user_address
 -- ----------------------------
-INSERT INTO `jiy_user_address` VALUES ('2', '', '3', '张三', 'wqit@163.com', '1', '11', '150', '1268', '西工区', '461400', '18613792371', '18613792371', '西工区', '下午');
+INSERT INTO `jiy_user_address` VALUES ('1', '', '2', '完成度', 'dd@45.com', '1', '4', '55', '539', ' 东方闪电', '4525542', '2452', '52452452', '阿斯蒂芬', '阿斯蒂芬');
 
 -- ----------------------------
 -- Table structure for `jiy_user_bonus`
@@ -6687,8 +6575,8 @@ CREATE TABLE `jiy_users` (
 -- Records of jiy_users
 -- ----------------------------
 INSERT INTO `jiy_users` VALUES ('1', 'test@test.com', 'test', 'e10adc3949ba59abbe56e057f20f883e', '', '', '0', '0000-00-00', '0.00', '0.00', '0', '0', '0', '1382315897', '1382315897', '0000-00-00 00:00:00', '127.0.0.1', '1', '0', '0', null, '0', '0', '0', '', '', '', '', '', '13333333333', '0', '0.00', null, null);
-INSERT INTO `jiy_users` VALUES ('2', 'dd@45.com', 'wcd', '318daa66faf087fd7af8ef1dea68437e', '', '', '0', '1954-01-01', '0.00', '0.00', '0', '0', '1', '1403225949', '1403805801', '0000-00-00 00:00:00', '127.0.0.1', '27', '0', '0', '227', '0', '0', '0', '', '', '', '', '', '', '0', '0.00', null, null);
-INSERT INTO `jiy_users` VALUES ('3', 'wqit@163.com', 'wqit', 'e07e884b1708410598162d9a62792b4f', '', '', '0', '0000-00-00', '0.00', '0.00', '0', '0', '2', '1403574151', '1403832981', '0000-00-00 00:00:00', '127.0.0.1', '6', '0', '0', '9732', '0', '0', '0', '', '', '12534', '', '', '15737985468', '0', '0.00', null, null);
+INSERT INTO `jiy_users` VALUES ('2', 'dd@45.com', 'wcd', '318daa66faf087fd7af8ef1dea68437e', '', '', '0', '1954-01-01', '0.00', '0.00', '0', '0', '1', '1403225949', '1403573932', '0000-00-00 00:00:00', '127.0.0.1', '21', '0', '0', '227', '0', '0', '0', '', '', '', '', '', '', '0', '0.00', null, null);
+INSERT INTO `jiy_users` VALUES ('3', 'wqit@163.com', 'wqit', 'e07e884b1708410598162d9a62792b4f', '', '', '0', '0000-00-00', '0.00', '0.00', '0', '0', '0', '1403574151', '1403660165', '0000-00-00 00:00:00', '127.0.0.1', '3', '0', '0', '9732', '0', '0', '0', '', '', '12534', '', '', '15737985468', '0', '0.00', null, null);
 
 -- ----------------------------
 -- Table structure for `jiy_virtual_card`

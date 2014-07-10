@@ -122,6 +122,12 @@ if (!$smarty->is_cached('article_cat.dwt', $cache_id))
     }
     $smarty->assign('artciles_list',    get_cat_articles($cat_id, $page, $size ,$keywords));
     $smarty->assign('cat_id',    $cat_id);
+
+$smarty->assign('group_buy_goods', index_get_group_buy());      // 团购商品
+$smarty->assign('promotion_goods', get_promote_goods()); // 特价商品
+$smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
+$smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //
+
     /* 分页 */
     assign_pager('article_cat', $cat_id, $count, $size, '', '', $page, $goon_keywords);
     assign_dynamic('article_cat');
@@ -130,5 +136,66 @@ if (!$smarty->is_cached('article_cat.dwt', $cache_id))
 $smarty->assign('feed_url',         ($_CFG['rewrite'] == 1) ? "feed-typearticle_cat" . $cat_id . ".xml" : 'feed.php?type=article_cat' . $cat_id); // RSS URL
 
 $smarty->display('article_cat.dwt', $cache_id);
+
+
+ /**
+ * 获得最新的团购活动
+ *
+ * @access  private
+ * @return  array
+ */
+function index_get_group_buy()
+{
+    $time = gmtime();
+    $limit = get_library_number('group_buy', 'index');
+
+    $group_buy_list = array();
+    if ($limit > 0)
+    {
+        $sql = 'SELECT gb.act_id AS group_buy_id, gb.goods_id, gb.ext_info, gb.goods_name, g.goods_thumb, g.goods_img ' .
+                'FROM ' . $GLOBALS['ecs']->table('goods_activity') . ' AS gb, ' .
+                    $GLOBALS['ecs']->table('goods') . ' AS g ' .
+                "WHERE gb.act_type = '" . GAT_GROUP_BUY . "' " .
+                "AND g.goods_id = gb.goods_id " .
+                "AND gb.start_time <= '" . $time . "' " .
+                "AND gb.end_time >= '" . $time . "' " .
+                "AND g.is_delete = 0 " .
+                "ORDER BY gb.act_id DESC " .
+                "LIMIT $limit" ;
+        $res = $GLOBALS['db']->query($sql);
+
+        while ($row = $GLOBALS['db']->fetchRow($res))
+        {
+            /* 如果缩略图为空，使用默认图片 */
+            $row['goods_img'] = get_image_path($row['goods_id'], $row['goods_img']);
+            $row['thumb'] = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+
+            /* 根据价格阶梯，计算最低价 */
+            $ext_info = unserialize($row['ext_info']);
+            $price_ladder = $ext_info['price_ladder'];
+            if (!is_array($price_ladder) || empty($price_ladder))
+            {
+                $row['last_price'] = price_format(0);
+            }
+            else
+            {
+                foreach ($price_ladder AS $amount_price)
+                {
+                    $price_ladder[$amount_price['amount']] = $amount_price['price'];
+                }
+            }
+            ksort($price_ladder);
+            $row['last_price'] = price_format(end($price_ladder));
+            $row['url'] = build_uri('group_buy', array('gbid' => $row['group_buy_id']));
+            $row['short_name']   = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
+                                           sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
+            $row['short_style_name']   = add_style($row['short_name'],'');
+            $group_buy_list[] = $row;
+        }
+    }
+
+    return $group_buy_list;
+}
+
 
 ?>

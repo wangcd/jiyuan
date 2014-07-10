@@ -9,7 +9,7 @@
 <!-- TemplateEndEditable -->
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
-<!--meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/-->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
@@ -50,7 +50,7 @@
 	<!--{foreach from=$group_buy_goods item=goods}-->
 	<div class="goodsbox">
 	 <div class="imgbox1"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
-     
+
 	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
     <div class="fontbox">
    ￥{$lang.last_price}<b class="f1">{$goods.last_price}</b>
@@ -74,14 +74,14 @@
 				<div class="rs_left_rp_goodsbox">
 					<div class="rs_l_rp_imgbox1">
 						<a href="{$goods.url}" target="_blank">
-						
+
 						<img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
 						</a>
 					</div>
 					<div class="rs_l_rp_word1">
-						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>	
-                     </div>	
-                     <div class="rs_l_rp_word2">			
+						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a>
+                     </div>
+                     <div class="rs_l_rp_word2">
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1 fc">{$goods.promote_price}</b>
                          <!-- {else}-->
@@ -90,7 +90,7 @@
                          <b class="time">剩余时间</b>
                        </div>
 						<a href="goods-1.html" target="_blank" class="qianggou"></a>
-					   
+
 				</div>
 				<!-- {/if} -->
 				<!--{/foreach}-->
@@ -113,7 +113,7 @@
 					<div class="rs_l_ht_word">
                         <a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
 						<a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
-						
+
                          <!-- {if $goods.promote_price neq ""} -->
                          <b class="f1">{$goods.promote_price}</b><br />
                          <!-- {else}-->
@@ -159,35 +159,28 @@
 		<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
         <div class="group_buy">
 		<div class="goodsTitle">{$lang.group_buy_goods}</div>
-		<div class="grouplist clearfix">
+		<div class="grouplist clearfix group_buy_list_boxs">
 			 <!-- {if $gb_list} 如果有团购活动 --><!--有改动-->
 				<!-- {foreach from=$gb_list item=group_buy name="group_foreach"} 循环团购活动开始 -->
-				<div class="group_buy_list clearfix {if $smarty.foreach.group_foreach.last} rs_left_box_listnone {/if}">
-					<div class="fl groupImg">
+                <!--图片-->
+				<div class="group_buy_list_box">
 						<a href="{$group_buy.url}"><img src="{$group_buy.goods_thumb}" border="0" alt="{$group_buy.goods_name|escape:html}" /></a>
-					</div>
-					<div class="fl">
-					{$lang.gb_goods_name}<a href="{$group_buy.url}"><font class="f14b">{$group_buy.goods_name|escape:html}</font></a><br />
-					{$lang.act_time}：<font class="f1">{$group_buy.formated_start_date} -- {$group_buy.formated_end_date}</font><br />
-					{$lang.gb_price_ladder}<br />
-					<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-					 <tr>
-							<th width="29%" bgcolor="#FFFFFF">{$lang.gb_ladder_amount}</th>
-						 <th width="71%" bgcolor="#FFFFFF">{$lang.gb_ladder_price}</th>
-						</tr>
-						<!-- {foreach from=$group_buy.price_ladder item=item} -->
-						<tr>
-							<td width="29%" bgcolor="#FFFFFF">{$item.amount}</td>
-						 <td width="71%" bgcolor="#FFFFFF">{$item.formated_price}</td>
-						</tr>
-						<!-- {/foreach} -->
-					</table>
-					</div>
+                        <div class="">
+                            <ul>
+                            <li>
+                            <a href="{$group_buy.url}"><font class="f14b">{$group_buy.goods_name|escape:html}</font></a>
+                            </li>
+                            <li>{$lang.gb_cur_price}{$group_buy.formated_cur_price}</li>
+                            <li>{$lang.gb_valid_goods}{$group_buy.num}</b>
+                            <li>活动剩余时间</li>      
+                            <li><font class="time rs_jq_timer">{$goods.end_date|date_format:'M j,Y H:i:s'}</font></li>                
+                            </ul>
+						</div>
 				</div>
 				<!--{/foreach}-->
 				<!-- {else} -->
 				 <div class="tips">{$lang.group_goods_empty}</div>
-				<!-- {/if} -->	
+				<!-- {/if} -->
 	</div>
 	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
 	</div>
@@ -202,12 +195,13 @@
 </div>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-	</div>  
-    
+	</div>
+
 </div>
 
 <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
 <!--鼠标切换js Star-->
 <script>
 <!--

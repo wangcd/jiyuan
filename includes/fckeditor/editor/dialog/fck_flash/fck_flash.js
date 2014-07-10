@@ -243,7 +243,7 @@ function OnUploadCompleted( errorNumber, fileUrl, fileName, customMsg )
 	switch ( errorNumber )
 	{
 		case 0 :	// No errors
-			alert( 'Your file has been successfully uploaded' ) ;
+			alert( '您的文件已成功上传！' ) ;
 			break ;
 		case 1 :	// Custom error
 			alert( customMsg ) ;

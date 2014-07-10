@@ -864,15 +864,22 @@
 				<tr>
 					<td align="right" bgcolor="#ffffff">{$lang.phone}：</td>
 					<td align="left" bgcolor="#ffffff"><input name="tel" type="text" class="InputBorder" id="tel_{$sn}" value="{$consignee.tel|escape}" />
-					{$lang.require_field}</td>
+					</td>
 					<td align="right" bgcolor="#ffffff">{$lang.backup_phone}：</td>
-					<td align="left" bgcolor="#ffffff"><input name="mobile" type="text" class="InputBorder" id="mobile_{$sn}" value="{$consignee.mobile|escape}" /></td>
+					<td align="left" bgcolor="#ffffff"><input name="mobile" type="text" class="InputBorder" id="mobile_{$sn}" value="{$consignee.mobile|escape}" />{$lang.require_field}</td>
 				</tr>
 				<tr>
 					<td align="right" bgcolor="#ffffff">{$lang.sign_building}：</td>
 					<td align="left" bgcolor="#ffffff"><input name="sign_building" type="text" class="InputBorder" id="sign_building_{$sn}" value="{$consignee.sign_building|escape}" /></td>
 					<td align="right" bgcolor="#ffffff">{$lang.deliver_goods_time}：</td>
-					<td align="left" bgcolor="#ffffff"><input name="best_time" type="text"  class="InputBorder" id="best_time_{$sn}" value="{$consignee.best_time|escape}" /></td>
+					<td align="left" bgcolor="#ffffff">
+                    <select name="best_time" class="InputBorder" id="best_time_{$sn}">
+                        <option value="{$consignee.best_time|escape}">{$consignee.best_time|escape}</option>
+                        <option value="8-12点">8-12点</option>
+                        <option value="12点至17点">12点至17点</option>
+                        <option value="17点以后">17点以后</option>
+                    </select>
+                    </td>
 				</tr>
 				<tr>
 					<td align="right" bgcolor="#ffffff">&nbsp;</td>

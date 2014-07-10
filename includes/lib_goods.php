@@ -397,7 +397,6 @@ function get_promote_goods($cats = '')
         $goods[$idx]['goods_img']    = get_image_path($row['goods_id'], $row['goods_img']);
         $goods[$idx]['url']          = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
     }
-
     return $goods;
 }
 
@@ -983,7 +982,6 @@ function group_buy_info($group_buy_id, $current_num = 0)
     {
         return array();
     }
-
     $ext_info = unserialize($group_buy['ext_info']);
     $group_buy = array_merge($group_buy, $ext_info);
 
@@ -1012,7 +1010,6 @@ function group_buy_info($group_buy_id, $current_num = 0)
     /* 统计信息 */
     $stat = group_buy_stat($group_buy_id, $group_buy['deposit']);
     $group_buy = array_merge($group_buy, $stat);
-
     /* 计算当前价 */
     $cur_price  = $price_ladder[0]['price']; // 初始化
     $cur_amount = $stat['valid_goods'] + $current_num; // 当前数量
