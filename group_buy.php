@@ -67,6 +67,9 @@ if ($_REQUEST['act'] == 'list')
         {
             /* 取得当前页的团购活动 */
             $gb_list = group_buy_list($size, $page);
+//	echo "<pre>";
+//	print_r($gb_list);
+//	echo "</pre>";exit();
             $smarty->assign('gb_list',  $gb_list);
 
             /* 设置分页链接 */
@@ -89,10 +92,7 @@ $smarty->assign('promotion_goods', get_promote_goods()); // 特价商品
 $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
  $smarty->assign('rs_articles',    get_assign_cat_article('where `cat_type`=1','limit 2'));   //
         $smarty->assign('feed_url',         ($_CFG['rewrite'] == 1) ? "feed-typegroup_buy.xml" : 'feed.php?type=group_buy'); // RSS URL
-//		$aa=get_promote_goods();
-//		echo"<pre>";
-//		print_r($aa);
-//		echo"</pre>";exit();
+
         assign_dynamic('group_buy_list');
     }
 
@@ -106,6 +106,7 @@ $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文
         $ad = $db->getRow($sql, true);
         $smarty->assign('ad', $ad);
     }
+
 
     /* 显示模板 */
     $smarty->display('group_buy_list.dwt', $cache_id);
@@ -126,6 +127,7 @@ elseif ($_REQUEST['act'] == 'view')
 
     /* 取得团购活动信息 */
     $group_buy = group_buy_info($group_buy_id);
+
     if (empty($group_buy))
     {
         ecs_header("Location: ./\n");
@@ -149,7 +151,6 @@ elseif ($_REQUEST['act'] == 'view')
     if (!$smarty->is_cached('group_buy_goods.dwt', $cache_id))
     {
         $group_buy['gmt_end_date'] = $group_buy['end_date'];
-
         $smarty->assign('group_buy', $group_buy);
 
         /* 取得团购商品信息 */
@@ -206,7 +207,6 @@ $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文
     $db->query($sql);
 
     $smarty->assign('now_time',  gmtime());           // 当前系统时间
-
     $smarty->display('group_buy_goods.dwt', $cache_id);
 }
 
@@ -352,7 +352,7 @@ function index_get_group_buy()
     $group_buy_list = array();
     if ($limit > 0)
     {
-        $sql = 'SELECT gb.act_id AS group_buy_id,start_time AS start_date, end_time AS end_date,gb.goods_id, gb.ext_info, gb.goods_name, g.goods_thumb, g.goods_img ' .
+        $sql = 'SELECT gb.act_id AS group_buy_id,start_time AS start_date, end_time AS end_date, gb.goods_id, gb.ext_info, gb.goods_name, g.goods_thumb, g.goods_img ' .
                 'FROM ' . $GLOBALS['ecs']->table('goods_activity') . ' AS gb, ' .
                     $GLOBALS['ecs']->table('goods') . ' AS g ' .
                 "WHERE gb.act_type = '" . GAT_GROUP_BUY . "' " .
@@ -390,14 +390,13 @@ function index_get_group_buy()
             $row['short_name']   = $GLOBALS['_CFG']['goods_name_length'] > 0 ?
                                            sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
             $row['short_style_name']   = add_style($row['short_name'],'');
-			$row['end_date_str']=date('M j,Y H:i:s',$res['end_date']);
             $group_buy_list[] = $row;
         }
     }
-// echo "<pre>";
-//  print_r($group_buy_list);
-// echo "</pre>";
-//exit();
+	/*格式化时间*/
+    for($i=0;$i<count($group_buy_list);$i++){
+		$group_buy_list[$i]['end_date']=date('M j,Y H:i:s',$group_buy_list[$i]['end_date']);
+    }
     return $group_buy_list;
 }
 
@@ -473,7 +472,13 @@ function group_buy_list($size, $page)
         /* 加入数组 */
         $gb_list[] = $group_buy;
     }
-
+    /*格式化时间*/
+    for($i=0;$i<count($gb_list);$i++){
+		$gb_list[$i]['end_date']=date('M j,Y H:i:s',$gb_list[$i]['end_date']);
+    }
+//	echo "<pre>";
+//	print_r($gb_list);
+//	echo "</pre>";exit();
     return $gb_list;
 }
 

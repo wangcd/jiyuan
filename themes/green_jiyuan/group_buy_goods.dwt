@@ -158,10 +158,10 @@
               <tr>
                 <td colspan="2" align="right" bgcolor="#FFFFFF" class="tips">
                   {$lang.gb_notice_login}
-								</td>
-              </tr>
-              </table>
+			    </td>
+              </tr>   
               <!-- {/if} 判断登录结束 -->
+              </table>
 
 						</div>
 					</div>	

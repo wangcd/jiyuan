@@ -31,6 +31,36 @@ var select_spe = "{$lang.select_spe}";
 
 <div class="rs_head_wrap">
 	<a href="index.php"><img src="images/logo.jpg"></a>
+     <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+    <!--搜索 开始-->
+    <div class="hd_search_form clearfix">
+      <div class="hd_search_wrap clearfix">
+        <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+          <input type="text" maxlength="100" style="color:#999; padding-left:40px;" name="keywords" id="keyword" class="hd_input_test"  value="{$search_keywords|escape}" >
+          <!--搜索提示 begin-->
+          <input class="hd_search_btn" type="submit" style="width:98px" value="SEARCH" >
+          </input>
+        </form>
+      </div>
+    </div>
+     <!--搜索 结束-->
 </div>
 <div class="rs_headnav_wrap">
 	<div class="rs_headnav">

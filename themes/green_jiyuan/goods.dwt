@@ -307,8 +307,9 @@
 		  <font class="a f14b" style="font-size:12px;">{$lang.goods_free_shipping}</font>
 		  <!-- {/if} -->
 			</div>
-			<a href="javascript:addToCart({$goods.goods_id})" style="float:left; margin-left:150px;"><img src="images/goods_nav.gif" /></a> 
-
+            
+			<a href="javascript:addToCart({$goods.goods_id})" style="float:left; margin-right:20px;"><img src="images/goods_nav.gif"/></a> 
+            <a href="javascript:bool =1;addToCart({$goods.goods_id})" style="float:left; margin-right:20px;"><img src="images/ljgm.jpg"/></a> 
 		</form>
        
         

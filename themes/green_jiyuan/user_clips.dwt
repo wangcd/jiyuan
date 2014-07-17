@@ -287,7 +287,7 @@
 </div>
 <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
 
-<div class="us_contentBox mod1 mod2">
+<div class="us_contentBox mod1 mod2" style="display:none;">
 <span class="lt"></span><span class="lb"></span><span class="rt"></span><span class="rb"></span>
   <h6>{$lang.label_affiliate}</h6>
  <form name="theForm" method="post" action="">

@@ -365,8 +365,9 @@ function get_promote_goods($cats = '')
                 "ON mp.goods_id = g.goods_id AND mp.user_rank = '$_SESSION[user_rank]' ".
             'WHERE g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_delete = 0 ' .
             " AND g.is_promote = 1 AND promote_start_date <= '$time' AND promote_end_date >= '$time' ";
-    $sql .= $order_type == 0 ? ' ORDER BY g.sort_order, g.last_update DESC' : ' ORDER BY rnd';
-    $sql .= " LIMIT $num ";
+    $sql .= $order_type == 0 ? ' ORDER BY g.sort_order, g.last_update DESC' : ' ORDER BY promote_start_date';
+        /*排序通过promote_start_date 原为rnd*/
+    $sql .= " LIMIT 1 ";/*动态变化 $num */
     $result = $GLOBALS['db']->getAll($sql);
 
     $goods = array();

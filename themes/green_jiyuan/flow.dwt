@@ -896,4 +896,5 @@ var btn_buy = "{$lang.btn_buy}";
 var is_cancel = "{$lang.is_cancel}";
 var select_spe = "{$lang.select_spe}";
 </script>
+<script type="text/javascript" src="js/move_time.js"></script>
 </html>

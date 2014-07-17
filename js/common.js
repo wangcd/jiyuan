@@ -1,4 +1,6 @@
 /* $Id : common.js 4865 2007-01-31 14:04:10Z paulgao $ */
+var bool =0;
+
 
 /* *
  * 添加商品到购物车 
@@ -87,6 +89,7 @@ function addToCartResponse(result)
   {
     var cartInfo = document.getElementById('ECS_CARTINFO');
     var cart_url = 'flow.php?step=cart';
+	(bool == 1) && (cart_url = 'flow.php?step=consignee');
     if (cartInfo)
     {
       cartInfo.innerHTML = result.content;
